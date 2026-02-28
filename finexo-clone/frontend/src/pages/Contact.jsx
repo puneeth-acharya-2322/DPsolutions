@@ -41,7 +41,7 @@ export default function Contact() {
                         </div>
                         <h1 data-w-id="958c1d0d-3ef0-8b3a-d49c-351252aec018"
                             className="section-top-hero-title features">
-                            Flexible <span className="design-text">pricing</span> for <span className="design-text">team</span> usage
+                            Contact <span className="design-text">us</span> and let&apos;s <span className="design-text">talk</span>
                         </h1>
                         <p data-w-id="958c1d0d-3ef0-8b3a-d49c-351252aec020"
                             className="section-top-description">
@@ -127,6 +127,45 @@ export default function Contact() {
                                     <div>Oops! Something went wrong while submitting the form.</div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Section 3 — Footer CTA (footer-content-wrapper) */}
+            <section className="section">
+                <div className="w-layout-blockcontainer container w-container">
+                    <div className="footer-content-wrapper">
+                        <div data-w-id="19cac388-8877-fdb5-ab95-2fa6ded75ac7"
+                            className="footer-left-col-wrapper">
+                            <h2>Get started today</h2>
+                            <p className="footer-description">
+                                We provide comprehensive financial solutions to help you achieve your goals. From gets Personalized.
+                            </p>
+                            <a href="/contact" data-w-id="022059ed-85d5-c9d6-db4d-384787a8a2c7"
+                                aria-current="page"
+                                className="primary-button-wrapper white w-inline-block w--current">
+                                <div className="primary-button-wrap">
+                                    <div className="primary-button-text">Get Started</div>
+                                    <div className="primary-button-text">Get Started</div>
+                                </div>
+                                <img loading="lazy" src="/img/ArrowUp-white.svg" alt="" className="primary-button-icon" />
+                            </a>
+                        </div>
+                        <div data-w-id="19cac388-8877-fdb5-ab95-2fa6ded75ad3"
+                            className="footer-left-col-wrapper _02">
+                            <h2>Get started today</h2>
+                            <p className="footer-description">
+                                We provide comprehensive financial solutions to help you achieve your goals. From gets Personalized.
+                            </p>
+                            <a href="/contact" data-w-id="19cac388-8877-fdb5-ab95-2fa6ded75ad8"
+                                className="primary-button-wrapper w-inline-block">
+                                <div className="primary-button-wrap">
+                                    <div className="primary-button-text">Book a Demo</div>
+                                    <div className="primary-button-text">Book a Demo</div>
+                                </div>
+                                <img loading="lazy" src="/img/ArrowUp.svg" alt="" className="primary-button-icon" />
+                            </a>
                         </div>
                     </div>
                 </div>
