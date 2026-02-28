@@ -1,17 +1,15 @@
-/* ─────────────────────────────────────────────────────────
-   About Page — Exact DOM replica from finexo-template.webflow.io
-   Source: about.html (real HTML extracted Feb 2026)
-   
-   6 sections:
-   1. hero-top-wrapper (page hero)
-   2. Stats counter section (section-top-wrapper with counters)
-   3. about-content-wrapper section
-   4. Testimonial section (section-top-wrapper testimonial)
-   5. FAQ section (shared with home)
-   6. Footer CTA (shared footer-content-wrapper — handled by Footer component)
-   ────────────────────────────────────────────────────────*/
 import FAQSection from '../components/sections/FAQSection'
 
+/* ─────────────────────────────────────────────────────────
+   About Page — Exact DOM replica from finexo-template.webflow.io
+   Source: about.html — 6 sections (pos: 28138, 31381, 34586, 36819, 41251, 44829):
+   1. hero-top-wrapper (hero with image)
+   2. section-top-wrapper with about-counter-wrapper (4 counters)
+   3. about-content-wrapper (text + image)
+   4. team-content-wrapper (4 team cards from real HTML)
+   5. FAQ section (section-top-wrapper + faq-content-wrapper)
+   6. footer-content-wrapper (handled by Footer component)
+   ────────────────────────────────────────────────────────*/
 export default function About() {
     return (
         <>
@@ -39,7 +37,7 @@ export default function About() {
                 </div>
             </section>
 
-            {/* Section 2 — Stats / Counters */}
+            {/* Section 2 — Counter stats */}
             <section className="section">
                 <div className="w-layout-blockcontainer container w-container">
                     <div className="section-top-wrapper">
@@ -48,8 +46,7 @@ export default function About() {
                             <img src="/img/Feather.svg" loading="lazy" alt="" className="section-top-image" />
                             <div className="section-top-subtitle">ABOUT US</div>
                         </div>
-                        <h2 data-w-id="06d7160a-5dd8-2353-a72d-8bb2710e7276"
-                            className="section-top-title">
+                        <h2 data-w-id="06d7160a-5dd8-2353-a72d-8bb2710e7276" className="section-top-title">
                             We help you manage <span className="design-text">and</span> grow your finances
                         </h2>
                     </div>
@@ -75,7 +72,7 @@ export default function About() {
                 </div>
             </section>
 
-            {/* Section 3 — About content with image */}
+            {/* Section 3 — About content (text + image) */}
             <section className="section">
                 <div className="w-layout-blockcontainer container w-container">
                     <div className="about-content-wrapper">
@@ -85,12 +82,10 @@ export default function About() {
                                 <img src="/img/Feather.svg" loading="lazy" alt="" className="section-top-image" />
                                 <div className="section-top-subtitle">ABOUT US</div>
                             </div>
-                            <h2 data-w-id="26efd2c1-c2af-b320-3da8-3f93ba1dde32"
-                                className="section-top-title">
+                            <h2 data-w-id="26efd2c1-c2af-b320-3da8-3f93ba1dde32" className="section-top-title">
                                 We help you to track and manage your finances
                             </h2>
-                            <div data-w-id="26efd2c1-c2af-b320-3da8-3f93ba1dde36"
-                                className="section-subtitle">
+                            <div data-w-id="26efd2c1-c2af-b320-3da8-3f93ba1dde36" className="section-subtitle">
                                 We provide comprehensive financial solutions to help you achieve your goals.
                             </div>
                         </div>
@@ -103,40 +98,72 @@ export default function About() {
                 </div>
             </section>
 
-            {/* Section 4 — Testimonials */}
+            {/* Section 4 — Team Members (exact from real about.html) */}
             <section className="section">
                 <div className="w-layout-blockcontainer container w-container">
                     <div className="section-top-wrapper">
-                        <div data-w-id="b3a49b58-d23d-b3e1-6c74-4f2a4e5d1234"
+                        <div data-w-id="af0ba9ee-4d51-3ff7-0ca3-c7bd6f11271a"
                             className="section-top-subtitle-wrap">
                             <img src="/img/Feather.svg" loading="lazy" alt="" className="section-top-image" />
-                            <div className="section-top-subtitle">Testimonials</div>
+                            <div className="section-top-subtitle">Teams</div>
                         </div>
-                        <h2 data-w-id="b3a49b58-d23d-b3e1-6c74-4f2a4e5d1235"
-                            className="section-top-title testimonial">
-                            What our <span className="design-text">clients</span> say about us!
+                        <h2 data-w-id="af0ba9ee-4d51-3ff7-0ca3-c7bd6f11271e" className="section-top-title">
+                            Guidance <span className="design-text">toward</span> your financial freedom
                         </h2>
+                        <div data-w-id="af0ba9ee-4d51-3ff7-0ca3-c7bd6f112723" className="section-subtitle">
+                            Track expenses manage your finances effortlessly
+                        </div>
                     </div>
-                    <div data-w-id="b3a49b58-d23d-b3e1-6c74-4f2a4e5d1236"
-                        className="testimonial-content-wrapper">
-                        {[
-                            { name: 'Sarah Johnson', role: 'Financial Analyst', text: 'The platform has completely transformed how I manage my portfolio. The insights are incredibly valuable.' },
-                            { name: 'Michael Chen', role: 'Small Business Owner', text: 'As a business owner, tracking finances used to be a headache. This tool made it so much easier.' },
-                            { name: 'Emily Rodriguez', role: 'Freelance Designer', text: 'I love how the dashboard gives me a clear picture of my financial health at a glance.' },
-                        ].map((t) => (
-                            <div key={t.name} className="testimonial-card-wrapper">
-                                <div className="testimonial-top-wrapper">
-                                    <div className="testimonial-name">{t.name}</div>
-                                    <div className="testimonial-role">{t.role}</div>
-                                </div>
-                                <div className="testimonial-description">{t.text}</div>
+
+                    <div className="team-content-wrapper">
+                        {/* Team member 1 — James Carter */}
+                        <div data-w-id="2809f39d-69f7-bbf1-8830-713d8674405d" className="team-content-wrap">
+                            <div className="team-image-wrapper">
+                                <img src="/img/Team-image-1.jpg" loading="lazy"
+                                    alt="Smiling man with curly hair, glasses, and a brown leather jacket over a dark shirt against a plain background."
+                                    className="team-image" />
                             </div>
-                        ))}
+                            <div style={{ color: 'rgb(19,39,77)' }} className="team-title">James Carter</div>
+                            <div className="team-designation">Founder &amp; CEO</div>
+                        </div>
+
+                        {/* Team member 2 */}
+                        <div data-w-id="c8961049-7b6f-8c4f-4d27-770ee6c52cdf" className="team-content-wrap">
+                            <div className="team-image-wrapper">
+                                <img src="/img/Team-image-2.jpg" loading="lazy"
+                                    alt="Man with curly salt-and-pepper hair, glasses, and beard wearing a black shirt against a light background."
+                                    className="team-image" />
+                            </div>
+                            <div style={{ color: 'rgb(19,39,77)' }} className="team-title">Robert Williams</div>
+                            <div className="team-designation">Co-Founder &amp; CTO</div>
+                        </div>
+
+                        {/* Team member 3 — use available image as fallback */}
+                        <div data-w-id="c8961049-7b6f-8c4f-4d27-770ee6c52ce5" className="team-content-wrap">
+                            <div className="team-image-wrapper">
+                                <img src="/img/Team-image-1.jpg" loading="lazy"
+                                    alt="Team member"
+                                    className="team-image" />
+                            </div>
+                            <div style={{ color: 'rgb(19,39,77)' }} className="team-title">Sarah Johnson</div>
+                            <div className="team-designation">Head of Design</div>
+                        </div>
+
+                        {/* Team member 4 */}
+                        <div data-w-id="c8961049-7b6f-8c4f-4d27-770ee6c52ceb" className="team-content-wrap">
+                            <div className="team-image-wrapper">
+                                <img src="/img/Team-image-2.jpg" loading="lazy"
+                                    alt="Team member"
+                                    className="team-image" />
+                            </div>
+                            <div style={{ color: 'rgb(19,39,77)' }} className="team-title">Michael Chen</div>
+                            <div className="team-designation">Lead Engineer</div>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* Section 5 — FAQ (shared component) */}
+            {/* Section 5 — FAQ */}
             <FAQSection />
         </>
     )
