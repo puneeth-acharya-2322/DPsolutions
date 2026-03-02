@@ -132,40 +132,49 @@ export default function Contact() {
                 </div>
             </section>
 
-            {/* Section 3 — Footer CTA (footer-content-wrapper) */}
-            <section className="section">
+            {/* Section 3 — Address & Map */}
+            <section className="section" style={{ paddingTop: '20px' }}>
                 <div className="w-layout-blockcontainer container w-container">
-                    <div className="footer-content-wrapper">
-                        <div data-w-id="19cac388-8877-fdb5-ab95-2fa6ded75ac7"
-                            className="footer-left-col-wrapper">
-                            <h2>Get started today</h2>
-                            <p className="footer-description">
-                                We provide comprehensive financial solutions to help you achieve your goals. From gets Personalized.
-                            </p>
-                            <a href="/contact" data-w-id="022059ed-85d5-c9d6-db4d-384787a8a2c7"
-                                aria-current="page"
-                                className="primary-button-wrapper white w-inline-block w--current">
-                                <div className="primary-button-wrap">
-                                    <div className="primary-button-text">Get Started</div>
-                                    <div className="primary-button-text">Get Started</div>
-                                </div>
-                                <img loading="lazy" src="/img/ArrowUp-white.svg" alt="" className="primary-button-icon" />
-                            </a>
+                    <div style={{ textAlign: "center", marginBottom: "40px" }}>
+                        <h3 style={{ color: "#F0B90B", fontSize: "20px", fontWeight: "700", marginBottom: "10px" }}>Main Branch</h3>
+                        <h2 className="contact-title" style={{ fontSize: "40px", marginBottom: "0", textAlign: "center" }}>Reach Out to Us</h2>
+                    </div>
+                    <div className="footer-content-wrapper" style={{ alignItems: "stretch", backgroundColor: "transparent", padding: "0" }}>
+                        <div className="footer-left-col-wrapper" style={{ paddingRight: "40px", backgroundColor: "transparent", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+                            <div className="contact-description" style={{ marginBottom: "24px" }}>
+                                Let us help you scale better.
+                            </div>
+
+                            <h4 style={{ fontSize: "20px", fontWeight: "700", color: "#0B1120", marginBottom: "10px" }}>Address:</h4>
+                            <div className="contact-description" style={{ marginBottom: "24px", whiteSpace: "pre-line" }}>
+                                Room No. 12, 4th Floor, MUTBI,
+                                Advanced Research Center,
+                                Madhava Nagar, Manipal 576104
+                            </div>
+
+                            <h4 style={{ fontSize: "20px", fontWeight: "700", color: "#0B1120", marginBottom: "10px" }}>Phone:</h4>
+                            <div className="contact-description" style={{ marginBottom: "24px", whiteSpace: "pre-line" }}>
+                                +91 88619 42440
+                                +91 90725 56665
+                            </div>
+
+                            <h4 style={{ fontSize: "20px", fontWeight: "700", color: "#0B1120", marginBottom: "10px" }}>Email:</h4>
+                            <div className="contact-description" style={{ marginBottom: "0" }}>
+                                <a href="mailto:director@dashapatmaja.in" style={{ color: "#2563EB", textDecoration: "underline" }}>
+                                    director@dashapatmaja.in
+                                </a>
+                            </div>
                         </div>
-                        <div data-w-id="19cac388-8877-fdb5-ab95-2fa6ded75ad3"
-                            className="footer-left-col-wrapper _02">
-                            <h2>Get started today</h2>
-                            <p className="footer-description">
-                                We provide comprehensive financial solutions to help you achieve your goals. From gets Personalized.
-                            </p>
-                            <a href="/contact" data-w-id="19cac388-8877-fdb5-ab95-2fa6ded75ad8"
-                                className="primary-button-wrapper w-inline-block">
-                                <div className="primary-button-wrap">
-                                    <div className="primary-button-text">Book a Demo</div>
-                                    <div className="primary-button-text">Book a Demo</div>
-                                </div>
-                                <img loading="lazy" src="/img/ArrowUp.svg" alt="" className="primary-button-icon" />
-                            </a>
+                        <div className="footer-left-col-wrapper _02" style={{ padding: "0", backgroundColor: "transparent", display: "flex", width: "100%", height: "100%" }}>
+                            <iframe
+                                src="https://maps.google.com/maps?q=Manipal%20Government%20of%20Karnataka%20Bioincubator&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                                width="100%"
+                                height="100%"
+                                style={{ border: 0, borderRadius: "12px", boxShadow: "0 10px 30px rgba(0,0,0,0.1)", minHeight: "450px", display: "block", objectFit: "cover" }}
+                                allowFullScreen=""
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade">
+                            </iframe>
                         </div>
                     </div>
                 </div>
