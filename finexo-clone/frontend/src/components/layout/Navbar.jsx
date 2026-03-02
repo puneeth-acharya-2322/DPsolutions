@@ -76,12 +76,28 @@ export default function Navbar() {
                                     <div className="dropdown-list-wrap" style={{ marginLeft: 0 }}>
                                         <div className="dropdown-list-wrapper" style={{ paddingTop: 0 }}>
                                             <div className="dropdown-dual-wrap">
-                                                <Link to="/about" className="dropdown-link-wrapper w-inline-block">
+                                                <Link to="/about#values" className="dropdown-link-wrapper w-inline-block">
                                                     <div className="dropdown-link-wrap">
                                                         <div className="dropdown-item-title">Our Values</div>
+                                                    </div>
+                                                </Link>
+                                                <Link to="/about#vision" className="dropdown-link-wrapper w-inline-block">
+                                                    <div className="dropdown-link-wrap">
                                                         <div className="dropdown-item-title">Our Vision</div>
+                                                    </div>
+                                                </Link>
+                                                <Link to="/about#mission" className="dropdown-link-wrapper w-inline-block">
+                                                    <div className="dropdown-link-wrap">
                                                         <div className="dropdown-item-title">Our Mission</div>
+                                                    </div>
+                                                </Link>
+                                                <Link to="/about#leadership" className="dropdown-link-wrapper w-inline-block">
+                                                    <div className="dropdown-link-wrap">
                                                         <div className="dropdown-item-title">Our Leadership Team</div>
+                                                    </div>
+                                                </Link>
+                                                <Link to="/about#accomplishments" className="dropdown-link-wrapper w-inline-block">
+                                                    <div className="dropdown-link-wrap">
                                                         <div className="dropdown-item-title">Our Accomplishments</div>
                                                     </div>
                                                 </Link>
@@ -92,38 +108,6 @@ export default function Navbar() {
                             </nav>
                         </div>
 
-                        {/* Our Founders dropdown */}
-                        <div data-delay="400" data-hover="false"
-                            data-w-id="fde50651-1d3f-2cf0-7c13-1ca51d9561e2"
-                            className={`dropdown w-dropdown${activeDropdown === 'founders' ? ' w--open' : ''}`}
-                            onMouseEnter={() => setActiveDropdown('founders')}
-                            onMouseLeave={() => setActiveDropdown(null)}>
-                            <div className="dropdown-toggle w-dropdown-toggle"
-                                onClick={() => setActiveDropdown(v => v === 'founders' ? null : 'founders')}>
-                                <div className="dropdown-title-wrapper">
-                                    <div className="dropdown-title-wrap">
-                                        <div className="dropdown-title">Our Founders</div>
-                                        <div className="dropdown-title">Our Founders</div>
-                                    </div>
-                                    <img loading="lazy" src="/img/CaretDown.svg" alt="" className="dropdown-arrow" />
-                                </div>
-                            </div>
-                            <nav className={`dropdown-list w-dropdown-list${activeDropdown === 'founders' ? ' w--open' : ''}`} style={{ minWidth: '250px', left: 0, right: 'auto' }}>
-                                <div className="dropdown-pd v2" style={{ gridTemplateColumns: '1fr', padding: '20px', minWidth: '250px' }}>
-                                    <div className="dropdown-list-wrap" style={{ marginLeft: 0 }}>
-                                        <div className="dropdown-list-wrapper" style={{ paddingTop: 0 }}>
-                                            <div className="dropdown-dual-wrap">
-                                                <Link to="/founders" className="dropdown-link-wrapper w-inline-block">
-                                                    <div className="dropdown-link-wrap">
-                                                        <div className="dropdown-item-title">Our leadership team</div>
-                                                    </div>
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </nav>
-                        </div>
 
                         {/* Our Brands dropdown */}
                         <div data-delay="400" data-hover="false"
@@ -148,12 +132,12 @@ export default function Navbar() {
                                             <div className="dropdown-dual-wrap">
                                                 <Link to="/brands/raw-radicles" className="dropdown-link-wrapper w-inline-block">
                                                     <div className="dropdown-link-wrap">
-                                                        <div className="dropdown-item-title">Raw radicles</div>
+                                                        <div className="dropdown-item-title">Raw Radicles</div>
                                                     </div>
                                                 </Link>
                                                 <Link to="/brands/genalpha" className="dropdown-link-wrapper w-inline-block">
                                                     <div className="dropdown-link-wrap">
-                                                        <div className="dropdown-item-title">Genalpha</div>
+                                                        <div className="dropdown-item-title">Gen-Alpha Portable Lab</div>
                                                     </div>
                                                 </Link>
                                             </div>
@@ -249,8 +233,8 @@ export default function Navbar() {
                         <Link to="/pricing"
                             className={`global-text-style w-inline-block${isPricing ? ' w--current' : ''}`}>
                             <div className="link-wrap">
-                                <div className="navbar-menu-title">Pricing</div>
-                                <div className="navbar-menu-title">Pricing</div>
+                                <div className="navbar-menu-title">News & Events</div>
+                                <div className="navbar-menu-title">News & Events</div>
                             </div>
                         </Link>
 
@@ -283,8 +267,8 @@ export default function Navbar() {
                             data-w-id="fde50651-1d3f-2cf0-7c13-1ca51d956278"
                             className="primary-button-wrapper navbar w-inline-block">
                             <div className="primary-button-wrap">
-                                <div className="primary-button-text">Get a Demo</div>
-                                <div className="primary-button-text">Get a Demo</div>
+                                <div className="primary-button-text">Get in Touch</div>
+                                <div className="primary-button-text">Get in Touch</div>
                             </div>
                             <img loading="lazy" src="/img/ArrowUp.svg" alt="" className="primary-button-icon" />
                         </Link>

@@ -69,8 +69,8 @@ export default function Hero({ variant = 'home', title, subtitle }) {
                                 <Link to="/contact" data-w-id="d6e99a6b-32b8-7752-4992-8db9e68f321f"
                                     className="primary-button-wrapper secondary w-inline-block">
                                     <div className="primary-button-wrap">
-                                        <div className="primary-button-text">Book a Demo </div>
-                                        <div className="primary-button-text">Book a Demo </div>
+                                        <div className="primary-button-text">Contact Us </div>
+                                        <div className="primary-button-text">Contact Us </div>
                                     </div>
                                     <img loading="lazy" src="/img/ArrowUp.svg" alt="" className="primary-button-icon" />
                                 </Link>
