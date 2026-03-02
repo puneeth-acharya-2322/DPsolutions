@@ -72,24 +72,20 @@ export default function Blogs() {
                     <div className="hero-top-wrapper">
                         {/* data-w-id exactly from blogs.html at position 28200 */}
                         <div data-w-id="72aac671-aa57-7d90-e97d-97e1a4b6cbeb"
-                            style={{ opacity: 0 }}
                             className="hero-top-text-wrapper">
                             <img src="/img/Coins.svg" loading="lazy" alt="" className="hero-top-icon" />
                             <div className="hero-top-subtitle">#1 <span className="hero-top-subtitle-span">FINANCE PLATFORM</span></div>
                         </div>
                         {/* h1 class: "section-top-hero-title features" — NOT just "section-top-hero-title" */}
                         <h1 data-w-id="72aac671-aa57-7d90-e97d-97e1a4b6cbf1"
-                            style={{ opacity: 0 }}
                             className="section-top-hero-title features">
                             About best <span className="design-text">featured </span><span className="design-text">blogs</span> of company
                         </h1>
                         <p data-w-id="72aac671-aa57-7d90-e97d-97e1a4b6cbf9"
-                            style={{ opacity: 0 }}
                             className="section-top-description">
                             We provide comprehensive financial solutions to help you achieve your goals. From Personalized.
                         </p>
                         <div data-w-id="72aac671-aa57-7d90-e97d-97e1a4b6cbfb"
-                            style={{ opacity: 0 }}
                             className="hero-button-wrapper">
                             <a href="/contact" data-w-id="d6e99a6b-32b8-7752-4992-8db9e68f321f"
                                 className="primary-button-wrapper secondary w-inline-block">
@@ -124,7 +120,6 @@ export default function Blogs() {
                                 <div role="list" className="w-dyn-items">
                                     <div role="listitem" className="w-dyn-item">
                                         <a data-w-id="72038d32-9417-ae59-747f-d1a2bcd4acce"
-                                            style={{ opacity: 0 }}
                                             href="/article/mastering-your-money-smart"
                                             className="blog-link-wrapper w-inline-block">
                                             <div className="blog-image-wrapper">
@@ -161,7 +156,6 @@ export default function Blogs() {
                                     {/* Side blog 1 — data-w-id: ace0 (both cards share same ID) */}
                                     <div role="listitem" className="w-dyn-item">
                                         <a data-w-id="72038d32-9417-ae59-747f-d1a2bcd4ace0"
-                                            style={{ opacity: 0 }}
                                             href="/article/debt-management-strategies"
                                             className="blog-link-wrapper _02 w-inline-block">
                                             {/* image-wrapper has the shared node id */}
@@ -188,7 +182,6 @@ export default function Blogs() {
                                     {/* Side blog 2 — same data-w-id as blog 1 (exact from real HTML) */}
                                     <div role="listitem" className="w-dyn-item">
                                         <a data-w-id="72038d32-9417-ae59-747f-d1a2bcd4ace0"
-                                            style={{ opacity: 0 }}
                                             href="/article/smart-ways-to-save-for-retirement"
                                             className="blog-link-wrapper _02 w-inline-block">
                                             <div id="w-node-_72038d32-9417-ae59-747f-d1a2bcd4ace1-e340b76e"
@@ -238,7 +231,6 @@ export default function Blogs() {
                                     <div key={idx} role="listitem" className="w-dyn-item">
                                         {/* All 6 share the same data-w-id in the real Webflow CMS HTML */}
                                         <a data-w-id="13fdafaa-198b-4aa9-ac0f-68f8271e6185"
-                                            style={{ opacity: 0 }}
                                             href={art.href}
                                             className="article-link-wrapper w-inline-block">
                                             <div className="article-image-wrapper">

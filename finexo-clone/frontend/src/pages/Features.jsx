@@ -366,7 +366,7 @@ export default function Features() {
                     <div className="ticker-content-wrapper _02">
                         <div data-w-id="702b3f3b-bf68-67be-cbbd-c7e460d6c2ee"
                             className="ticker-title">
-                            Over 4M+ connected with us!
+                            Trusted by leading brands
                         </div>
                         <div className="ticker-content-wrap">
                             <div data-w-id="702b3f3b-bf68-67be-cbbd-c7e460d6c2f1"

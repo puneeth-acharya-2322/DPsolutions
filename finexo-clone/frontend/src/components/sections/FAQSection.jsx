@@ -36,7 +36,7 @@ export default function FAQSection() {
                                 {/* FAQ 1 — Tab 2 in Webflow data-w-tab (real HTML starts at Tab 2) */}
                                 <a data-w-tab="Tab 2"
                                     data-w-id="fe3cc9fa-660c-b4c0-739e-efbd2513112c"
-                                    className="faq-content w-inline-block w-tab-link"
+                                    className="faq-content w-inline-block w-tab-link w--current"
                                     href="#">
                                     <div className="faq-top-wrapper">
                                         <h4>What are the benefits of using your financial tools?</h4>
@@ -47,8 +47,8 @@ export default function FAQSection() {
                                     </div>
                                     <div className="faq-ans">
                                         <ul role="list" className="list">
-                                            <li>Right now, every time you&apos;ve got something new to share, you have to go to every single one of your channels to change the link in each of your bios.</li>
-                                            <li>It&apos;s time-consuming and complicated - making it so much harder to keep everything up to date.</li>
+                                            <li>Our financial tools provide real-time insights, automated expense tracking, and personalized investment strategies tailored to your goals.</li>
+                                            <li>This empowers you to make informed decisions and optimize your financial growth with minimal effort, saving you both time and money.</li>
                                         </ul>
                                     </div>
                                 </a>
@@ -67,8 +67,8 @@ export default function FAQSection() {
                                     </div>
                                     <div className="faq-ans">
                                         <ul role="list" className="list">
-                                            <li>Right now, every time you&apos;ve got something new to share, you have to go to every single one of your channels to change the link in each of your bios.</li>
-                                            <li>It&apos;s time-consuming and complicated - making it so much harder to keep everything up to date.</li>
+                                            <li>Getting started is quick and easy. Simply sign up for an account, complete your profile, and connect your bank securely.</li>
+                                            <li>Once connected, our intuitive dashboard will guide you through the remaining setup so you can begin managing your finances immediately.</li>
                                         </ul>
                                     </div>
                                 </a>
@@ -87,8 +87,8 @@ export default function FAQSection() {
                                     </div>
                                     <div className="faq-ans">
                                         <ul role="list" className="list">
-                                            <li>Right now, every time you&apos;ve got something new to share, you have to go to every single one of your channels to change the link in each of your bios.</li>
-                                            <li>It&apos;s time-consuming and complicated - making it so much harder to keep everything up to date.</li>
+                                            <li>Security is our top priority. We use bank-level 256-bit encryption, multi-factor authentication (MFA), and secure servers to protect your data.</li>
+                                            <li>We maintain strict compliance with industry standards and never sell or share your personal information with unauthorized third parties.</li>
                                         </ul>
                                     </div>
                                 </a>
@@ -107,8 +107,8 @@ export default function FAQSection() {
                                     </div>
                                     <div className="faq-ans">
                                         <ul role="list" className="list">
-                                            <li>Right now, every time you&apos;ve got something new to share, you have to go to every single one of your channels to change the link in each of your bios.</li>
-                                            <li>It&apos;s time-consuming and complicated - making it so much harder to keep everything up to date.</li>
+                                            <li>Our dedicated support team is available 24/7. You can reach us via the live chat feature on our platform, or email us at support.</li>
+                                            <li>Additionally, we offer comprehensive documentation and video tutorials in our Help Center to assist you with common inquiries.</li>
                                         </ul>
                                     </div>
                                 </a>
@@ -127,8 +127,8 @@ export default function FAQSection() {
                                     </div>
                                     <div className="faq-ans">
                                         <ul role="list" className="list">
-                                            <li>Right now, every time you&apos;ve got something new to share, you have to go to every single one of your channels to change the link in each of your bios.</li>
-                                            <li>It&apos;s time-consuming and complicated - making it so much harder to keep everything up to date.</li>
+                                            <li>We accept all major credit and debit cards including Visa, Mastercard, and American Express for seamless transactions.</li>
+                                            <li>We also support popular digital wallets like Apple Pay and Google Pay, as well as direct bank transfers (ACH) for your convenience.</li>
                                         </ul>
                                     </div>
                                 </a>

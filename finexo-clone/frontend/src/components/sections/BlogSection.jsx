@@ -43,6 +43,7 @@ export default function BlogSection() {
                                             <h3 style={{ color: 'rgb(19,39,77)' }} className="blog-title">Mastering Your Money: Smart...</h3>
                                             <div className="blog-description">Discover key investment strategies that help grow your wealth and secure...</div>
                                         </div>
+                                        <p className="none-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
                                     </Link>
                                 </div>
                             </div>
@@ -65,6 +66,7 @@ export default function BlogSection() {
                                                 <h3 className="blog-title _02">Debt Management Strategies.</h3>
                                                 <div className="blog-description">Turn your free time into extra income profitable side...</div>
                                             </div>
+                                            <p className="none-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
                                             <div className="blog-top-wrapper">
                                                 <div className="blog-category-wrapper"><div>Investing</div></div>
                                                 <div className="blog-dot-icon"></div>
@@ -85,6 +87,7 @@ export default function BlogSection() {
                                                 <h3 className="blog-title _02">Smart Ways to Save for Retirement.</h3>
                                                 <div className="blog-description">Break down the complexities of the stock market...</div>
                                             </div>
+                                            <p className="none-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
                                             <div className="blog-top-wrapper">
                                                 <div className="blog-category-wrapper"><div>Budgeting</div></div>
                                                 <div className="blog-dot-icon"></div>

@@ -29,45 +29,31 @@ export function useWebflowInit() {
   useEffect(() => {
     if (typeof window === 'undefined') return
 
-    // ── STEP 1: Scroll to top IMMEDIATELY (synchronous, before any rAF) ────────
-    //
-    // CRITICAL: This must happen BEFORE Webflow IX2 re-initializes.
-    // Webflow IX2 uses IntersectionObserver + scroll position to decide which
-    // elements are "in viewport" and should trigger entrance animations.
-    //
-    // Without this: React Router keeps the scroll position from the previous
-    // page → IX2 initializes and finds many elements "already in view" →
-    // those elements never get their fade-in animation triggered → user must
-    // scroll to force a re-evaluation.
-    //
-    // With this: page is at top (0,0) when IX2 initializes → only elements
-    // visible in the fresh viewport are considered "in view" → all scroll-
-    // triggered animations play correctly as the user scrolls down.
+    // ── STEP 1: Set attributes IMMEDIATELY (synchronous) ────────────────────────
+    const pageId = PAGE_WF_IDS[location.pathname] || PAGE_WF_IDS['/']
+    const html = document.documentElement
+    html.setAttribute('data-wf-page', pageId)
+    html.setAttribute('data-wf-site', SITE_ID)
+
+    // ── STEP 2: Scroll to top IMMEDIATELY ───────────────────────────────────────
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
 
-    // ── STEP 2: Double rAF — let React commit the DOM, then init Webflow ───────
-    //
-    // Double requestAnimationFrame guarantees:
-    // rAF 1 → browser layout pass with new DOM
-    // rAF 2 → browser paint committed, all elements have correct positions
-    // Then Webflow IX2 measures element positions from a clean (top) scroll state
+    // ── STEP 3: Double rAF + Manual Scroll Trigger ─────────────────────────────
     let raf1, raf2
     raf1 = requestAnimationFrame(() => {
       raf2 = requestAnimationFrame(() => {
         try {
-          // ── 2a. Swap data-wf-page to the correct page ID ───────────────
-          const pageId = PAGE_WF_IDS[location.pathname] || PAGE_WF_IDS['/']
-          const html = document.documentElement
-          html.setAttribute('data-wf-page', pageId)
-          html.setAttribute('data-wf-site', SITE_ID)
-
-          // ── 2b. Re-initialize Webflow with the correct page context ─────
           if (window.Webflow) {
             window.Webflow.destroy()
             window.Webflow.ready()
+            
             if (window.Webflow.require) {
               const ix2 = window.Webflow.require('ix2')
-              if (ix2 && ix2.init) ix2.init()
+              if (ix2 && ix2.init) {
+                ix2.init()
+                // Force a scroll event to wake up IX2 engine
+                window.dispatchEvent(new Event('scroll'))
+              }
             }
           }
         } catch (e) {

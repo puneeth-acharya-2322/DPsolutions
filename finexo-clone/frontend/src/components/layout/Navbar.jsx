@@ -14,13 +14,13 @@ import { Link, useLocation } from 'react-router-dom'
    ────────────────────────────────────────────────────────*/
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false)
-    const [dropdownOpen, setDropdownOpen] = useState(false)
+    const [activeDropdown, setActiveDropdown] = useState(null)
     const location = useLocation()
 
     // Close menu and dropdown on navigation
     useEffect(() => {
         setMenuOpen(false)
-        setDropdownOpen(false)
+        setActiveDropdown(null)
     }, [location.pathname])
 
     const isHome = location.pathname === '/'
@@ -39,7 +39,7 @@ export default function Navbar() {
                     <div className="nav-first-item-wrap">
                         <Link to="/" aria-current={isHome ? 'page' : undefined}
                             className={`navbar-logo-wrapper w-nav-brand${isHome ? ' w--current' : ''}`}>
-                            <img loading="lazy" src="/img/Finexo.svg" alt="" className="navbar-logo" />
+                            <img loading="lazy" src="/img/logo_dp.png" alt="" className="navbar-logo" style={{ maxHeight: '60px', width: 'auto' }} />
                         </Link>
                     </div>
 
@@ -55,14 +55,117 @@ export default function Navbar() {
                             </div>
                         </Link>
 
-                        {/* Pages dropdown */}
+                        {/* About us dropdown */}
                         <div data-delay="400" data-hover="false"
                             data-w-id="fde50651-1d3f-2cf0-7c13-1ca51d9561e2"
-                            className={`dropdown w-dropdown${dropdownOpen ? ' w--open' : ''}`}
-                            onMouseEnter={() => setDropdownOpen(true)}
-                            onMouseLeave={() => setDropdownOpen(false)}>
+                            className={`dropdown w-dropdown${activeDropdown === 'about' ? ' w--open' : ''}`}
+                            onMouseEnter={() => setActiveDropdown('about')}
+                            onMouseLeave={() => setActiveDropdown(null)}>
                             <div className="dropdown-toggle w-dropdown-toggle"
-                                onClick={() => setDropdownOpen(v => !v)}>
+                                onClick={() => setActiveDropdown(v => v === 'about' ? null : 'about')}>
+                                <div className="dropdown-title-wrapper">
+                                    <div className="dropdown-title-wrap">
+                                        <div className="dropdown-title">About us</div>
+                                        <div className="dropdown-title">About us</div>
+                                    </div>
+                                    <img loading="lazy" src="/img/CaretDown.svg" alt="" className="dropdown-arrow" />
+                                </div>
+                            </div>
+                            <nav className={`dropdown-list w-dropdown-list${activeDropdown === 'about' ? ' w--open' : ''}`} style={{ minWidth: '250px', left: 0, right: 'auto' }}>
+                                <div className="dropdown-pd v2" style={{ gridTemplateColumns: '1fr', padding: '20px', minWidth: '250px' }}>
+                                    <div className="dropdown-list-wrap" style={{ marginLeft: 0 }}>
+                                        <div className="dropdown-list-wrapper" style={{ paddingTop: 0 }}>
+                                            <div className="dropdown-dual-wrap">
+                                                <Link to="/about" className="dropdown-link-wrapper w-inline-block">
+                                                    <div className="dropdown-link-wrap">
+                                                        <div className="dropdown-item-title">Our company</div>
+                                                    </div>
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+
+                        {/* Our Founders dropdown */}
+                        <div data-delay="400" data-hover="false"
+                            data-w-id="fde50651-1d3f-2cf0-7c13-1ca51d9561e2"
+                            className={`dropdown w-dropdown${activeDropdown === 'founders' ? ' w--open' : ''}`}
+                            onMouseEnter={() => setActiveDropdown('founders')}
+                            onMouseLeave={() => setActiveDropdown(null)}>
+                            <div className="dropdown-toggle w-dropdown-toggle"
+                                onClick={() => setActiveDropdown(v => v === 'founders' ? null : 'founders')}>
+                                <div className="dropdown-title-wrapper">
+                                    <div className="dropdown-title-wrap">
+                                        <div className="dropdown-title">Our Founders</div>
+                                        <div className="dropdown-title">Our Founders</div>
+                                    </div>
+                                    <img loading="lazy" src="/img/CaretDown.svg" alt="" className="dropdown-arrow" />
+                                </div>
+                            </div>
+                            <nav className={`dropdown-list w-dropdown-list${activeDropdown === 'founders' ? ' w--open' : ''}`} style={{ minWidth: '250px', left: 0, right: 'auto' }}>
+                                <div className="dropdown-pd v2" style={{ gridTemplateColumns: '1fr', padding: '20px', minWidth: '250px' }}>
+                                    <div className="dropdown-list-wrap" style={{ marginLeft: 0 }}>
+                                        <div className="dropdown-list-wrapper" style={{ paddingTop: 0 }}>
+                                            <div className="dropdown-dual-wrap">
+                                                <Link to="/founders" className="dropdown-link-wrapper w-inline-block">
+                                                    <div className="dropdown-link-wrap">
+                                                        <div className="dropdown-item-title">Our leadership team</div>
+                                                    </div>
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+
+                        {/* Our Brands dropdown */}
+                        <div data-delay="400" data-hover="false"
+                            data-w-id="fde50651-1d3f-2cf0-7c13-1ca51d9561e2"
+                            className={`dropdown w-dropdown${activeDropdown === 'brands' ? ' w--open' : ''}`}
+                            onMouseEnter={() => setActiveDropdown('brands')}
+                            onMouseLeave={() => setActiveDropdown(null)}>
+                            <div className="dropdown-toggle w-dropdown-toggle"
+                                onClick={() => setActiveDropdown(v => v === 'brands' ? null : 'brands')}>
+                                <div className="dropdown-title-wrapper">
+                                    <div className="dropdown-title-wrap">
+                                        <div className="dropdown-title">Our Brands</div>
+                                        <div className="dropdown-title">Our Brands</div>
+                                    </div>
+                                    <img loading="lazy" src="/img/CaretDown.svg" alt="" className="dropdown-arrow" />
+                                </div>
+                            </div>
+                            <nav className={`dropdown-list w-dropdown-list${activeDropdown === 'brands' ? ' w--open' : ''}`} style={{ minWidth: '250px', left: 0, right: 'auto' }}>
+                                <div className="dropdown-pd v2" style={{ gridTemplateColumns: '1fr', padding: '20px', minWidth: '250px' }}>
+                                    <div className="dropdown-list-wrap" style={{ marginLeft: 0 }}>
+                                        <div className="dropdown-list-wrapper" style={{ paddingTop: 0 }}>
+                                            <div className="dropdown-dual-wrap">
+                                                <Link to="/brands/raw-radicles" className="dropdown-link-wrapper w-inline-block">
+                                                    <div className="dropdown-link-wrap">
+                                                        <div className="dropdown-item-title">Raw radicles</div>
+                                                    </div>
+                                                </Link>
+                                                <Link to="/brands/genalpha" className="dropdown-link-wrapper w-inline-block">
+                                                    <div className="dropdown-link-wrap">
+                                                        <div className="dropdown-item-title">Genalpha</div>
+                                                    </div>
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                        {/* Pages dropdown */}
+                        {/* <div data-delay="400" data-hover="false"
+                            data-w-id="fde50651-1d3f-2cf0-7c13-1ca51d9561e2"
+                            className={`dropdown w-dropdown${activeDropdown === 'pages' ? ' w--open' : ''}`}
+                            onMouseEnter={() => setActiveDropdown('pages')}
+                            onMouseLeave={() => setActiveDropdown(null)}>
+                            <div className="dropdown-toggle w-dropdown-toggle"
+                                onClick={() => setActiveDropdown(v => v === 'pages' ? null : 'pages')}>
                                 <div className="dropdown-title-wrapper">
                                     <div className="dropdown-title-wrap">
                                         <div className="dropdown-title">Pages</div>
@@ -71,9 +174,9 @@ export default function Navbar() {
                                     <img loading="lazy" src="/img/CaretDown.svg" alt="" className="dropdown-arrow" />
                                 </div>
                             </div>
-                            <nav className={`dropdown-list w-dropdown-list${dropdownOpen ? ' w--open' : ''}`}>
+                            <nav className={`dropdown-list w-dropdown-list${activeDropdown === 'pages' ? ' w--open' : ''}`}>
                                 <div className="dropdown-pd v2">
-                                    {/* Main Pages */}
+                                     Main Pages 
                                     <div className="navbar-line-wrapper">
                                         <div className="dropdown-list-wrap">
                                             <div className="navbar-title">Main Pages</div>
@@ -108,7 +211,7 @@ export default function Navbar() {
                                         </div>
                                     </div>
 
-                                    {/* Inner Pages */}
+                                    Inner Pages
                                     <div id="w-node-fde50651-1d3f-2cf0-7c13-1ca51d956204-1d9561d5" className="navbar-line-wrapper">
                                         <div className="navbar-list-items">
                                             <div className="navbar-title">Inner Pages</div>
@@ -136,7 +239,7 @@ export default function Navbar() {
                                     </div>
                                 </div>
                             </nav>
-                        </div>
+                        </div> */}
 
                         {/* Pricing link */}
                         <Link to="/pricing"

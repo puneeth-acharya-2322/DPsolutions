@@ -25,23 +25,19 @@ export default function Pricing() {
                     {/* Hero */}
                     <div className="hero-top-wrapper">
                         <div data-w-id="6444e04b-f4d6-64b5-af74-17171db5d4b7"
-                            style={{ opacity: 0 }}
                             className="hero-top-text-wrapper">
                             <img src="/img/Coins.svg" loading="lazy" alt="" className="hero-top-icon" />
                             <div className="hero-top-subtitle">#1 <span className="hero-top-subtitle-span">FINANCE PLATFORM</span></div>
                         </div>
                         <h1 data-w-id="6444e04b-f4d6-64b5-af74-17171db5d4bd"
-                            style={{ opacity: 0 }}
                             className="section-top-hero-title features">
                             Flexible <span className="design-text">pricing</span> for <span className="design-text">team</span> usage
                         </h1>
                         <p data-w-id="6444e04b-f4d6-64b5-af74-17171db5d4c4"
-                            style={{ opacity: 0 }}
                             className="section-top-description">
                             We provide comprehensive financial solutions to help you achieve your goals. From Personalized.
                         </p>
                         <div data-w-id="6444e04b-f4d6-64b5-af74-17171db5d4c6"
-                            style={{ opacity: 0 }}
                             className="hero-button-wrapper">
                             <a href="/contact" data-w-id="d6e99a6b-32b8-7752-4992-8db9e68f321f"
                                 className="primary-button-wrapper secondary w-inline-block">
@@ -72,7 +68,6 @@ export default function Pricing() {
                                     {/* All 3 cards share SAME data-w-id — this is how real Webflow CMS
                                         renders CMS list items; IX2 uses this single ID for all cards */}
                                     <div data-w-id="0ccced61-16db-4637-7360-cf22208d4023"
-                                        style={{ opacity: 0 }}
                                         className="pricing-details-wrapper">
                                         <div className="pricing-top-wrapper">
                                             <img loading="lazy" src="/img/Pricing-Icon-1.svg" alt="" className="pricing-icon" />
@@ -104,7 +99,6 @@ export default function Pricing() {
                                 <div role="listitem" className="w-dyn-item">
                                     {/* Same data-w-id as Basic and Premium — matches real Webflow CMS output */}
                                     <div data-w-id="0ccced61-16db-4637-7360-cf22208d4023"
-                                        style={{ opacity: 0 }}
                                         className="pricing-details-wrapper">
                                         <div className="pricing-top-wrapper">
                                             <img loading="lazy" src="/img/Pricing-Icon-2.svg" alt="" className="pricing-icon" />
