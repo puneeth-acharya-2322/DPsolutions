@@ -314,3 +314,8 @@ h6 {
 .delay-500 {
   transition-delay: 0.5s;
 }
+
+/* Hide Webflow Badge */
+.w-webflow-badge {
+  display: none !important;
+}

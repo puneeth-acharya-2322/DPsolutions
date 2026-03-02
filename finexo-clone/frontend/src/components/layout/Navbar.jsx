@@ -78,7 +78,11 @@ export default function Navbar() {
                                             <div className="dropdown-dual-wrap">
                                                 <Link to="/about" className="dropdown-link-wrapper w-inline-block">
                                                     <div className="dropdown-link-wrap">
-                                                        <div className="dropdown-item-title">Our company</div>
+                                                        <div className="dropdown-item-title">Our Values</div>
+                                                        <div className="dropdown-item-title">Our Vision</div>
+                                                        <div className="dropdown-item-title">Our Mission</div>
+                                                        <div className="dropdown-item-title">Our Leadership Team</div>
+                                                        <div className="dropdown-item-title">Our Accomplishments</div>
                                                     </div>
                                                 </Link>
                                             </div>

@@ -7211,3 +7211,9 @@ strong {
     grid-area: span 1 / span 1 / span 1 / span 1;
   }
 }
+
+
+/* Hide Webflow Badge */
+.w-webflow-badge {
+  display: none !important;
+}

@@ -8,6 +8,29 @@ import { Link } from 'react-router-dom'
 export default function FeaturesSection() {
     return (
         <>
+            <style>{`
+                @keyframes float-img {
+                    0% { transform: translateY(0px); }
+                    50% { transform: translateY(-10px); }
+                    100% { transform: translateY(0px); }
+                }
+                @keyframes spin-slow {
+                    from { transform: rotate(0deg); }
+                    to { transform: rotate(360deg); }
+                }
+                @keyframes spin-slow-reverse {
+                    from { transform: rotate(360deg); }
+                    to { transform: rotate(0deg); }
+                }
+                @keyframes pulse-node {
+                    0% { transform: scale(1); opacity: 1; }
+                    50% { transform: scale(1.5); opacity: 0.5; }
+                    100% { transform: scale(1); opacity: 1; }
+                }
+                .floating-img {
+                    animation: float-img 4s ease-in-out infinite;
+                }
+            `}</style>
             {/* ── Section 1: Control / Card features ─────────── */}
             <section className="section features">
                 <div className="w-layout-blockcontainer container w-container">
@@ -21,52 +44,64 @@ export default function FeaturesSection() {
                             className="section-top-title">Take a control for your finances</h2>
                     </div>
 
-                    <div className="control-content-wrapper">
+                    <div className="control-content-wrapper" style={{ gridTemplateColumns: '1fr 1fr 1fr 1fr' }}>
                         {/* Card 1 */}
                         <div data-w-id="9508af15-2a36-4a03-9858-5fd31e914dba"
-                            className="control-content-wrap">
+                            className="control-content-wrap"
+                            style={{ transition: 'transform 0.3s ease', cursor: 'pointer' }}
+                            onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-10px)'}
+                            onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}>
                             <div className="control-top-content-wrapper">
-                                <h3 className="feature-title">Automated Savings</h3>
-                                <div className="control-description">Set it and Automate your savings with recurring transfer.</div>
+                                <h3 className="feature-title">Expertise Across Domains</h3>
+                                <div className="control-description">Strong foundation in Branding, E-commerce, Ed-Tech, and R&D to cater to diverse business needs.</div>
                             </div>
                             <div className="control-image-wrapper">
-                                <img src="/img/Control-image-4.svg" loading="lazy" alt="" className="control-image" />
+                                <ExpertiseIcon />
                             </div>
                         </div>
 
                         {/* Card 2 */}
                         <div data-w-id="ae606966-5161-1ea8-3122-81bf1a27d097"
-                            className="control-content-wrap">
+                            className="control-content-wrap"
+                            style={{ transition: 'transform 0.3s ease', cursor: 'pointer' }}
+                            onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-10px)'}
+                            onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}>
                             <div className="control-top-content-wrapper">
-                                <h3 className="feature-title">Customizable Cards</h3>
-                                <div className="control-description">Take control of your debt with our budgeting</div>
+                                <h3 className="feature-title">Innovation-Driven Solutions</h3>
+                                <div className="control-description">Cutting-edge technology and research to create impactful and future-ready solutions.</div>
                             </div>
                             <div className="control-image-wrapper _02">
-                                <div data-w-id="746d95ac-ff3e-71a9-7389-606c0900101d"
-                                    data-animation-type="lottie"
-                                    data-src="/lottie/cards-382x314.json"
-                                    data-loop="1" data-direction="1" data-autoplay="1"
-                                    data-is-ix2-target="0" data-renderer="svg"
-                                    data-default-duration="0" data-duration="0">
-                                </div>
+                                <InnovationIcon />
                             </div>
                         </div>
 
                         {/* Card 3 */}
                         <div data-w-id="98631d1b-72cc-bd84-a455-e14048f1565f"
-                            className="control-content-wrap">
+                            className="control-content-wrap"
+                            style={{ transition: 'transform 0.3s ease', cursor: 'pointer' }}
+                            onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-10px)'}
+                            onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}>
                             <div className="control-top-content-wrapper">
-                                <h3 className="feature-title">Automated Savings</h3>
-                                <div className="control-description">Set it and Automate your savings with recurring transfer.</div>
+                                <h3 className="feature-title">Customized Approach</h3>
+                                <div className="control-description">Tailored strategies that align with your business goals for maximum success.</div>
                             </div>
                             <div className="control-image-wrapper _03">
-                                <div data-w-id="941b6407-85d8-537c-c1ef-d462ca14df22"
-                                    data-animation-type="lottie"
-                                    data-src="/lottie/savings-345x336.json"
-                                    data-loop="1" data-direction="1" data-autoplay="1"
-                                    data-is-ix2-target="0" data-renderer="svg"
-                                    data-default-duration="0" data-duration="0">
-                                </div>
+                                <CustomizationIcon />
+                            </div>
+                        </div>
+
+                        {/* Card 4 */}
+                        <div data-w-id="98631d1b-72cc-bd84-a455-e14048f1566f"
+                            className="control-content-wrap"
+                            style={{ transition: 'transform 0.3s ease', cursor: 'pointer' }}
+                            onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-10px)'}
+                            onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}>
+                            <div className="control-top-content-wrapper">
+                                <h3 className="feature-title">Global Impact</h3>
+                                <div className="control-description">Helping businesses scale and make a meaningful difference worldwide.</div>
+                            </div>
+                            <div className="control-image-wrapper">
+                                <GlobalIcon />
                             </div>
                         </div>
                     </div>
@@ -359,3 +394,93 @@ function FeatureTabs() {
         </div>
     )
 }
+
+const ExpertiseIcon = () => (
+    <div style={{ width: '100%', height: '220px', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
+        <div style={{ position: 'absolute', width: '160px', height: '160px', background: 'radial-gradient(circle, rgba(45,104,254,0.06) 0%, rgba(45,104,254,0) 70%)', borderRadius: '50%' }}></div>
+        <svg viewBox="0 0 200 200" style={{ width: '100%', height: '100%', overflow: 'visible' }}>
+            <g className="floating-img" style={{ animationDelay: '0s' }}>
+                <rect x="50" y="50" width="70" height="70" rx="16" fill="#fff" stroke="#2d68fe" strokeWidth="5" style={{ filter: 'drop-shadow(0 10px 15px rgba(45,104,254,0.15))' }} />
+                <path d="M70 85h30M70 100h20" stroke="#2d68fe" strokeWidth="5" strokeLinecap="round" />
+
+                <rect x="100" y="90" width="70" height="70" rx="16" fill="#0b2a5c" style={{ filter: 'drop-shadow(0 10px 15px rgba(11,42,92,0.2))' }} />
+                <path d="M125 125l10 10 20-20" stroke="#ffb400" strokeWidth="5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+
+                <circle cx="165" cy="55" r="24" fill="#ffb400" style={{ filter: 'drop-shadow(0 8px 12px rgba(255,180,0,0.3))' }} />
+                <path d="M157 55l6 6 12-12" stroke="#fff" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+
+                <circle cx="50" cy="145" r="18" fill="#2d68fe" />
+                <path d="M40 145h20" stroke="#fff" strokeWidth="3" strokeLinecap="round" />
+                <path d="M50 135v20" stroke="#fff" strokeWidth="3" strokeLinecap="round" />
+            </g>
+        </svg>
+    </div>
+)
+
+const InnovationIcon = () => (
+    <div style={{ width: '100%', height: '220px', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
+        <div style={{ position: 'absolute', width: '160px', height: '160px', background: 'radial-gradient(circle, rgba(255,180,0,0.06) 0%, rgba(255,180,0,0) 70%)', borderRadius: '50%' }}></div>
+        <svg viewBox="0 0 200 200" style={{ width: '100%', height: '100%', overflow: 'visible' }}>
+            <g className="floating-img" style={{ animationDelay: '1s' }}>
+                <path d="M100 40c-25 0-45 20-45 45 0 15 8 28 20 36v19c0 5 4 10 10 10h30c6 0 10-5 10-10v-19c12-8 20-21 20-36 0-25-20-45-45-45z" fill="#fff" stroke="#0b2a5c" strokeWidth="5" style={{ filter: 'drop-shadow(0 10px 15px rgba(11,42,92,0.15))' }} />
+                <path d="M85 160h30M90 170h20" stroke="#0b2a5c" strokeWidth="5" strokeLinecap="round" />
+                <path d="M100 75v30M85 90l15-15 15 15" stroke="#ffb400" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
+
+                <g style={{ animation: 'spin-slow 20s linear infinite', transformOrigin: '100px 85px' }}>
+                    <circle cx="40" cy="85" r="8" fill="#2d68fe" />
+                    <circle cx="160" cy="85" r="8" fill="#2d68fe" />
+                    <circle cx="100" cy="25" r="8" fill="#ffb400" />
+                </g>
+                <path d="M48 85h20M132 85h20M100 33v20\n" stroke="#cbd5e1" strokeWidth="3" strokeDasharray="4 4" />
+            </g>
+        </svg>
+    </div>
+)
+
+const CustomizationIcon = () => (
+    <div style={{ width: '100%', height: '220px', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
+        <div style={{ position: 'absolute', width: '160px', height: '160px', background: 'radial-gradient(circle, rgba(45,104,254,0.06) 0%, rgba(45,104,254,0) 70%)', borderRadius: '50%' }}></div>
+        <svg viewBox="0 0 200 200" style={{ width: '100%', height: '100%', overflow: 'visible' }}>
+            <g className="floating-img" style={{ animationDelay: '0.5s' }}>
+                <rect x="30" y="60" width="140" height="14" rx="7" fill="#e2e8f0" />
+                <rect x="30" y="100" width="140" height="14" rx="7" fill="#e2e8f0" />
+                <rect x="30" y="140" width="140" height="14" rx="7" fill="#e2e8f0" />
+
+                <rect x="30" y="60" width="60" height="14" rx="7" fill="#2d68fe" />
+                <rect x="30" y="100" width="90" height="14" rx="7" fill="#ffb400" />
+                <rect x="30" y="140" width="40" height="14" rx="7" fill="#0b2a5c" />
+
+                <circle cx="90" cy="67" r="16" fill="#fff" stroke="#2d68fe" strokeWidth="5" style={{ filter: 'drop-shadow(0 4px 6px rgba(45,104,254,0.3))' }} />
+                <circle cx="120" cy="107" r="16" fill="#fff" stroke="#ffb400" strokeWidth="5" style={{ filter: 'drop-shadow(0 4px 6px rgba(255,180,0,0.3))' }} />
+                <circle cx="70" cy="147" r="16" fill="#fff" stroke="#0b2a5c" strokeWidth="5" style={{ filter: 'drop-shadow(0 4px 6px rgba(11,42,92,0.3))' }} />
+            </g>
+        </svg>
+    </div>
+)
+
+const GlobalIcon = () => (
+    <div style={{ width: '100%', height: '220px', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
+        <div style={{ position: 'absolute', width: '180px', height: '180px', background: 'radial-gradient(circle, rgba(45,104,254,0.06) 0%, rgba(45,104,254,0) 70%)', borderRadius: '50%' }}></div>
+        <svg viewBox="0 0 200 200" style={{ width: '100%', height: '100%', overflow: 'visible' }}>
+            <g className="floating-img" style={{ animationDelay: '1.5s' }}>
+                <circle cx="100" cy="100" r="70" fill="#fff" stroke="#0b2a5c" strokeWidth="4" style={{ filter: 'drop-shadow(0 10px 20px rgba(11,42,92,0.15))' }} />
+                <g style={{ animation: 'spin-slow 20s linear infinite', transformOrigin: '100px 100px' }}>
+                    <ellipse cx="100" cy="100" rx="30" ry="70" fill="none" stroke="#2d68fe" strokeWidth="4" />
+                    <ellipse cx="100" cy="100" rx="70" ry="25" fill="none" stroke="#2d68fe" strokeWidth="4" />
+                </g>
+                <path d="M100 30v140" stroke="#0b2a5c" strokeWidth="4" strokeDasharray="6 6" />
+
+                <circle cx="100" cy="30" r="10" fill="#ffb400" />
+                <circle cx="100" cy="170" r="10" fill="#ffb400" />
+                <circle cx="30" cy="100" r="10" fill="#0b2a5c" />
+                <circle cx="170" cy="100" r="10" fill="#0b2a5c" />
+
+                <path d="M170 100l15-15M30 100l-15-15M100 30l15-20M100 170l-20 15" stroke="#cbd5e1" strokeWidth="3" strokeLinecap="round" />
+                <circle cx="185" cy="85" r="5" fill="#2d68fe" style={{ animation: 'pulse-node 2s infinite' }} />
+                <circle cx="15" cy="85" r="5" fill="#ffb400" style={{ animation: 'pulse-node 2.5s infinite' }} />
+                <circle cx="115" cy="10" r="5" fill="#0b2a5c" style={{ animation: 'pulse-node 1.8s infinite' }} />
+                <circle cx="80" cy="185" r="5" fill="#2d68fe" style={{ animation: 'pulse-node 2.2s infinite' }} />
+            </g>
+        </svg>
+    </div>
+)
