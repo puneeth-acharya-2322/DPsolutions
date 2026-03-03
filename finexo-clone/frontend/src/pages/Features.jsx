@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { EcommerceVisualRounded } from '../components/sections/FeaturesSection'
 
 /* ─────────────────────────────────────────────────────────
    Features Page — Pixel-perfect DOM replica
@@ -102,14 +103,14 @@ export default function Features() {
                                             <div data-w-id="22133966-01c9-08ad-9b13-dee17846fd86"
                                                 className="tab-colomn-wrap">
                                                 <img loading="lazy" src="/img/Tab-Icons-1.svg" alt="" className="tab-icon" />
-                                                <h2 className="tab-title">Customization Options</h2>
-                                                <div className="tab-description">Personalize your dashboard and to display the information.</div>
+                                                <h2 className="tab-title">Brand Strategy</h2>
+                                                <div className="tab-description">Building brands that are distinct, credible, and commercially strong.</div>
                                             </div>
                                             <div data-w-id="22133966-01c9-08ad-9b13-dee17846fd8c"
                                                 className="tab-colomn-wrap _02">
                                                 <img loading="lazy" src="/img/Tab-Icons-2.svg" alt="" className="tab-icon" />
-                                                <h2 className="tab-title">Effortless Tracking</h2>
-                                                <div className="tab-description">Monitor your progress towards your financial goals in real-time.</div>
+                                                <h2 className="tab-title">Positioning</h2>
+                                                <div className="tab-description">Clear brand strategy and positioning to stand out in the market.</div>
                                             </div>
                                         </div>
                                         {/* Center — Lottie (tab-image-wrapper bg) */}
@@ -129,14 +130,14 @@ export default function Features() {
                                             <div data-w-id="22133966-01c9-08ad-9b13-dee17846fd95"
                                                 className="tab-colomn-wrap">
                                                 <img loading="lazy" src="/img/Tab-Icon-3.svg" alt="" className="tab-icon" />
-                                                <h2 className="tab-title">At-a-Glance View</h2>
-                                                <div className="tab-description">See your overall financial health with a clear and concise summary</div>
+                                                <h2 className="tab-title">Digital Marketing</h2>
+                                                <div className="tab-description">Aligning your messaging with measurable business outcomes.</div>
                                             </div>
                                             <div data-w-id="22133966-01c9-08ad-9b13-dee17846fd9b"
                                                 className="tab-colomn-wrap _02">
                                                 <img loading="lazy" src="/img/Tab-Icon-4.svg" alt="" className="tab-icon" />
-                                                <h2 className="tab-title">Actionable Insights</h2>
-                                                <div className="tab-description">Gain valuable insights into your spending habits.</div>
+                                                <h2 className="tab-title">Campaign Execution</h2>
+                                                <div className="tab-description">End-to-end campaign execution for maximum reach and impact.</div>
                                             </div>
                                         </div>
                                     </div>
@@ -151,37 +152,29 @@ export default function Features() {
                                         <div className="tab-colomn-wrapper">
                                             <div className="tab-colomn-wrap">
                                                 <img loading="lazy" src="/img/Tab-Icons-1.svg" alt="" className="tab-icon" />
-                                                <h2 className="tab-title">Customization Options</h2>
-                                                <div className="tab-description">Personalize your dashboard and to display the information.</div>
+                                                <h2 className="tab-title">End-To-End Systems</h2>
+                                                <div className="tab-description">We design and manage comprehensive end-to-end commerce systems.</div>
                                             </div>
                                             <div className="tab-colomn-wrap _02">
                                                 <img loading="lazy" src="/img/Tab-Icons-2.svg" alt="" className="tab-icon" />
-                                                <h2 className="tab-title">Effortless Tracking</h2>
-                                                <div className="tab-description">Monitor your progress towards your financial goals in real-time.</div>
+                                                <h2 className="tab-title">Marketplace Onboarding</h2>
+                                                <div className="tab-description">Website development and seamless marketplace onboarding.</div>
                                             </div>
                                         </div>
-                                        {/* NOTE: class is "tab-image-wrapper" only — NO "bg" */}
                                         <div id="w-node-_22133966-01c9-08ad-9b13-dee17846fdb0-f704b8da"
                                             className="tab-image-wrapper">
-                                            <div
-                                                data-w-id="96b6b906-054f-bde9-f3ca-45700a939fab"
-                                                data-animation-type="lottie"
-                                                data-src="/lottie/tab-lottie-2.json"
-                                                data-loop="1" data-direction="1" data-autoplay="1"
-                                                data-is-ix2-target="0" data-renderer="svg"
-                                                data-default-duration="0" data-duration="0">
-                                            </div>
+                                            <EcommerceVisualRounded />
                                         </div>
                                         <div className="tab-colomn-wrapper">
                                             <div className="tab-colomn-wrap">
                                                 <img loading="lazy" src="/img/Tab-Icon-3.svg" alt="" className="tab-icon" />
-                                                <h2 className="tab-title">At-a-Glance View</h2>
-                                                <div className="tab-description">See your overall financial health with a clear and concise summary</div>
+                                                <h2 className="tab-title">Performance Marketing</h2>
+                                                <div className="tab-description">Catalog optimization and performance marketing strategies.</div>
                                             </div>
                                             <div className="tab-colomn-wrap _02">
                                                 <img loading="lazy" src="/img/Tab-Icon-4.svg" alt="" className="tab-icon" />
-                                                <h2 className="tab-title">Actionable Insights</h2>
-                                                <div className="tab-description">Gain valuable insights into your spending habits.</div>
+                                                <h2 className="tab-title">Quick-Commerce</h2>
+                                                <div className="tab-description">Logistics coordination and quick-commerce integrations.</div>
                                             </div>
                                         </div>
                                     </div>
@@ -195,26 +188,26 @@ export default function Features() {
                                         <div className="tab-colomn-wrapper">
                                             <div className="tab-colomn-wrap">
                                                 <img loading="lazy" src="/img/Tab-Icons-1.svg" alt="" className="tab-icon" />
-                                                <h2 className="tab-title">Customization Options</h2>
-                                                <div className="tab-description">Personalize your dashboard and to display the information.</div>
+                                                <h2 className="tab-title">Structured Engines</h2>
+                                                <div className="tab-description">We create robust and structured sales engines for your business.</div>
                                             </div>
                                             <div className="tab-colomn-wrap _02">
                                                 <img loading="lazy" src="/img/Tab-Icons-2.svg" alt="" className="tab-icon" />
-                                                <h2 className="tab-title">Effortless Tracking</h2>
-                                                <div className="tab-description">Monitor your progress towards your financial goals in real-time.</div>
+                                                <h2 className="tab-title">Channel Partnerships</h2>
+                                                <div className="tab-description">Developing channel partnerships and strong distributor networks.</div>
                                             </div>
                                         </div>
                                         <div id="w-node-_22133966-01c9-08ad-9b13-dee17846fdce-f704b8da"
                                             className="tab-image-wrapper">
                                             <div data-w-id="8e1a4fa2-29ca-e60a-e78b-e0c5bf799dfb"
                                                 className="third-tab-content-wrapper">
-                                                <div className="third-tan-subtitle">INTEGRATION</div>
-                                                <h2 className="third-tab-image-title">Integrate to control <span className="design-text">your finance</span></h2>
+                                                <div className="third-tan-subtitle">SALES</div>
+                                                <h2 className="third-tab-image-title">Drive <span className="design-text">predictable</span> revenue</h2>
                                                 <a href="/contact" data-w-id="0d66475d-82db-88c1-e5ac-1bf3ee0a1dca"
                                                     className="primary-button-wrapper secondary w-inline-block">
                                                     <div className="primary-button-wrap">
-                                                        <div className="primary-button-text">Start free</div>
-                                                        <div className="primary-button-text">Start free</div>
+                                                        <div className="primary-button-text">Start growing</div>
+                                                        <div className="primary-button-text">Start growing</div>
                                                     </div>
                                                     <img loading="lazy" alt="" src="/img/ArrowUp.svg" className="primary-button-icon" />
                                                 </a>
@@ -227,13 +220,13 @@ export default function Features() {
                                         <div className="tab-colomn-wrapper">
                                             <div className="tab-colomn-wrap">
                                                 <img loading="lazy" src="/img/Tab-Icon-3.svg" alt="" className="tab-icon" />
-                                                <h2 className="tab-title">At-a-Glance View</h2>
-                                                <div className="tab-description">See your overall financial health with a clear and concise summary</div>
+                                                <h2 className="tab-title">Lead Generation</h2>
+                                                <div className="tab-description">Advanced lead generation systems targeting high-value institutional sales.</div>
                                             </div>
                                             <div className="tab-colomn-wrap _02">
                                                 <img loading="lazy" src="/img/Tab-Icon-4.svg" alt="" className="tab-icon" />
-                                                <h2 className="tab-title">Actionable Insights</h2>
-                                                <div className="tab-description">Gain valuable insights into your spending habits.</div>
+                                                <h2 className="tab-title">Conversion Optimization</h2>
+                                                <div className="tab-description">Data-driven conversion optimization to maximize your sales pipeline.</div>
                                             </div>
                                         </div>
                                     </div>
