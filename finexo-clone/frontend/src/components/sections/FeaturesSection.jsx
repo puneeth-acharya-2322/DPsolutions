@@ -38,10 +38,10 @@ export default function FeaturesSection() {
                         <div data-w-id="e7af82c1-d798-7f93-082c-8e98ebf337e0"
                             className="section-top-subtitle-wrap phone-left">
                             <img src="/img/Feather.svg" loading="lazy" alt="" className="section-top-image" />
-                            <div className="section-top-subtitle">FEATURES</div>
+                            <div className="section-top-subtitle">Why Choose Us?</div>
                         </div>
                         <h2 data-w-id="bd59f56d-a367-d893-a558-ae1118c5b959"
-                            className="section-top-title">Take a control for your finances</h2>
+                            className="section-top-title">Innovate. Educate. Elevate</h2>
                     </div>
 
                     <div className="control-content-wrapper" style={{ gridTemplateColumns: '1fr 1fr 1fr 1fr' }}>
@@ -119,7 +119,7 @@ export default function FeaturesSection() {
                         </div>
                         <h2 data-w-id="cfa3e9b5-8188-28d5-4150-29ef74f17ef9"
                             className="section-top-title">
-                            Empower <span className="design-text">your</span> with a financial journey
+                            Integrated growth across <span className="design-text">Three</span> Core Domains
                         </h2>
                         <div data-w-id="a34f0792-587a-82a3-b6e0-10d6a8cf7bfa"
                             className="section-subtitle">
@@ -140,7 +140,7 @@ export default function FeaturesSection() {
                         <div data-w-id="a65be11c-987a-67a9-cd26-dc846082610d"
                             className="section-top-subtitle-wrap phone-left">
                             <img src="/img/Feather.svg" loading="lazy" alt="" className="section-top-image" />
-                            <div className="section-top-subtitle">FEATURES</div>
+                            <div className="section-top-subtitle">What We Do?</div>
                         </div>
                         <h2 data-w-id="a65be11c-987a-67a9-cd26-dc8460826111"
                             className="section-top-title">
@@ -228,7 +228,7 @@ function FeatureTabs() {
                         <img loading="lazy" src="/img/Dark-HandCoins.svg" alt="" className="tab-button-icon" />
                         <img loading="lazy" src="/img/HandCoins-white.svg" alt="" className="tab-button-icon-white" />
                     </div>
-                    <div className="tab-text">Dashboard Overview</div>
+                    <div className="tab-text">Marketing & Branding</div>
                 </a>
                 <a data-w-tab="Tab 3" onClick={e => { e.preventDefault(); setTab(1) }}
                     className={`tab-button w-inline-block w-tab-link${tab === 1 ? ' w--current' : ''}`} href="#">
@@ -236,7 +236,7 @@ function FeatureTabs() {
                         <img loading="lazy" src="/img/Money-black.svg" alt="" className="tab-button-icon" />
                         <img loading="lazy" src="/img/White-Money.svg" alt="" className="tab-button-icon-white" />
                     </div>
-                    <div className="tab-text">Invoice Management</div>
+                    <div className="tab-text">E-Commerce & Quick-Commerce</div>
                 </a>
                 <a data-w-tab="Tab 4" onClick={e => { e.preventDefault(); setTab(2) }}
                     className={`tab-button w-inline-block w-tab-link${tab === 2 ? ' w--current' : ''}`} href="#">
@@ -244,7 +244,7 @@ function FeatureTabs() {
                         <img loading="lazy" src="/img/CreditCard-ash.svg" alt="" className="tab-button-icon" />
                         <img loading="lazy" src="/img/CreditCard-white.svg" alt="" className="tab-button-icon-white" />
                     </div>
-                    <div className="tab-text">Invoice Management</div>
+                    <div className="tab-text">Sales</div>
                 </a>
             </div>
 

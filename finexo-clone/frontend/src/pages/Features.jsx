@@ -29,25 +29,25 @@ export default function Features() {
                         </div>
                         <h1 data-w-id="66d8eca5-d82a-2e40-b54c-ef5c602f22a6"
                             className="section-top-hero-title">
-                            Explore, manage, and <span className="design-text">grow</span> your finances easier
+                            Integrated growth across <span className="design-text">Three</span> Core Domains
                         </h1>
                         <p data-w-id="66d8eca5-d82a-2e40-b54c-ef5c602f22ac"
                             className="section-top-description center">
-                            We provide comprehensive financial solutions to help you achieve your goals. From Personalized.
+                            We work at the intersection of strategy, creativity, technology, and execution. From brand architecture and digital presence to marketplace expansion and sales systems, we help businesses grow with clarity and control.
                         </p>
                         <div data-w-id="66d8eca5-d82a-2e40-b54c-ef5c602f22ae"
                             className="hero-button-wrapper center">
                             <Link to="/contact" data-w-id="d6e99a6b-32b8-7752-4992-8db9e68f321f"
                                 className="primary-button-wrapper secondary w-inline-block">
                                 <div className="primary-button-wrap">
-                                    <div className="primary-button-text">Book a Demo </div>
-                                    <div className="primary-button-text">Book a Demo </div>
+                                    <div className="primary-button-text">Schedule a Strategy Call </div>
+                                    <div className="primary-button-text">Schedule a Strategy Call </div>
                                 </div>
                                 <img loading="lazy" src="/img/ArrowUp.svg" alt="" className="primary-button-icon" />
                             </Link>
                             <Link data-w-id="717a1373-40c1-701e-7ec9-e70365b0649a" to="/contact"
                                 className="download-button-wrapper w-inline-block">
-                                <div className="download-button-text">Download App</div>
+                                <div className="download-button-text">Explore Our Brands</div>
                                 <div className="download-button-icon-wrapper">
                                     <img src="/img/DownloadSimple.svg" loading="lazy" alt="" className="download-button-icon" />
                                     <img src="/img/DownloadSimple-White.svg" loading="lazy" alt="" className="download-button-white-icon" />
@@ -73,21 +73,21 @@ export default function Features() {
                                         <img loading="lazy" src="/img/Dark-HandCoins.svg" alt="" className="tab-button-icon" />
                                         <img loading="lazy" src="/img/HandCoins-white.svg" alt="" className="tab-button-icon-white" />
                                     </div>
-                                    <div className="tab-text">Dashboard Overview</div>
+                                    <div className="tab-text">Marketing & Branding</div>
                                 </a>
                                 <a data-w-tab="Tab 3" className="tab-button w-inline-block w-tab-link">
                                     <div className="tab-button-icon-wrapper">
                                         <img loading="lazy" src="/img/Money-black.svg" alt="" className="tab-button-icon" />
                                         <img loading="lazy" src="/img/White-Money.svg" alt="" className="tab-button-icon-white" />
                                     </div>
-                                    <div className="tab-text">Invoice Management</div>
+                                    <div className="tab-text">E-Commerce & Quick-Commerce</div>
                                 </a>
                                 <a data-w-tab="Tab 4" className="tab-button w-inline-block w-tab-link w--current">
                                     <div className="tab-button-icon-wrapper">
                                         <img loading="lazy" src="/img/CreditCard-ash.svg" alt="" className="tab-button-icon" />
                                         <img loading="lazy" src="/img/CreditCard-white.svg" alt="" className="tab-button-icon-white" />
                                     </div>
-                                    <div className="tab-text">Invoice Management</div>
+                                    <div className="tab-text">Sales</div>
                                 </a>
                             </div>
 
@@ -371,18 +371,18 @@ export default function Features() {
                         <div className="ticker-content-wrap">
                             <div data-w-id="702b3f3b-bf68-67be-cbbd-c7e460d6c2f1"
                                 className="ticker-single-wrapper">
-                                {[1, 2, 3, 4, 5, 6].map(i => (
-                                    <img key={i} src={`/img/Ticker-Image-${i}.svg`} loading="lazy" alt="" className="ticker-images" />
+                                {['float2.png', 'float4.png', 'float5.png', 'float2.png', 'float4.png', 'float5.png'].map((img, i) => (
+                                    <img key={i} src={`/img/${img}`} loading="lazy" alt="" className="ticker-images" />
                                 ))}
                             </div>
                             <div className="ticker-single-wrapper">
-                                {[1, 2, 3, 4, 5, 6].map(i => (
-                                    <img key={i} src={`/img/Ticker-Image-${i}.svg`} loading="lazy" alt="" className="ticker-images" />
+                                {['float2.png', 'float4.png', 'float5.png', 'float2.png', 'float4.png', 'float5.png'].map((img, i) => (
+                                    <img key={i} src={`/img/${img}`} loading="lazy" alt="" className="ticker-images" />
                                 ))}
                             </div>
                             <div className="ticker-single-wrapper">
-                                {[1, 2, 3, 4, 5, 6].map(i => (
-                                    <img key={i} src={`/img/Ticker-Image-${i}.svg`} loading="lazy" alt="" className="ticker-images" />
+                                {['float2.png', 'float4.png', 'float5.png', 'float2.png', 'float4.png', 'float5.png'].map((img, i) => (
+                                    <img key={i} src={`/img/${img}`} loading="lazy" alt="" className="ticker-images" />
                                 ))}
                             </div>
                         </div>

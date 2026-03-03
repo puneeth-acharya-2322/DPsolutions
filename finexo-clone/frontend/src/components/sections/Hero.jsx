@@ -49,12 +49,11 @@ export default function Hero({ variant = 'home', title, subtitle }) {
                                 Innovating <span className="design-text">Today</span> for a<span className="design-text"> Smarter </span>Tomorrow
                             </h1>
                             <p data-w-id="4a21c3c5-7435-1bc3-4715-5cc31678d4e7" className="hero-description">
-                                At Dashapatmaja Solutions, we bridge creativity and strategic insight—driving innovation across Branding & E-commerce, Ed-Tech, and Research & Development.
+                                Dashapatmaja Solutions partners with ambitious businesses to strengthen brand positioning, build high-performance commerce ecosystems, and create structured sales growth.
                                 {isExpanded && (
                                     <>
-                                        {' '}We partner with businesses not only to craft distinctive brand experiences and transformative educational technologies, but also to deliver high-impact advisory and consulting services.
-                                        Whether it’s shaping go-to-market strategies, enabling digital transformation, or conducting industry-defining research, we bring the analytical rigor and executional excellence typically
-                                        associated with top-tier firms—while keeping our solutions bold, future-ready, and grounded in real-world impact.
+                                        {' '}We work at the intersection of strategy, creativity, technology, and execution. From brand architecture and digital
+                                        presence to marketplace expansion and sales systems, we help businesses grow with clarity and control.
                                     </>
                                 )}
                                 {' '}
@@ -69,8 +68,8 @@ export default function Hero({ variant = 'home', title, subtitle }) {
                                 <Link to="/contact" data-w-id="d6e99a6b-32b8-7752-4992-8db9e68f321f"
                                     className="primary-button-wrapper secondary w-inline-block">
                                     <div className="primary-button-wrap">
-                                        <div className="primary-button-text">Contact Us </div>
-                                        <div className="primary-button-text">Contact Us </div>
+                                        <div className="primary-button-text">Schedule a Strategy Call</div>
+                                        <div className="primary-button-text">Schedule a Strategy Call</div>
                                     </div>
                                     <img loading="lazy" src="/img/ArrowUp.svg" alt="" className="primary-button-icon" />
                                 </Link>
@@ -99,8 +98,8 @@ export default function Hero({ variant = 'home', title, subtitle }) {
                         className="ticker-content-wrap">
                         {[1, 2, 3].map(n => (
                             <div key={n} className="ticker-single-wrapper">
-                                {[1, 2, 3, 4, 5, 6].map(i => (
-                                    <img key={i} src={`/img/Ticker-Image-${i}.svg`}
+                                {['float2.png', 'float4.png', 'float5.png', 'float2.png', 'float4.png', 'float5.png'].map((img, i) => (
+                                    <img key={i} src={`/img/${img}`}
                                         loading="lazy" alt="" className="ticker-images" />
                                 ))}
                             </div>
