@@ -47,7 +47,7 @@ export default function Contact() {
                             className="section-top-description">
                             We provide comprehensive financial solutions to help you achieve your goals. From Personalized.
                         </p>
-                        <div data-w-id="958c1d0d-3ef0-8b3a-d49c-351252aec022"
+                        {/* <div data-w-id="958c1d0d-3ef0-8b3a-d49c-351252aec022"
                             className="hero-button-wrapper">
                             <a href="/contact" data-w-id="d6e99a6b-32b8-7752-4992-8db9e68f321f"
                                 className="primary-button-wrapper secondary w-inline-block">
@@ -65,7 +65,7 @@ export default function Contact() {
                                     <img src="/img/DownloadSimple-White.svg" loading="lazy" alt="" className="download-button-white-icon" />
                                 </div>
                             </a>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </section>
@@ -136,7 +136,7 @@ export default function Contact() {
             <section className="section" style={{ paddingTop: '20px' }}>
                 <div className="w-layout-blockcontainer container w-container">
                     <div style={{ textAlign: "center", marginBottom: "40px" }}>
-                        <h3 style={{ color: "#F0B90B", fontSize: "20px", fontWeight: "700", marginBottom: "10px" }}>Main Branch</h3>
+                        <h3 className="hero-top-subtitle-span" style={{ fontSize: "20px", fontWeight: "700", marginBottom: "10px" }}>Main Branch</h3>
                         <h2 className="contact-title" style={{ fontSize: "40px", marginBottom: "0", textAlign: "center" }}>Reach Out to Us</h2>
                     </div>
                     <div className="footer-content-wrapper" style={{ alignItems: "stretch", backgroundColor: "transparent", padding: "0" }}>
