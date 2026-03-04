@@ -88,16 +88,28 @@ export default function Hero({ variant = 'home', title, subtitle }) {
                     <div data-w-id="ec14c473-f63f-e689-0137-b3fc22ad1e41"
                         className="ticker-title">Over 4M+ connected with us!</div>
                     <div data-w-id="332012d9-c181-63be-48ff-8116710856b7"
-                        className="ticker-content-wrap">
-                        {[1, 2, 3].map(n => (
-                            <div key={n} className="ticker-single-wrapper">
-                                {['float2.png', 'float4.png', 'float5.png', 'float2.png', 'float4.png', 'float5.png'].map((img, i) => (
-                                    <img key={i} src={`/img/${img}`}
-                                        loading="lazy" alt="" className="ticker-images" />
-                                ))}
-                            </div>
-                        ))}
+                        className="ticker-content-wrap" style={{ overflow: 'hidden' }}>
+                        <div style={{
+                            display: 'flex',
+                            animation: 'marquee-scroll 12s linear infinite',
+                            width: 'max-content'
+                        }}>
+                            {[1, 2, 3].map(n => (
+                                <div key={n} className="ticker-single-wrapper">
+                                    {['float2.png', 'float4.png', 'float5.png', 'float2.png', 'float4.png', 'float5.png'].map((img, i) => (
+                                        <img key={i} src={`/img/${img}`}
+                                            loading="lazy" alt="" className="ticker-images" />
+                                    ))}
+                                </div>
+                            ))}
+                        </div>
                     </div>
+                    <style>{`
+                        @keyframes marquee-scroll {
+                            0% { transform: translateX(0); }
+                            100% { transform: translateX(-33.33%); }
+                        }
+                    `}</style>
                 </div>
             </div>
         </section>

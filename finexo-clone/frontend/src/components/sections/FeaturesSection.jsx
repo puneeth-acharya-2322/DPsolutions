@@ -138,77 +138,158 @@ export default function FeaturesSection() {
                 </div>
             </section>
 
-            {/* ── Section 3: How it works (Steps) ───────────────── */}
+            {/* ── Section 3: Our Approach (Steps) ───────────────── */}
             <section className="section">
                 <div className="w-layout-blockcontainer container w-container">
                     <div className="section-top-wrapper">
                         <div data-w-id="a65be11c-987a-67a9-cd26-dc846082610d"
                             className="section-top-subtitle-wrap phone-left">
                             <img src="/img/Feather.svg" loading="lazy" alt="" className="section-top-image" />
-                            <div className="section-top-subtitle">What We Do?</div>
+                            <div className="section-top-subtitle">Our Approach</div>
                         </div>
                         <h2 data-w-id="a65be11c-987a-67a9-cd26-dc8460826111"
                             className="section-top-title">
-                            Empower <span className="design-text">your</span> financial journey with us!
+                            Strategy First.<span className="design-text">Execution</span> Focused.
                         </h2>
                         <div data-w-id="a65be11c-987a-67a9-cd26-dc8460826116"
                             className="section-subtitle">
-                            Track expenses manage your finances effortlessly
+                            We do not operate in silos. Every engagement begins with a clear understanding of your business model, margins, customer segments, and growth targets.
                         </div>
                     </div>
 
                     <div className="works-content-wrapper">
                         <div className="works-content-wrap">
+                            {/* Step 1 — Understand Your Business */}
                             <div data-w-id="25ad14af-06f1-9711-ec0c-7da0b1132543"
                                 className="works-card-wrapper">
                                 <div className="work-card-content-wrapper">
                                     <div className="work-card-number-wrapper"><div className="work-card-number">1</div></div>
-                                    <h3 className="work-title">Sign in a just few minutes</h3>
-                                    <div className="work-description">Getting Started your account in just a few minutes.</div>
+                                    <h3 className="work-title">Understand Your Business</h3>
+                                    <div className="work-description" style={{ maxWidth: '100%' }}>We start by mapping your business model, margins, customer segments, and growth targets to build a clear foundation.</div>
                                 </div>
                                 <div id="w-node-d4e79e05-1797-16fe-f13c-83f0fa5b71fa-25b1e467" className="work-image-wrapper">
-                                    <div data-w-id="f2a5641c-dc09-5794-6c2f-ac4b077d611b"
-                                        data-animation-type="lottie"
-                                        data-src="/lottie/signin-323x270.json"
-                                        data-loop="1" data-direction="1" data-autoplay="1"
-                                        data-is-ix2-target="0" data-renderer="svg"
-                                        data-default-duration="0" data-duration="0">
-                                    </div>
+                                    {/* Business Analysis SVG */}
+                                    <svg viewBox="0 0 280 240" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', maxWidth: 280 }}>
+                                        <rect x="20" y="20" width="240" height="200" rx="16" fill="#f0f4ff" stroke="#2d68fe" strokeWidth="1.5" />
+                                        <rect x="40" y="45" width="200" height="35" rx="8" fill="#fff" stroke="#e2e8f0" strokeWidth="1" />
+                                        <text x="55" y="68" fontSize="13" fill="#0b2a5c" fontWeight="600" fontFamily="Inter,sans-serif">Business Model Analysis</text>
+                                        {/* Bar chart */}
+                                        <rect x="50" y="160" width="28" height="45" rx="4" fill="#2d68fe" opacity="0.3" />
+                                        <rect x="90" y="140" width="28" height="65" rx="4" fill="#2d68fe" opacity="0.5" />
+                                        <rect x="130" y="120" width="28" height="85" rx="4" fill="#2d68fe" opacity="0.7" />
+                                        <rect x="170" y="100" width="28" height="105" rx="4" fill="#2d68fe" />
+                                        {/* Labels */}
+                                        <text x="55" y="195" fontSize="9" fill="#64748b" fontFamily="Inter,sans-serif">Margins</text>
+                                        <text x="91" y="195" fontSize="9" fill="#64748b" fontFamily="Inter,sans-serif">Segments</text>
+                                        <text x="137" y="195" fontSize="9" fill="#64748b" fontFamily="Inter,sans-serif">Reach</text>
+                                        <text x="173" y="195" fontSize="9" fill="#64748b" fontFamily="Inter,sans-serif">Growth</text>
+                                        {/* Target icon */}
+                                        <circle cx="220" cy="120" r="22" fill="#fff" stroke="#ffb400" strokeWidth="2" />
+                                        <circle cx="220" cy="120" r="14" fill="none" stroke="#ffb400" strokeWidth="1.5" />
+                                        <circle cx="220" cy="120" r="6" fill="#ffb400" />
+                                    </svg>
                                 </div>
                             </div>
 
+                            {/* Step 2 — Align Strategy Across Domains */}
                             <div data-w-id="0dc68af9-3de6-3cc9-6a61-acc1a758e573"
                                 className="works-card-wrapper">
                                 <div className="work-image-wrapper">
-                                    <div data-w-id="ec6da94e-8c2f-2b67-75ad-4af3533421f0"
-                                        data-animation-type="lottie"
-                                        data-src="/lottie/connect-300x270.json"
-                                        data-loop="1" data-direction="1" data-autoplay="1"
-                                        data-is-ix2-target="0" data-renderer="svg"
-                                        data-default-duration="0" data-duration="0">
-                                    </div>
+                                    {/* Connected Domains SVG */}
+                                    <svg viewBox="0 0 280 240" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', maxWidth: 280 }}>
+                                        <rect x="20" y="20" width="240" height="200" rx="16" fill="#f0f4ff" stroke="#2d68fe" strokeWidth="1.5" />
+                                        {/* Center hub */}
+                                        <circle cx="140" cy="120" r="30" fill="#0b2a5c" />
+                                        <text x="140" y="116" textAnchor="middle" fontSize="9" fill="#fff" fontWeight="600" fontFamily="Inter,sans-serif">STRATEGY</text>
+                                        <text x="140" y="128" textAnchor="middle" fontSize="8" fill="#94a3b8" fontFamily="Inter,sans-serif">Core</text>
+                                        {/* Branding node */}
+                                        <circle cx="70" cy="60" r="22" fill="#2d68fe" />
+                                        <text x="70" y="57" textAnchor="middle" fontSize="8" fill="#fff" fontWeight="600" fontFamily="Inter,sans-serif">Brand</text>
+                                        <text x="70" y="67" textAnchor="middle" fontSize="7" fill="#c7d2fe" fontFamily="Inter,sans-serif">Marketing</text>
+                                        <line x1="88" y1="76" x2="116" y2="98" stroke="#2d68fe" strokeWidth="2" strokeDasharray="4 2" />
+                                        {/* Commerce node */}
+                                        <circle cx="210" cy="60" r="22" fill="#2d68fe" />
+                                        <text x="210" y="57" textAnchor="middle" fontSize="8" fill="#fff" fontWeight="600" fontFamily="Inter,sans-serif">Commerce</text>
+                                        <text x="210" y="67" textAnchor="middle" fontSize="7" fill="#c7d2fe" fontFamily="Inter,sans-serif">Systems</text>
+                                        <line x1="192" y1="76" x2="164" y2="98" stroke="#2d68fe" strokeWidth="2" strokeDasharray="4 2" />
+                                        {/* Sales node */}
+                                        <circle cx="140" cy="195" r="22" fill="#ffb400" />
+                                        <text x="140" y="192" textAnchor="middle" fontSize="8" fill="#0b2a5c" fontWeight="600" fontFamily="Inter,sans-serif">Sales</text>
+                                        <text x="140" y="202" textAnchor="middle" fontSize="7" fill="#0b2a5c" fontFamily="Inter,sans-serif">Growth</text>
+                                        <line x1="140" y1="150" x2="140" y2="173" stroke="#ffb400" strokeWidth="2" strokeDasharray="4 2" />
+                                        {/* Connecting arcs */}
+                                        <path d="M88 64 Q140 30 192 64" stroke="#e2e8f0" strokeWidth="1.5" fill="none" strokeDasharray="3 3" />
+                                        <path d="M66 82 Q50 140 120 193" stroke="#e2e8f0" strokeWidth="1.5" fill="none" strokeDasharray="3 3" />
+                                        <path d="M214 82 Q230 140 160 193" stroke="#e2e8f0" strokeWidth="1.5" fill="none" strokeDasharray="3 3" />
+                                    </svg>
                                 </div>
                                 <div id="w-node-_0dc68af9-3de6-3cc9-6a61-acc1a758e574-25b1e467" className="work-card-content-wrapper">
                                     <div className="work-card-number-wrapper"><div className="work-card-number">2</div></div>
-                                    <h3 className="work-title">Connect Account</h3>
-                                    <div className="work-description">Getting Started your ac in minutes.</div>
+                                    <h3 className="work-title">Align Strategy Across Domains</h3>
+                                    <div className="work-description" style={{ maxWidth: '100%' }}>Strategy informs branding. Branding supports commerce. Commerce feeds sales. Sales validate strategy.</div>
                                 </div>
                             </div>
                         </div>
 
+                        {/* Step 3 — Execute & Measure Impact */}
                         <div data-w-id="b68a962a-5352-39ba-d5af-3f38aa290ba3"
                             className="work-right-col-wrapper">
-                            <div className="work-top-wrapper">
+                            <div className="work-top-wrapper" style={{ alignItems: 'flex-start', paddingRight: '32px' }}>
                                 <div className="work-card-number-wrapper _02"><div className="work-card-number">3</div></div>
-                                <h3>Customize Dashboard</h3>
-                                <div className="work-description _02">Getting Started your account<br />in just a few minutes.</div>
+                                <h3>Execute &amp; Measure Impact</h3>
+                                <div className="work-description _02" style={{ textAlign: 'left', maxWidth: '100%' }}>We deliver measurable outcomes across every domain — tracking KPIs, optimizing in real time, and iterating for continuous growth.</div>
                             </div>
                             <div className="work-second-image-wrapper">
-                                <img src="/img/work-image-3.webp" loading="lazy"
-                                    sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.984375px, 939.984375px"
-                                    srcSet="/img/work-image-3.webp 1062w"
-                                    alt="Financeo app interface showing stock overview"
-                                    className="work-third-image" />
+                                {/* KPI Dashboard SVG */}
+                                <svg viewBox="0 0 500 210" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%' }}>
+                                    <rect width="500" height="210" rx="16" fill="#f8fafc" />
+                                    {/* Header */}
+                                    <rect x="20" y="12" width="460" height="32" rx="8" fill="#0b2a5c" />
+                                    <text x="40" y="33" fontSize="13" fill="#fff" fontWeight="600" fontFamily="Inter,sans-serif">Performance Dashboard</text>
+                                    <text x="360" y="33" fontSize="10" fill="#94a3b8" fontFamily="Inter,sans-serif">Live Metrics</text>
+                                    <circle cx="445" cy="28" r="4" fill="#22c55e">
+                                        <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite" />
+                                    </circle>
+                                    {/* KPI Cards row */}
+                                    <rect x="20" y="54" width="105" height="52" rx="8" fill="#fff" stroke="#e2e8f0" strokeWidth="1" />
+                                    <text x="35" y="72" fontSize="9" fill="#64748b" fontFamily="Inter,sans-serif">Brand Reach</text>
+                                    <text x="35" y="94" fontSize="18" fill="#0b2a5c" fontWeight="700" fontFamily="Inter,sans-serif">248%</text>
+                                    <text x="88" y="94" fontSize="9" fill="#22c55e" fontFamily="Inter,sans-serif">↑12%</text>
+
+                                    <rect x="138" y="54" width="105" height="52" rx="8" fill="#fff" stroke="#e2e8f0" strokeWidth="1" />
+                                    <text x="153" y="72" fontSize="9" fill="#64748b" fontFamily="Inter,sans-serif">Commerce GMV</text>
+                                    <text x="153" y="94" fontSize="18" fill="#0b2a5c" fontWeight="700" fontFamily="Inter,sans-serif">₹12.8K</text>
+
+                                    <rect x="256" y="54" width="105" height="52" rx="8" fill="#fff" stroke="#e2e8f0" strokeWidth="1" />
+                                    <text x="271" y="72" fontSize="9" fill="#64748b" fontFamily="Inter,sans-serif">Sales Pipeline</text>
+                                    <text x="271" y="94" fontSize="18" fill="#0b2a5c" fontWeight="700" fontFamily="Inter,sans-serif">$2.4M</text>
+                                    <text x="335" y="94" fontSize="9" fill="#22c55e" fontFamily="Inter,sans-serif">↑8%</text>
+
+                                    <rect x="374" y="54" width="105" height="52" rx="8" fill="#2d68fe" />
+                                    <text x="389" y="72" fontSize="9" fill="#c7d2fe" fontFamily="Inter,sans-serif">ROI Score</text>
+                                    <text x="389" y="94" fontSize="18" fill="#fff" fontWeight="700" fontFamily="Inter,sans-serif">4.2x</text>
+
+                                    {/* Growth chart */}
+                                    <rect x="20" y="118" width="460" height="80" rx="8" fill="#fff" stroke="#e2e8f0" strokeWidth="1" />
+                                    <text x="40" y="136" fontSize="10" fill="#0b2a5c" fontWeight="600" fontFamily="Inter,sans-serif">Growth Trajectory</text>
+                                    <circle cx="370" cy="133" r="3" fill="#2d68fe" /><text x="378" y="136" fontSize="8" fill="#64748b" fontFamily="Inter,sans-serif">Revenue</text>
+                                    <circle cx="425" cy="133" r="3" fill="#ffb400" /><text x="433" y="136" fontSize="8" fill="#64748b" fontFamily="Inter,sans-serif">Pipeline</text>
+                                    {/* Revenue line */}
+                                    <polyline points="40,185 100,180 160,172 220,166 280,160 340,154 400,148 460,142"
+                                        stroke="#2d68fe" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+                                    {/* Pipeline line */}
+                                    <polyline points="40,188 100,184 160,178 220,176 280,170 340,165 400,158 460,150"
+                                        stroke="#ffb400" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="5 3" />
+                                    {/* Area fill */}
+                                    <polygon points="40,185 100,180 160,172 220,166 280,160 340,154 400,148 460,142 460,193 40,193"
+                                        fill="url(#blueGradFeat)" opacity="0.15" />
+                                    <defs>
+                                        <linearGradient id="blueGradFeat" x1="0" y1="0" x2="0" y2="1">
+                                            <stop offset="0%" stopColor="#2d68fe" />
+                                            <stop offset="100%" stopColor="#2d68fe" stopOpacity="0" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
                             </div>
                         </div>
                     </div>

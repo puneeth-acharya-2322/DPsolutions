@@ -1,14 +1,54 @@
 /* ─────────────────────────────────────────────────────────
-   FAQSection — Exact DOM replica from finexo-template.webflow.io
-   Source: home.html at position 58965 (real HTML extracted Feb 2026)
-   
-   Critical structure (from real HTML):
-   - faq-content-wrap contains a div.w-tabs (with data-current="Tab 1")
-   - Inside that: faq-tab-menu w-tab-menu (the tab list)
-   - Tab links start from data-w-tab="Tab 2" (real HTML skips Tab 1)
-   - data-w-id on each tab link matches exactly from real HTML
+   FAQSection — React-controlled accordion
+   Replaces Webflow w-tabs with useState for reliable expand/collapse
    ────────────────────────────────────────────────────────*/
+import { useState } from 'react'
+
+const faqData = [
+    {
+        question: "What is Dashapatmaja Solutions' core philosophy?",
+        answers: [
+            'Our philosophy is "Strategy First. Execution Focused." We don\'t operate in silos — instead, we integrate strategy, branding, commerce, and sales into a cohesive growth engine for your business.',
+            'Every engagement begins with a clear understanding of your business model, margins, customer segments, and growth targets before any execution begins.'
+        ]
+    },
+    {
+        question: "How do you tailor strategies for different businesses?",
+        answers: [
+            'Every engagement starts with a deep dive into your specific business model, margins, and customer segments. We analyze your growth targets to ensure every strategic move is data-driven and margin-aware.',
+            "Whether you're a startup looking to establish a brand or an established company optimizing sales, our approach adapts to your unique business context."
+        ]
+    },
+    {
+        question: "What does your integrated approach look like in practice?",
+        answers: [
+            'Strategy informs branding — your brand identity is built on your business strategy. Branding supports commerce — your commerce platforms are designed to reflect that brand for a seamless customer journey.',
+            'Commerce feeds sales — structured sales systems convert brand interest into revenue. And sales validate strategy — real performance data confirms or refines the initial strategy.'
+        ]
+    },
+    {
+        question: "How do you measure success and impact?",
+        answers: [
+            'We track KPIs across brand reach, commerce GMV, sales pipeline value, and ROI. Real-time dashboards give you clear visibility into how every domain is performing.',
+            'We use performance data to optimize in real time and iterate for continuous growth — ensuring measurable outcomes, not just deliverables.'
+        ]
+    },
+    {
+        question: "How can I get started with Dashapatmaja Solutions?",
+        answers: [
+            "Start by scheduling a Strategy Call through our website. In this discovery session, we'll discuss your business challenges, growth ambitions, and how our integrated approach can help.",
+            'From there, we create a tailored roadmap covering brand positioning, commerce ecosystem setup, and sales pipeline development — aligned to your specific goals.'
+        ]
+    }
+]
+
 export default function FAQSection() {
+    const [openIndex, setOpenIndex] = useState(0)
+
+    const handleToggle = (index) => {
+        setOpenIndex(openIndex === index ? -1 : index)
+    }
+
     return (
         <section className="section">
             <div className="w-layout-blockcontainer container w-container">
@@ -26,125 +66,44 @@ export default function FAQSection() {
 
                 <div className="faq-content-wrapper">
                     <div className="faq-content-wrap">
-
-                        {/* Exact structure from real HTML: div.w-tabs wraps faq-tab-menu */}
-                        <div data-current="Tab 1" data-easing="ease"
-                            data-duration-in="300" data-duration-out="100"
-                            className="w-tabs">
-                            <div className="faq-tab-menu w-tab-menu">
-
-                                {/* FAQ 1 — Tab 2 in Webflow data-w-tab (real HTML starts at Tab 2) */}
-                                <a data-w-tab="Tab 2"
-                                    data-w-id="fe3cc9fa-660c-b4c0-739e-efbd2513112c"
-                                    className="faq-content w-inline-block w-tab-link w--current"
-                                    href="#">
+                        <div className="faq-tab-menu" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                            {faqData.map((faq, index) => (
+                                <div
+                                    key={index}
+                                    className={`faq-content${openIndex === index ? ' faq-active' : ''}`}
+                                    onClick={() => handleToggle(index)}
+                                    style={{ cursor: 'pointer' }}
+                                >
                                     <div className="faq-top-wrapper">
-                                        <h4>What are the benefits of using your financial tools?</h4>
+                                        <h4>{faq.question}</h4>
                                         <div className="faq-icon-wrapper">
                                             <div className="faq-minuss-icon"></div>
-                                            <div className="faq-pluss-icon"></div>
+                                            <div className="faq-pluss-icon"
+                                                style={{
+                                                    transform: openIndex === index ? 'rotate(90deg)' : 'rotate(0deg)',
+                                                    opacity: openIndex === index ? 0 : 1,
+                                                    transition: 'transform 0.3s ease, opacity 0.3s ease'
+                                                }}
+                                            ></div>
                                         </div>
                                     </div>
-                                    <div className="faq-ans">
+                                    <div className="faq-ans"
+                                        style={{
+                                            maxHeight: openIndex === index ? '500px' : '0px',
+                                            overflow: 'hidden',
+                                            transition: 'max-height 0.4s ease',
+                                            opacity: openIndex === index ? 1 : 0
+                                        }}
+                                    >
                                         <ul role="list" className="list">
-                                            <li>Our financial tools provide real-time insights, automated expense tracking, and personalized investment strategies tailored to your goals.</li>
-                                            <li>This empowers you to make informed decisions and optimize your financial growth with minimal effort, saving you both time and money.</li>
+                                            {faq.answers.map((answer, i) => (
+                                                <li key={i}>{answer}</li>
+                                            ))}
                                         </ul>
                                     </div>
-                                </a>
-
-                                {/* FAQ 2 — Tab 3 */}
-                                <a data-w-tab="Tab 3"
-                                    data-w-id="fe3cc9fa-660c-b4c0-739e-efbd25131139"
-                                    className="faq-content w-inline-block w-tab-link"
-                                    href="#">
-                                    <div className="faq-top-wrapper">
-                                        <h4>How do I get started with your platform</h4>
-                                        <div className="faq-icon-wrapper">
-                                            <div className="faq-minuss-icon"></div>
-                                            <div className="faq-pluss-icon"></div>
-                                        </div>
-                                    </div>
-                                    <div className="faq-ans">
-                                        <ul role="list" className="list">
-                                            <li>Getting started is quick and easy. Simply sign up for an account, complete your profile, and connect your bank securely.</li>
-                                            <li>Once connected, our intuitive dashboard will guide you through the remaining setup so you can begin managing your finances immediately.</li>
-                                        </ul>
-                                    </div>
-                                </a>
-
-                                {/* FAQ 3 — Tab 4 */}
-                                <a data-w-tab="Tab 4"
-                                    data-w-id="fe3cc9fa-660c-b4c0-739e-efbd25131146"
-                                    className="faq-content w-inline-block w-tab-link"
-                                    href="#">
-                                    <div className="faq-top-wrapper">
-                                        <h4>Is my information secure?</h4>
-                                        <div className="faq-icon-wrapper">
-                                            <div className="faq-minuss-icon"></div>
-                                            <div className="faq-pluss-icon"></div>
-                                        </div>
-                                    </div>
-                                    <div className="faq-ans">
-                                        <ul role="list" className="list">
-                                            <li>Security is our top priority. We use bank-level 256-bit encryption, multi-factor authentication (MFA), and secure servers to protect your data.</li>
-                                            <li>We maintain strict compliance with industry standards and never sell or share your personal information with unauthorized third parties.</li>
-                                        </ul>
-                                    </div>
-                                </a>
-
-                                {/* FAQ 4 — Tab 5 */}
-                                <a data-w-tab="Tab 5"
-                                    data-w-id="fe3cc9fa-660c-b4c0-739e-efbd25131153"
-                                    className="faq-content w-inline-block w-tab-link"
-                                    href="#">
-                                    <div className="faq-top-wrapper">
-                                        <h4>How do I contact customer support?</h4>
-                                        <div className="faq-icon-wrapper">
-                                            <div className="faq-minuss-icon"></div>
-                                            <div className="faq-pluss-icon"></div>
-                                        </div>
-                                    </div>
-                                    <div className="faq-ans">
-                                        <ul role="list" className="list">
-                                            <li>Our dedicated support team is available 24/7. You can reach us via the live chat feature on our platform, or email us at support.</li>
-                                            <li>Additionally, we offer comprehensive documentation and video tutorials in our Help Center to assist you with common inquiries.</li>
-                                        </ul>
-                                    </div>
-                                </a>
-
-                                {/* FAQ 5 — Tab 6 */}
-                                <a data-w-tab="Tab 6"
-                                    data-w-id="fe3cc9fa-660c-b4c0-739e-efbd25131160"
-                                    className="faq-content w-inline-block w-tab-link"
-                                    href="#">
-                                    <div className="faq-top-wrapper">
-                                        <h4>What payment options do you accept?</h4>
-                                        <div className="faq-icon-wrapper">
-                                            <div className="faq-minuss-icon"></div>
-                                            <div className="faq-pluss-icon"></div>
-                                        </div>
-                                    </div>
-                                    <div className="faq-ans">
-                                        <ul role="list" className="list">
-                                            <li>We accept all major credit and debit cards including Visa, Mastercard, and American Express for seamless transactions.</li>
-                                            <li>We also support popular digital wallets like Apple Pay and Google Pay, as well as direct bank transfers (ACH) for your convenience.</li>
-                                        </ul>
-                                    </div>
-                                </a>
-
-                            </div>
-
-                            {/* Tab content panes — Webflow IX2 manages display */}
-                            <div className="tabs-content-2 w-tab-content">
-                                <div data-w-tab="Tab 2" className="w-tab-pane w--tab-active"></div>
-                                <div data-w-tab="Tab 3" className="w-tab-pane"></div>
-                                <div data-w-tab="Tab 4" className="w-tab-pane"></div>
-                                <div data-w-tab="Tab 5" className="w-tab-pane"></div>
-                                <div data-w-tab="Tab 6" className="w-tab-pane"></div>
-                            </div>
+                                </div>
+                            ))}
                         </div>
-
                     </div>
                 </div>
 
