@@ -58,7 +58,7 @@ export default function FeaturesSection() {
                             onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}>
                             <div className="control-top-content-wrapper">
                                 <h3 className="feature-title">Expertise Across Domains</h3>
-                                <div className="control-description">Strong foundation in Branding, E-commerce, Ed-Tech, and R&D to cater to diverse business needs.</div>
+                                <div className="control-description">Cross-domain expertise across marketing, commerce, and sales</div>
                             </div>
                             <div className="control-image-wrapper">
                                 <ExpertiseIcon />
@@ -473,59 +473,59 @@ const GlobalIcon = () => (
 export const EcommerceVisualRounded = () => (
     <div style={{
         background: 'linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%)',
-        borderRadius: '24px',
-        padding: '24px',
+        borderRadius: '32px',
+        padding: '36px',
         width: '100%',
-        maxWidth: '360px',
+        maxWidth: '460px',
         margin: '0 auto',
         display: 'flex',
         flexDirection: 'column',
-        boxShadow: '0 15px 35px rgba(0,0,0,0.06), inset 0 0 0 1px rgba(255,255,255,0.5)'
+        boxShadow: '0 20px 50px rgba(0,0,0,0.08), inset 0 0 0 1px rgba(255,255,255,0.6)'
     }}>
         {/* Header */}
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: '#f8fafc', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <img src="https://ui-avatars.com/api/?name=Alex&background=random" alt="Avatar" style={{ width: '100%' }} />
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '28px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+                <div style={{ width: '56px', height: '56px', borderRadius: '50%', background: '#0052ff', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontSize: '20px', fontWeight: '800' }}>
+                    AL
                 </div>
                 <div>
-                    <div style={{ fontSize: '15px', fontWeight: '700', color: '#0f172a' }}>Welcome, Alex!</div>
-                    <div style={{ fontSize: '11px', color: '#64748b' }}>Search for items, brands...</div>
+                    <div style={{ fontSize: '18px', fontWeight: '800', color: '#0f172a' }}>Welcome, Alex!</div>
+                    <div style={{ fontSize: '13px', color: '#64748b' }}>Search for items, brands...</div>
                 </div>
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <div style={{ width: '32px', height: '32px', borderRadius: '50%', background: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}>
-                    <svg width="14" height="14" fill="none" stroke="#64748b" strokeWidth="2" viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <div style={{ width: '44px', height: '44px', borderRadius: '50%', background: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }}>
+                    <svg width="20" height="20" fill="none" stroke="#64748b" strokeWidth="2" viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
                 </div>
-                <div style={{ padding: '8px 14px', borderRadius: '20px', background: '#fff', display: 'flex', alignItems: 'center', gap: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}>
-                    <svg width="14" height="14" fill="none" stroke="#64748b" strokeWidth="2" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-                    <div style={{ fontSize: '11px', fontWeight: '600', color: '#334155' }}>Cart <span style={{ color: '#94a3b8' }}>(5)</span></div>
+                <div style={{ padding: '12px 20px', borderRadius: '24px', background: '#fff', display: 'flex', alignItems: 'center', gap: '10px', boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }}>
+                    <svg width="18" height="18" fill="none" stroke="#64748b" strokeWidth="2" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                    <div style={{ fontSize: '14px', fontWeight: '700', color: '#334155' }}>Cart <span style={{ color: '#94a3b8', fontWeight: '500' }}>(5)</span></div>
                 </div>
             </div>
         </div>
 
         {/* Tracking Card */}
-        <div style={{ background: '#fff', borderRadius: '16px', padding: '16px', marginBottom: '20px', boxShadow: '0 4px 12px rgba(0,0,0,0.02)' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
-                <div style={{ fontSize: '13px', fontWeight: '700', color: '#0f172a' }}>Fast Delivery Tracking</div>
-                <div style={{ fontSize: '10px', color: '#64748b', fontWeight: '500' }}>Order #8457 - On the Way</div>
+        <div style={{ background: '#fff', borderRadius: '20px', padding: '24px', marginBottom: '28px', boxShadow: '0 6px 16px rgba(0,0,0,0.03)' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
+                <div style={{ fontSize: '16px', fontWeight: '800', color: '#0f172a' }}>Fast Delivery Tracking</div>
+                <div style={{ fontSize: '12px', color: '#64748b', fontWeight: '600' }}>Order #8457 - On the Way</div>
             </div>
-            <div style={{ position: 'relative', height: '6px', background: '#f1f5f9', borderRadius: '3px', marginBottom: '10px' }}>
-                <div style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: '65%', background: '#00a3ff', borderRadius: '3px' }}></div>
-                <div style={{ position: 'absolute', top: '50%', left: '65%', transform: 'translate(-50%, -50%)', width: '12px', height: '12px', borderRadius: '50%', background: '#00a3ff', border: '3px solid #fff', boxShadow: '0 2px 4px rgba(0,163,255,0.3)' }}></div>
+            <div style={{ position: 'relative', height: '8px', background: '#f1f5f9', borderRadius: '4px', marginBottom: '16px' }}>
+                <div style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: '65%', background: '#00a3ff', borderRadius: '4px' }}></div>
+                <div style={{ position: 'absolute', top: '50%', left: '65%', transform: 'translate(-50%, -50%)', width: '18px', height: '18px', borderRadius: '50%', background: '#00a3ff', border: '4px solid #fff', boxShadow: '0 3px 6px rgba(0,163,255,0.4)' }}></div>
             </div>
-            <div style={{ textAlign: 'center', fontSize: '10px', fontWeight: '600', color: '#00a3ff' }}>10-Min Delivery: 6 Mins Left</div>
+            <div style={{ textAlign: 'center', fontSize: '13px', fontWeight: '700', color: '#00a3ff' }}>10-Min Delivery: 6 Mins Left</div>
         </div>
 
         {/* Essentials Grid */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '12px' }}>
-            <div style={{ fontSize: '13px', fontWeight: '700', color: '#0f172a' }}>Your Essentials</div>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '16px' }}>
+            <div style={{ fontSize: '16px', fontWeight: '800', color: '#0f172a' }}>Your Essentials</div>
             <div style={{ textAlign: 'right' }}>
-                <div style={{ fontSize: '10px', fontWeight: '600', color: '#0f172a' }}>18 nearby stores active</div>
-                <div style={{ fontSize: '9px', color: '#64748b' }}>Average Delivery: 9 mins</div>
+                <div style={{ fontSize: '12px', fontWeight: '700', color: '#0f172a' }}>18 nearby stores active</div>
+                <div style={{ fontSize: '11px', color: '#64748b', fontWeight: '500', marginTop: '2px' }}>Average Delivery: 9 mins</div>
             </div>
         </div>
-        <div style={{ display: 'flex', gap: '8px', overflowX: 'auto', paddingBottom: '4px' }}>
+        <div style={{ display: 'flex', gap: '12px', overflowX: 'hidden', paddingBottom: '4px' }}>
             <ProductCard bgColor="#f0f9ff" title="Organic Milk 1L" price="$3.49" icon="🥛" />
             <ProductCard bgColor="#fff7ed" title="Bread" price="$3.49" icon="🍞" />
             <ProductCard bgColor="#fefce8" title="Bananas" price="$3.49" icon="🍌" />
@@ -535,14 +535,14 @@ export const EcommerceVisualRounded = () => (
 )
 
 const ProductCard = ({ bgColor, title, price, icon }) => (
-    <div style={{ minWidth: '70px', background: '#fff', borderRadius: '16px', padding: '8px', display: 'flex', flexDirection: 'column', alignItems: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.03)' }}>
-        <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: bgColor, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '20px', marginBottom: '8px' }}>
+    <div style={{ flex: 1, minWidth: '85px', background: '#fff', borderRadius: '20px', padding: '16px 12px', display: 'flex', flexDirection: 'column', alignItems: 'center', boxShadow: '0 4px 12px rgba(0,0,0,0.04)' }}>
+        <div style={{ width: '56px', height: '56px', borderRadius: '50%', background: bgColor, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '28px', marginBottom: '12px' }}>
             {icon}
         </div>
-        <div style={{ fontSize: '9px', fontWeight: '600', color: '#334155', textAlign: 'center', marginBottom: '8px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', width: '100%' }}>{title}</div>
+        <div style={{ fontSize: '11px', fontWeight: '700', color: '#334155', textAlign: 'center', marginBottom: '14px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', width: '100%' }}>{title}</div>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
-            <div style={{ fontSize: '10px', fontWeight: '700', color: '#0f172a' }}>{price}</div>
-            <div style={{ width: '16px', height: '16px', borderRadius: '4px', background: '#0052ff', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '10px', fontWeight: 'bold', cursor: 'pointer' }}>+</div>
+            <div style={{ fontSize: '14px', fontWeight: '800', color: '#0f172a' }}>{price}</div>
+            <div style={{ width: '22px', height: '22px', borderRadius: '6px', background: '#0052ff', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px', fontWeight: '800', cursor: 'pointer' }}>+</div>
         </div>
     </div>
 )
