@@ -28,11 +28,11 @@ export default function BlogSection() {
                     }
                     /* Featured image — force landscape crop */
                     .blog-left-col-wrapper .blog-image-wrapper {
-                        max-height: 314px;
+                        max-height: 260px;
                         overflow: hidden;
                     }
                     .blog-left-col-wrapper .blog-main-image {
-                        height: 314px;
+                        height: 260px;
                         object-fit: cover;
                         width: 100%;
                     }

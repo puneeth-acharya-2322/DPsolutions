@@ -14,13 +14,13 @@ export default function Footer() {
 
                     {/* Left CTA — dark background, white button */}
                     <div data-w-id="19cac388-8877-fdb5-ab95-2fa6ded75ac7" className="footer-left-col-wrapper">
-                        <h2>Get started today</h2>
-                        <p className="footer-description">We provide comprehensive financial solutions to help you achieve your goals. From gets Personalized.</p>
+                        <h2>Let’s Build the Next Phase of Your Growth</h2>
+                        <p className="footer-description">Whether you are launching a new brand or scaling an existing one, we bring structure to your expansion.</p>
                         <Link to="/contact" data-w-id="022059ed-85d5-c9d6-db4d-384787a8a2c7"
                             className="primary-button-wrapper white w-inline-block">
                             <div className="primary-button-wrap">
-                                <div className="primary-button-text">Get Stated</div>
-                                <div className="primary-button-text">Get Stated</div>
+                                <div className="primary-button-text">Talk to Us</div>
+                                <div className="primary-button-text">Talk to Us</div>
                             </div>
                             <img loading="lazy" src="/img/ArrowUp-white.svg" alt="" className="primary-button-icon" />
                         </Link>
@@ -29,12 +29,12 @@ export default function Footer() {
                     {/* Right CTA — light background, dark button */}
                     <div data-w-id="19cac388-8877-fdb5-ab95-2fa6ded75ad3" className="footer-left-col-wrapper _02">
                         <h2>Get started today</h2>
-                        <p className="footer-description">We provide comprehensive financial solutions to help you achieve your goals. From gets Personalized.</p>
+                        <p className="footer-description">Experience across consumer, retail, and emerging brands.</p>
                         <Link to="/contact" data-w-id="19cac388-8877-fdb5-ab95-2fa6ded75ad8"
                             className="primary-button-wrapper w-inline-block">
                             <div className="primary-button-wrap">
-                                <div className="primary-button-text">Contact Sales</div>
-                                <div className="primary-button-text">Contact Sales</div>
+                                <div className="primary-button-text">Contact Us</div>
+                                <div className="primary-button-text">Contact Us</div>
                             </div>
                             <img loading="lazy" src="/img/ArrowUp.svg" alt="" className="primary-button-icon" />
                         </Link>
