@@ -21,7 +21,7 @@ export default function About() {
                             <div data-w-id="fd4c5637-868a-ed33-73d2-399393944a92"
                                 className="hero-top-text-wrapper">
                                 <img src="/img/Coins.svg" loading="lazy" alt="" className="hero-top-icon" />
-                                <div className="hero-top-subtitle">#1 <span className="hero-top-subtitle-span">FINANCE PLATFORM</span></div>
+                                <div className="hero-top-subtitle">#1 <span className="hero-top-subtitle-span">Dashapatmaja Solutions</span></div>
                             </div>
                             <h1 data-w-id="fd4c5637-868a-ed33-73d2-399393944a98"
                                 className="section-top-hero-title features">

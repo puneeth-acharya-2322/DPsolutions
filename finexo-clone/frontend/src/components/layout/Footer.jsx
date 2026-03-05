@@ -28,8 +28,8 @@ export default function Footer() {
 
                     {/* Right CTA — light background, dark button */}
                     <div data-w-id="19cac388-8877-fdb5-ab95-2fa6ded75ad3" className="footer-left-col-wrapper _02">
-                        <h2>Get started today</h2>
-                        <p className="footer-description">Experience across consumer, retail, and emerging brands.</p>
+                        <h2>Ready to Scale Your Brand?</h2>
+                        <p className="footer-description">From strategy to execution — we bring cross-domain expertise across marketing, commerce, and sales.</p>
                         <Link to="/contact" data-w-id="19cac388-8877-fdb5-ab95-2fa6ded75ad8"
                             className="primary-button-wrapper w-inline-block">
                             <div className="primary-button-wrap">
@@ -47,14 +47,13 @@ export default function Footer() {
                     <div className="footer-logo-wrap">
                         <div data-w-id="19cac388-8877-fdb5-ab95-2fa6ded75ae1" className="footer-item-wrapper">
                             <Link to="/about" className="footer-item">About</Link>
-                            <Link to="/blogs" className="footer-item">Blog</Link>
-                            <Link to="/features" className="footer-item">Features</Link>
-                            <Link to="/pricing" className="footer-item">Pricing</Link>
+                            <Link to="/features" className="footer-item">Services</Link>
+                            <Link to="/blogs" className="footer-item">Insights</Link>
                             <Link to="/contact" className="footer-item">Contact</Link>
                         </div>
                         <Link data-w-id="19cac388-8877-fdb5-ab95-2fa6ded75aec" to="/"
                             className="footer-logo-wrapper w-inline-block">
-                            <img src="/img/Finexo.svg" loading="lazy" alt="" className="footer-logo" />
+                            <img src="/img/logo_dp.png" loading="lazy" alt="Dashapatmaja Solutions" className="footer-logo" style={{ maxHeight: '40px' }} />
                         </Link>
                     </div>
 
@@ -80,13 +79,8 @@ export default function Footer() {
                 {/* Copyright */}
                 <div data-w-id="19cac388-8877-fdb5-ab95-2fa6ded75af8" className="footer-copywrite-wrapper">
                     <div className="footer-copywrite-text">
-                        c Copyright 2025 | Design &amp; Developed By{' '}
-                        <a href="https://onixtheme.com/?utm_source=webflow&amp;utm_medium=template&amp;utm_campaign=marketplace"
-                            target="_blank" rel="noreferrer" className="footer-copywrite-link">Onixtheme</a>
-                        {' '}-{' '}
-                        <Link to="/utility-pages/license" target="_blank" className="footer-copywrite-link">License</Link>
-                        {' '}| Powered By{' '}
-                        <a href="https://webflow.com" target="_blank" rel="noreferrer" className="footer-copywrite-link">Webflow</a>
+                        © 2025 Dashapatmaja Solutions. All rights reserved. | Design &amp; Developed By{' '}
+                        <a href="https://ganglia.in/" target="_blank" rel="noreferrer" className="footer-copywrite-link">Ganglia Technologies</a>
                     </div>
                 </div>
 

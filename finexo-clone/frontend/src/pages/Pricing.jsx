@@ -27,7 +27,7 @@ export default function Pricing() {
                         <div data-w-id="6444e04b-f4d6-64b5-af74-17171db5d4b7"
                             className="hero-top-text-wrapper">
                             <img src="/img/Coins.svg" loading="lazy" alt="" className="hero-top-icon" />
-                            <div className="hero-top-subtitle">#1 <span className="hero-top-subtitle-span">FINANCE PLATFORM</span></div>
+                            <div className="hero-top-subtitle">#1 <span className="hero-top-subtitle-span">Dashapatmaja Solutions</span></div>
                         </div>
                         <h1 data-w-id="6444e04b-f4d6-64b5-af74-17171db5d4bd"
                             className="section-top-hero-title features">

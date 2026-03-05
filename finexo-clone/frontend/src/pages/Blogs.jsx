@@ -74,7 +74,7 @@ export default function Blogs() {
                         <div data-w-id="72aac671-aa57-7d90-e97d-97e1a4b6cbeb"
                             className="hero-top-text-wrapper">
                             <img src="/img/Coins.svg" loading="lazy" alt="" className="hero-top-icon" />
-                            <div className="hero-top-subtitle">#1 <span className="hero-top-subtitle-span">FINANCE PLATFORM</span></div>
+                            <div className="hero-top-subtitle">#1 <span className="hero-top-subtitle-span">Dashapatmaja Solutions</span></div>
                         </div>
                         {/* h1 class: "section-top-hero-title features" — NOT just "section-top-hero-title" */}
                         <h1 data-w-id="72aac671-aa57-7d90-e97d-97e1a4b6cbf1"

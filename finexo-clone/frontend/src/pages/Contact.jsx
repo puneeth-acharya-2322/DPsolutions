@@ -37,7 +37,7 @@ export default function Contact() {
                         <div data-w-id="958c1d0d-3ef0-8b3a-d49c-351252aec012"
                             className="hero-top-text-wrapper">
                             <img src="/img/Coins.svg" loading="lazy" alt="" className="hero-top-icon" />
-                            <div className="hero-top-subtitle">#1 <span className="hero-top-subtitle-span">FINANCE PLATFORM</span></div>
+                            <div className="hero-top-subtitle">#1 <span className="hero-top-subtitle-span">Dashapatmaja Solutions</span></div>
                         </div>
                         <h1 data-w-id="958c1d0d-3ef0-8b3a-d49c-351252aec018"
                             className="section-top-hero-title features">

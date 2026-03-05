@@ -26,7 +26,7 @@ export default function Features() {
                         <div data-w-id="66d8eca5-d82a-2e40-b54c-ef5c602f22a0"
                             className="hero-top-text-wrapper phone-center">
                             <img src="/img/Coins.svg" loading="lazy" alt="" className="hero-top-icon" />
-                            <div className="hero-top-subtitle">#1 <span className="hero-top-subtitle-span">FINANCE PLATFORM</span></div>
+                            <div className="hero-top-subtitle">#1 <span className="hero-top-subtitle-span">Dashapatmaja Solutions</span></div>
                         </div>
                         <h1 data-w-id="66d8eca5-d82a-2e40-b54c-ef5c602f22a6"
                             className="section-top-hero-title">
