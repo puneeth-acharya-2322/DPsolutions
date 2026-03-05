@@ -168,25 +168,47 @@ export default function FeaturesSection() {
                                     <div className="work-description" style={{ maxWidth: '100%' }}>We start by mapping your business model, margins, customer segments, and growth targets to build a clear foundation.</div>
                                 </div>
                                 <div id="w-node-d4e79e05-1797-16fe-f13c-83f0fa5b71fa-25b1e467" className="work-image-wrapper">
-                                    {/* Business Analysis SVG */}
+                                    {/* Business Analysis SVG — Animated bars */}
                                     <svg viewBox="0 0 280 240" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', maxWidth: 280 }}>
                                         <rect x="20" y="20" width="240" height="200" rx="16" fill="#f0f4ff" stroke="#2d68fe" strokeWidth="1.5" />
                                         <rect x="40" y="45" width="200" height="35" rx="8" fill="#fff" stroke="#e2e8f0" strokeWidth="1" />
                                         <text x="55" y="68" fontSize="13" fill="#0b2a5c" fontWeight="600" fontFamily="Inter,sans-serif">Business Model Analysis</text>
-                                        {/* Bar chart */}
-                                        <rect x="50" y="160" width="28" height="45" rx="4" fill="#2d68fe" opacity="0.3" />
-                                        <rect x="90" y="140" width="28" height="65" rx="4" fill="#2d68fe" opacity="0.5" />
-                                        <rect x="130" y="120" width="28" height="85" rx="4" fill="#2d68fe" opacity="0.7" />
-                                        <rect x="170" y="100" width="28" height="105" rx="4" fill="#2d68fe" />
+                                        {/* Animated bars — grow from bottom */}
+                                        <rect x="50" y="205" width="28" rx="4" fill="#2d68fe" opacity="0.3">
+                                            <animate attributeName="y" from="205" to="160" dur="0.8s" begin="0.2s" fill="freeze" />
+                                            <animate attributeName="height" from="0" to="45" dur="0.8s" begin="0.2s" fill="freeze" />
+                                        </rect>
+                                        <rect x="90" y="205" width="28" rx="4" fill="#2d68fe" opacity="0.5">
+                                            <animate attributeName="y" from="205" to="140" dur="0.8s" begin="0.5s" fill="freeze" />
+                                            <animate attributeName="height" from="0" to="65" dur="0.8s" begin="0.5s" fill="freeze" />
+                                        </rect>
+                                        <rect x="130" y="205" width="28" rx="4" fill="#2d68fe" opacity="0.7">
+                                            <animate attributeName="y" from="205" to="120" dur="0.8s" begin="0.8s" fill="freeze" />
+                                            <animate attributeName="height" from="0" to="85" dur="0.8s" begin="0.8s" fill="freeze" />
+                                        </rect>
+                                        <rect x="170" y="205" width="28" rx="4" fill="#2d68fe">
+                                            <animate attributeName="y" from="205" to="100" dur="0.8s" begin="1.1s" fill="freeze" />
+                                            <animate attributeName="height" from="0" to="105" dur="0.8s" begin="1.1s" fill="freeze" />
+                                        </rect>
                                         {/* Labels */}
-                                        <text x="55" y="195" fontSize="9" fill="#64748b" fontFamily="Inter,sans-serif">Margins</text>
-                                        <text x="91" y="195" fontSize="9" fill="#64748b" fontFamily="Inter,sans-serif">Segments</text>
-                                        <text x="137" y="195" fontSize="9" fill="#64748b" fontFamily="Inter,sans-serif">Reach</text>
-                                        <text x="173" y="195" fontSize="9" fill="#64748b" fontFamily="Inter,sans-serif">Growth</text>
-                                        {/* Target icon */}
-                                        <circle cx="220" cy="120" r="22" fill="#fff" stroke="#ffb400" strokeWidth="2" />
-                                        <circle cx="220" cy="120" r="14" fill="none" stroke="#ffb400" strokeWidth="1.5" />
-                                        <circle cx="220" cy="120" r="6" fill="#ffb400" />
+                                        <text x="55" y="195" fontSize="9" fill="#64748b" fontFamily="Inter,sans-serif" opacity="0">Margins
+                                            <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="1s" fill="freeze" /></text>
+                                        <text x="91" y="195" fontSize="9" fill="#64748b" fontFamily="Inter,sans-serif" opacity="0">Segments
+                                            <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="1.3s" fill="freeze" /></text>
+                                        <text x="137" y="195" fontSize="9" fill="#64748b" fontFamily="Inter,sans-serif" opacity="0">Reach
+                                            <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="1.6s" fill="freeze" /></text>
+                                        <text x="173" y="195" fontSize="9" fill="#64748b" fontFamily="Inter,sans-serif" opacity="0">Growth
+                                            <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="1.9s" fill="freeze" /></text>
+                                        {/* Pulsing target icon */}
+                                        <circle cx="220" cy="120" r="22" fill="#fff" stroke="#ffb400" strokeWidth="2">
+                                            <animate attributeName="r" values="22;24;22" dur="2s" repeatCount="indefinite" />
+                                        </circle>
+                                        <circle cx="220" cy="120" r="14" fill="none" stroke="#ffb400" strokeWidth="1.5">
+                                            <animate attributeName="r" values="14;16;14" dur="2s" repeatCount="indefinite" />
+                                        </circle>
+                                        <circle cx="220" cy="120" r="6" fill="#ffb400">
+                                            <animate attributeName="r" values="6;7;6" dur="1.5s" repeatCount="indefinite" />
+                                        </circle>
                                     </svg>
                                 </div>
                             </div>
@@ -195,32 +217,61 @@ export default function FeaturesSection() {
                             <div data-w-id="0dc68af9-3de6-3cc9-6a61-acc1a758e573"
                                 className="works-card-wrapper">
                                 <div className="work-image-wrapper">
-                                    {/* Connected Domains SVG */}
+                                    {/* Connected Domains SVG — Animated nodes */}
                                     <svg viewBox="0 0 280 240" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', maxWidth: 280 }}>
                                         <rect x="20" y="20" width="240" height="200" rx="16" fill="#f0f4ff" stroke="#2d68fe" strokeWidth="1.5" />
-                                        {/* Center hub */}
-                                        <circle cx="140" cy="120" r="30" fill="#0b2a5c" />
-                                        <text x="140" y="116" textAnchor="middle" fontSize="9" fill="#fff" fontWeight="600" fontFamily="Inter,sans-serif">STRATEGY</text>
-                                        <text x="140" y="128" textAnchor="middle" fontSize="8" fill="#94a3b8" fontFamily="Inter,sans-serif">Core</text>
-                                        {/* Branding node */}
-                                        <circle cx="70" cy="60" r="22" fill="#2d68fe" />
-                                        <text x="70" y="57" textAnchor="middle" fontSize="8" fill="#fff" fontWeight="600" fontFamily="Inter,sans-serif">Brand</text>
-                                        <text x="70" y="67" textAnchor="middle" fontSize="7" fill="#c7d2fe" fontFamily="Inter,sans-serif">Marketing</text>
-                                        <line x1="88" y1="76" x2="116" y2="98" stroke="#2d68fe" strokeWidth="2" strokeDasharray="4 2" />
-                                        {/* Commerce node */}
-                                        <circle cx="210" cy="60" r="22" fill="#2d68fe" />
-                                        <text x="210" y="57" textAnchor="middle" fontSize="8" fill="#fff" fontWeight="600" fontFamily="Inter,sans-serif">Commerce</text>
-                                        <text x="210" y="67" textAnchor="middle" fontSize="7" fill="#c7d2fe" fontFamily="Inter,sans-serif">Systems</text>
-                                        <line x1="192" y1="76" x2="164" y2="98" stroke="#2d68fe" strokeWidth="2" strokeDasharray="4 2" />
-                                        {/* Sales node */}
-                                        <circle cx="140" cy="195" r="22" fill="#ffb400" />
-                                        <text x="140" y="192" textAnchor="middle" fontSize="8" fill="#0b2a5c" fontWeight="600" fontFamily="Inter,sans-serif">Sales</text>
-                                        <text x="140" y="202" textAnchor="middle" fontSize="7" fill="#0b2a5c" fontFamily="Inter,sans-serif">Growth</text>
-                                        <line x1="140" y1="150" x2="140" y2="173" stroke="#ffb400" strokeWidth="2" strokeDasharray="4 2" />
-                                        {/* Connecting arcs */}
-                                        <path d="M88 64 Q140 30 192 64" stroke="#e2e8f0" strokeWidth="1.5" fill="none" strokeDasharray="3 3" />
-                                        <path d="M66 82 Q50 140 120 193" stroke="#e2e8f0" strokeWidth="1.5" fill="none" strokeDasharray="3 3" />
-                                        <path d="M214 82 Q230 140 160 193" stroke="#e2e8f0" strokeWidth="1.5" fill="none" strokeDasharray="3 3" />
+                                        {/* Connecting lines — draw animation */}
+                                        <line x1="88" y1="76" x2="116" y2="98" stroke="#2d68fe" strokeWidth="2" strokeDasharray="30" strokeDashoffset="30">
+                                            <animate attributeName="stroke-dashoffset" from="30" to="0" dur="0.6s" begin="0.8s" fill="freeze" />
+                                        </line>
+                                        <line x1="192" y1="76" x2="164" y2="98" stroke="#2d68fe" strokeWidth="2" strokeDasharray="30" strokeDashoffset="30">
+                                            <animate attributeName="stroke-dashoffset" from="30" to="0" dur="0.6s" begin="1s" fill="freeze" />
+                                        </line>
+                                        <line x1="140" y1="150" x2="140" y2="173" stroke="#ffb400" strokeWidth="2" strokeDasharray="25" strokeDashoffset="25">
+                                            <animate attributeName="stroke-dashoffset" from="25" to="0" dur="0.6s" begin="1.2s" fill="freeze" />
+                                        </line>
+                                        {/* Arcs — draw in */}
+                                        <path d="M88 64 Q140 30 192 64" stroke="#e2e8f0" strokeWidth="1.5" fill="none" strokeDasharray="120" strokeDashoffset="120">
+                                            <animate attributeName="stroke-dashoffset" from="120" to="0" dur="1s" begin="1.4s" fill="freeze" />
+                                        </path>
+                                        <path d="M66 82 Q50 140 120 193" stroke="#e2e8f0" strokeWidth="1.5" fill="none" strokeDasharray="150" strokeDashoffset="150">
+                                            <animate attributeName="stroke-dashoffset" from="150" to="0" dur="1s" begin="1.6s" fill="freeze" />
+                                        </path>
+                                        <path d="M214 82 Q230 140 160 193" stroke="#e2e8f0" strokeWidth="1.5" fill="none" strokeDasharray="150" strokeDashoffset="150">
+                                            <animate attributeName="stroke-dashoffset" from="150" to="0" dur="1s" begin="1.8s" fill="freeze" />
+                                        </path>
+                                        {/* Center hub — fade in */}
+                                        <circle cx="140" cy="120" r="30" fill="#0b2a5c" opacity="0">
+                                            <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.3s" fill="freeze" />
+                                        </circle>
+                                        <text x="140" y="116" textAnchor="middle" fontSize="9" fill="#fff" fontWeight="600" fontFamily="Inter,sans-serif" opacity="0">STRATEGY
+                                            <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.5s" fill="freeze" /></text>
+                                        <text x="140" y="128" textAnchor="middle" fontSize="8" fill="#94a3b8" fontFamily="Inter,sans-serif" opacity="0">Core
+                                            <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.5s" fill="freeze" /></text>
+                                        {/* Branding node — pop in */}
+                                        <circle cx="70" cy="60" r="0" fill="#2d68fe">
+                                            <animate attributeName="r" from="0" to="22" dur="0.4s" begin="0.6s" fill="freeze" />
+                                        </circle>
+                                        <text x="70" y="57" textAnchor="middle" fontSize="8" fill="#fff" fontWeight="600" fontFamily="Inter,sans-serif" opacity="0">Brand
+                                            <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="0.8s" fill="freeze" /></text>
+                                        <text x="70" y="67" textAnchor="middle" fontSize="7" fill="#c7d2fe" fontFamily="Inter,sans-serif" opacity="0">Marketing
+                                            <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="0.8s" fill="freeze" /></text>
+                                        {/* Commerce node — pop in */}
+                                        <circle cx="210" cy="60" r="0" fill="#2d68fe">
+                                            <animate attributeName="r" from="0" to="22" dur="0.4s" begin="0.9s" fill="freeze" />
+                                        </circle>
+                                        <text x="210" y="57" textAnchor="middle" fontSize="8" fill="#fff" fontWeight="600" fontFamily="Inter,sans-serif" opacity="0">Commerce
+                                            <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="1.1s" fill="freeze" /></text>
+                                        <text x="210" y="67" textAnchor="middle" fontSize="7" fill="#c7d2fe" fontFamily="Inter,sans-serif" opacity="0">Systems
+                                            <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="1.1s" fill="freeze" /></text>
+                                        {/* Sales node — pop in */}
+                                        <circle cx="140" cy="195" r="0" fill="#ffb400">
+                                            <animate attributeName="r" from="0" to="22" dur="0.4s" begin="1.2s" fill="freeze" />
+                                        </circle>
+                                        <text x="140" y="192" textAnchor="middle" fontSize="8" fill="#0b2a5c" fontWeight="600" fontFamily="Inter,sans-serif" opacity="0">Sales
+                                            <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="1.4s" fill="freeze" /></text>
+                                        <text x="140" y="202" textAnchor="middle" fontSize="7" fill="#0b2a5c" fontFamily="Inter,sans-serif" opacity="0">Growth
+                                            <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="1.4s" fill="freeze" /></text>
                                     </svg>
                                 </div>
                                 <div id="w-node-_0dc68af9-3de6-3cc9-6a61-acc1a758e574-25b1e467" className="work-card-content-wrapper">
@@ -240,7 +291,7 @@ export default function FeaturesSection() {
                                 <div className="work-description _02" style={{ textAlign: 'left', maxWidth: '100%' }}>We deliver measurable outcomes across every domain — tracking KPIs, optimizing in real time, and iterating for continuous growth.</div>
                             </div>
                             <div className="work-second-image-wrapper">
-                                {/* KPI Dashboard SVG */}
+                                {/* KPI Dashboard SVG — Animated */}
                                 <svg viewBox="0 0 500 210" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%' }}>
                                     <rect width="500" height="210" rx="16" fill="#f8fafc" />
                                     {/* Header */}
@@ -250,39 +301,51 @@ export default function FeaturesSection() {
                                     <circle cx="445" cy="28" r="4" fill="#22c55e">
                                         <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite" />
                                     </circle>
-                                    {/* KPI Cards row */}
-                                    <rect x="20" y="54" width="105" height="52" rx="8" fill="#fff" stroke="#e2e8f0" strokeWidth="1" />
-                                    <text x="35" y="72" fontSize="9" fill="#64748b" fontFamily="Inter,sans-serif">Brand Reach</text>
-                                    <text x="35" y="94" fontSize="18" fill="#0b2a5c" fontWeight="700" fontFamily="Inter,sans-serif">248%</text>
-                                    <text x="88" y="94" fontSize="9" fill="#22c55e" fontFamily="Inter,sans-serif">↑12%</text>
-
-                                    <rect x="138" y="54" width="105" height="52" rx="8" fill="#fff" stroke="#e2e8f0" strokeWidth="1" />
-                                    <text x="153" y="72" fontSize="9" fill="#64748b" fontFamily="Inter,sans-serif">Commerce GMV</text>
-                                    <text x="153" y="94" fontSize="18" fill="#0b2a5c" fontWeight="700" fontFamily="Inter,sans-serif">₹12.8K</text>
-
-                                    <rect x="256" y="54" width="105" height="52" rx="8" fill="#fff" stroke="#e2e8f0" strokeWidth="1" />
-                                    <text x="271" y="72" fontSize="9" fill="#64748b" fontFamily="Inter,sans-serif">Sales Pipeline</text>
-                                    <text x="271" y="94" fontSize="18" fill="#0b2a5c" fontWeight="700" fontFamily="Inter,sans-serif">$2.4M</text>
-                                    <text x="335" y="94" fontSize="9" fill="#22c55e" fontFamily="Inter,sans-serif">↑8%</text>
-
-                                    <rect x="374" y="54" width="105" height="52" rx="8" fill="#2d68fe" />
-                                    <text x="389" y="72" fontSize="9" fill="#c7d2fe" fontFamily="Inter,sans-serif">ROI Score</text>
-                                    <text x="389" y="94" fontSize="18" fill="#fff" fontWeight="700" fontFamily="Inter,sans-serif">4.2x</text>
-
-                                    {/* Growth chart */}
+                                    {/* KPI Cards — fade in sequentially */}
+                                    <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.3s" fill="freeze" />
+                                        <rect x="20" y="54" width="105" height="52" rx="8" fill="#fff" stroke="#e2e8f0" strokeWidth="1" />
+                                        <text x="35" y="72" fontSize="9" fill="#64748b" fontFamily="Inter,sans-serif">Brand Reach</text>
+                                        <text x="35" y="94" fontSize="18" fill="#0b2a5c" fontWeight="700" fontFamily="Inter,sans-serif">248%</text>
+                                        <text x="88" y="94" fontSize="9" fill="#22c55e" fontFamily="Inter,sans-serif">↑12%</text>
+                                    </g>
+                                    <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.6s" fill="freeze" />
+                                        <rect x="138" y="54" width="105" height="52" rx="8" fill="#fff" stroke="#e2e8f0" strokeWidth="1" />
+                                        <text x="153" y="72" fontSize="9" fill="#64748b" fontFamily="Inter,sans-serif">Commerce GMV</text>
+                                        <text x="153" y="94" fontSize="18" fill="#0b2a5c" fontWeight="700" fontFamily="Inter,sans-serif">₹12.8K</text>
+                                    </g>
+                                    <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.9s" fill="freeze" />
+                                        <rect x="256" y="54" width="105" height="52" rx="8" fill="#fff" stroke="#e2e8f0" strokeWidth="1" />
+                                        <text x="271" y="72" fontSize="9" fill="#64748b" fontFamily="Inter,sans-serif">Sales Pipeline</text>
+                                        <text x="271" y="94" fontSize="18" fill="#0b2a5c" fontWeight="700" fontFamily="Inter,sans-serif">$2.4M</text>
+                                        <text x="335" y="94" fontSize="9" fill="#22c55e" fontFamily="Inter,sans-serif">↑8%</text>
+                                    </g>
+                                    <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="1.2s" fill="freeze" />
+                                        <rect x="374" y="54" width="105" height="52" rx="8" fill="#2d68fe" />
+                                        <text x="389" y="72" fontSize="9" fill="#c7d2fe" fontFamily="Inter,sans-serif">ROI Score</text>
+                                        <text x="389" y="94" fontSize="18" fill="#fff" fontWeight="700" fontFamily="Inter,sans-serif">4.2x</text>
+                                    </g>
+                                    {/* Growth chart area */}
                                     <rect x="20" y="118" width="460" height="80" rx="8" fill="#fff" stroke="#e2e8f0" strokeWidth="1" />
                                     <text x="40" y="136" fontSize="10" fill="#0b2a5c" fontWeight="600" fontFamily="Inter,sans-serif">Growth Trajectory</text>
                                     <circle cx="370" cy="133" r="3" fill="#2d68fe" /><text x="378" y="136" fontSize="8" fill="#64748b" fontFamily="Inter,sans-serif">Revenue</text>
                                     <circle cx="425" cy="133" r="3" fill="#ffb400" /><text x="433" y="136" fontSize="8" fill="#64748b" fontFamily="Inter,sans-serif">Pipeline</text>
-                                    {/* Revenue line */}
+                                    {/* Revenue line — draws in */}
                                     <polyline points="40,185 100,180 160,172 220,166 280,160 340,154 400,148 460,142"
-                                        stroke="#2d68fe" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-                                    {/* Pipeline line */}
+                                        stroke="#2d68fe" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"
+                                        strokeDasharray="500" strokeDashoffset="500">
+                                        <animate attributeName="stroke-dashoffset" from="500" to="0" dur="1.5s" begin="1.5s" fill="freeze" />
+                                    </polyline>
+                                    {/* Pipeline line — draws in */}
                                     <polyline points="40,188 100,184 160,178 220,176 280,170 340,165 400,158 460,150"
-                                        stroke="#ffb400" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="5 3" />
-                                    {/* Area fill */}
+                                        stroke="#ffb400" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"
+                                        strokeDasharray="500" strokeDashoffset="500">
+                                        <animate attributeName="stroke-dashoffset" from="500" to="0" dur="1.5s" begin="1.8s" fill="freeze" />
+                                    </polyline>
+                                    {/* Area fill — fades in */}
                                     <polygon points="40,185 100,180 160,172 220,166 280,160 340,154 400,148 460,142 460,193 40,193"
-                                        fill="url(#blueGradFeat)" opacity="0.15" />
+                                        fill="url(#blueGradFeat)" opacity="0">
+                                        <animate attributeName="opacity" from="0" to="0.15" dur="0.8s" begin="2.5s" fill="freeze" />
+                                    </polygon>
                                     <defs>
                                         <linearGradient id="blueGradFeat" x1="0" y1="0" x2="0" y2="1">
                                             <stop offset="0%" stopColor="#2d68fe" />
