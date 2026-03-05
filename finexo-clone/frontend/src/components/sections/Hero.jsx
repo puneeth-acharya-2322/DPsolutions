@@ -86,7 +86,7 @@ export default function Hero({ variant = 'home', title, subtitle }) {
                 {/* Ticker */}
                 <div className="ticker-content-wrapper">
                     <div data-w-id="ec14c473-f63f-e689-0137-b3fc22ad1e41"
-                        className="ticker-title">Over 4M+ connected with us!</div>
+                        className="ticker-title">Connected with us!</div>
                     <div data-w-id="332012d9-c181-63be-48ff-8116710856b7"
                         className="ticker-content-wrap" style={{ overflow: 'hidden' }}>
                         <div style={{

@@ -1,9 +1,22 @@
 import { Link } from 'react-router-dom'
+import { useState, useEffect, useRef } from 'react'
 
 /* ─── BlogSection ─────────────────────────────────────────
    Dashapatmaja Solutions — Insights & Articles
   ──────────────────────────────────────────────────────── */
 export default function BlogSection() {
+    const blogRef = useRef(null);
+    const [blogVisible, setBlogVisible] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => { if (entry.isIntersecting) { setBlogVisible(true); observer.disconnect(); } },
+            { threshold: 0.15 }
+        );
+        if (blogRef.current) observer.observe(blogRef.current);
+        return () => observer.disconnect();
+    }, []);
+
     return (
         <section className="section blog">
             <div className="w-layout-blockcontainer container w-container">
@@ -70,13 +83,18 @@ export default function BlogSection() {
                     .blog-link-wrapper:hover .blog-main-image {
                         transform: scale(1.05);
                     }
+                    @keyframes blogFadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+                    .blog-card-anim { opacity: 0; }
+                    .blog-visible .blog-card-anim { animation: blogFadeIn 0.7s ease forwards; }
+                    .blog-visible .blog-card-anim:nth-child(1) { animation-delay: 0.1s; }
+                    .blog-visible .blog-card-anim:nth-child(2) { animation-delay: 0.3s; }
                 `}</style>
 
-                <div data-w-id="09ac68b2-1d3a-5bd3-d0c5-c0a3cb90cdf9"
-                    className="blog-content-wrapper">
+                <div ref={blogRef} data-w-id="09ac68b2-1d3a-5bd3-d0c5-c0a3cb90cdf9"
+                    className={`blog-content-wrapper${blogVisible ? ' blog-visible' : ''}`}>
 
                     {/* Featured blog — left col */}
-                    <div className="blog-left-col-wrapper" data-w-id="blog-left-col-fade">
+                    <div className="blog-left-col-wrapper blog-card-anim" data-w-id="blog-left-col-fade">
                         <div className="w-dyn-list">
                             <div role="list" className="w-dyn-items">
                                 <div role="listitem" className="w-dyn-item">
@@ -102,7 +120,7 @@ export default function BlogSection() {
                     </div>
 
                     {/* Right col blogs */}
-                    <div className="blog-right-col-wrapper" data-w-id="blog-right-col-fade">
+                    <div className="blog-right-col-wrapper blog-card-anim" data-w-id="blog-right-col-fade">
                         <div className="w-dyn-list">
                             <div role="list" className="blog-collection-list w-dyn-items">
 
