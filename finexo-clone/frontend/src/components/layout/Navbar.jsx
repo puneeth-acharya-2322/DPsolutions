@@ -76,17 +76,22 @@ export default function Navbar() {
                                     <div className="dropdown-list-wrap" style={{ marginLeft: 0 }}>
                                         <div className="dropdown-list-wrapper" style={{ paddingTop: 0 }}>
                                             <div className="dropdown-dual-wrap">
-                                                <Link to="/about#values" className="dropdown-link-wrapper w-inline-block">
+                                                <Link to="/about" className="dropdown-link-wrapper w-inline-block">
+                                                    <div className="dropdown-link-wrap">
+                                                        <div className="dropdown-item-title">Our Company</div>
+                                                    </div>
+                                                </Link>
+                                                <Link to="/our-values" className="dropdown-link-wrapper w-inline-block">
                                                     <div className="dropdown-link-wrap">
                                                         <div className="dropdown-item-title">Our Values</div>
                                                     </div>
                                                 </Link>
-                                                <Link to="/about#vision" className="dropdown-link-wrapper w-inline-block">
+                                                <Link to="/our-vision" className="dropdown-link-wrapper w-inline-block">
                                                     <div className="dropdown-link-wrap">
                                                         <div className="dropdown-item-title">Our Vision</div>
                                                     </div>
                                                 </Link>
-                                                <Link to="/about#mission" className="dropdown-link-wrapper w-inline-block">
+                                                <Link to="/our-mission" className="dropdown-link-wrapper w-inline-block">
                                                     <div className="dropdown-link-wrap">
                                                         <div className="dropdown-item-title">Our Mission</div>
                                                     </div>
@@ -135,11 +140,11 @@ export default function Navbar() {
                                                         <div className="dropdown-item-title">Raw Radicles</div>
                                                     </div>
                                                 </Link>
-                                                <Link to="/brands/genalpha" className="dropdown-link-wrapper w-inline-block">
+                                                <a href="https://gen-alpha-portable-lab-final.onrender.com" target="_blank" rel="noopener noreferrer" className="dropdown-link-wrapper w-inline-block">
                                                     <div className="dropdown-link-wrap">
                                                         <div className="dropdown-item-title">Gen-Alpha Portable Lab</div>
                                                     </div>
-                                                </Link>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>

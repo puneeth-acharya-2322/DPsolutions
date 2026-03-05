@@ -1,208 +1,195 @@
-import FAQSection from '../components/sections/FAQSection'
+import { Link } from 'react-router-dom'
 
 /* ─────────────────────────────────────────────────────────
-   About Page — Exact DOM replica from finexo-template.webflow.io
-   Source: about.html — 6 sections (pos: 28138, 31381, 34586, 36819, 41251, 44829):
-   1. hero-top-wrapper (hero with image)
-   2. section-top-wrapper with about-counter-wrapper (4 counters)
-   3. about-content-wrapper (text + image)
-   4. team-content-wrapper (4 team cards from real HTML)
-   5. FAQ section (section-top-wrapper + faq-content-wrapper)
-   6. footer-content-wrapper (handled by Footer component)
+   About Page — Dashapatmaja Solutions Overview
+   Structure mirrors Pricing.jsx: hero + content + footer CTA
    ────────────────────────────────────────────────────────*/
 export default function About() {
     return (
         <>
-            {/* Section 1 — Page Hero */}
+            <style>{`
+                @keyframes timelineFade { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+                .timeline-card {
+                    background: #fff;
+                    border-radius: 20px;
+                    padding: 36px 32px;
+                    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+                    position: relative;
+                    overflow: hidden;
+                    transition: transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94), box-shadow 0.5s cubic-bezier(0.25,0.46,0.45,0.94);
+                    animation: timelineFade 0.7s ease forwards;
+                }
+                .timeline-card:hover {
+                    transform: translateY(-6px);
+                    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+                }
+                .timeline-card::before {
+                    content: '';
+                    position: absolute;
+                    top: 0; left: 0; right: 0;
+                    height: 4px;
+                }
+                .timeline-card:nth-child(1) { animation-delay: 0.1s; }
+                .timeline-card:nth-child(2) { animation-delay: 0.3s; }
+                .timeline-card:nth-child(3) { animation-delay: 0.5s; }
+                .timeline-card:nth-child(1)::before { background: linear-gradient(90deg, #2d68fe, #60a5fa); }
+                .timeline-card:nth-child(2)::before { background: linear-gradient(90deg, #ffb400, #fcd34d); }
+                .timeline-card:nth-child(3)::before { background: linear-gradient(90deg, #22c55e, #86efac); }
+                .timeline-year {
+                    display: inline-block;
+                    background: #0b2a5c;
+                    color: #fff;
+                    font-size: 18px;
+                    font-weight: 800;
+                    padding: 8px 20px;
+                    border-radius: 12px;
+                    margin-bottom: 20px;
+                }
+                .timeline-item {
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 12px;
+                    padding: 10px 0;
+                    border-bottom: 1px solid #f1f5f9;
+                    font-size: 15px;
+                    line-height: 1.7;
+                    color: #475569;
+                }
+                .timeline-item:last-child { border-bottom: none; }
+                .timeline-dot {
+                    width: 8px; height: 8px;
+                    border-radius: 50%;
+                    background: #2d68fe;
+                    flex-shrink: 0;
+                    margin-top: 8px;
+                }
+            `}</style>
+
+            {/* ── Section 1: Hero ── */}
             <section className="section">
                 <div className="w-layout-blockcontainer container w-container">
                     <div className="hero-top-wrapper">
-                        <div className="hero-top-wrap">
-                            <div data-w-id="fd4c5637-868a-ed33-73d2-399393944a92"
-                                className="hero-top-text-wrapper">
-                                <img src="/img/Coins.svg" loading="lazy" alt="" className="hero-top-icon" />
-                                <div className="hero-top-subtitle">#1 <span className="hero-top-subtitle-span">Dashapatmaja Solutions</span></div>
-                            </div>
-                            <h1 data-w-id="fd4c5637-868a-ed33-73d2-399393944a98"
-                                className="section-top-hero-title features">
-                                We help you manage<br /> <span className="design-text">and</span> grow your finances
-                            </h1>
+                        <div data-w-id="6444e04b-f4d6-64b5-af74-17171db5d4b7"
+                            className="hero-top-text-wrapper">
+                            <img src="/img/Coins.svg" loading="lazy" alt="" className="hero-top-icon" />
+                            <div className="hero-top-subtitle">#1 <span className="hero-top-subtitle-span">Dashapatmaja Solutions</span></div>
                         </div>
-                        <div data-w-id="fd4c5637-868a-ed33-73d2-399393944a9d"
-                            className="about-hero-image-wrapper">
-                            <img src="/img/Blog-Image.webp" loading="lazy" alt="" className="about-hero-image"
-                                sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.984375px, 939.984375px" />
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Section 2 — Counter stats */}
-            <section className="section">
-                <div className="w-layout-blockcontainer container w-container">
-                    <div className="section-top-wrapper">
-                        <div data-w-id="06d7160a-5dd8-2353-a72d-8bb2710e7272"
-                            className="section-top-subtitle-wrap">
-                            <img src="/img/Feather.svg" loading="lazy" alt="" className="section-top-image" />
-                            <div className="section-top-subtitle">ABOUT US</div>
-                        </div>
-                        <h2 data-w-id="06d7160a-5dd8-2353-a72d-8bb2710e7276" className="section-top-title">
-                            We help you manage <span className="design-text">and</span> grow your finances
-                        </h2>
-                    </div>
-                    <div data-w-id="06d7160a-5dd8-2353-a72d-8bb2710e727a"
-                        className="about-counter-wrapper">
-                        <div className="about-counter-wrap">
-                            <h2 className="about-counter-number">300<span className="design-text">+</span></h2>
-                            <div className="about-counter-title">Happy clients</div>
-                        </div>
-                        <div className="about-counter-wrap">
-                            <h2 className="about-counter-number">$4.5<span className="design-text">M</span></h2>
-                            <div className="about-counter-title">Capital Raised</div>
-                        </div>
-                        <div className="about-counter-wrap">
-                            <h2 className="about-counter-number">120<span className="design-text">+</span></h2>
-                            <div className="about-counter-title">Team Members</div>
-                        </div>
-                        <div className="about-counter-wrap">
-                            <h2 className="about-counter-number">20<span className="design-text">+</span></h2>
-                            <div className="about-counter-title">Awards Won</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Section 3 — About content (text + image) */}
-            <section className="section">
-                <div className="w-layout-blockcontainer container w-container">
-                    <div className="about-content-wrapper">
-                        <div className="section-top-wrapper left">
-                            <div data-w-id="26efd2c1-c2af-b320-3da8-3f93ba1dde2e"
-                                className="section-top-subtitle-wrap">
-                                <img src="/img/Feather.svg" loading="lazy" alt="" className="section-top-image" />
-                                <div className="section-top-subtitle">ABOUT US</div>
-                            </div>
-                            <h2 data-w-id="26efd2c1-c2af-b320-3da8-3f93ba1dde32" className="section-top-title">
-                                We help you to track and manage your finances
-                            </h2>
-                            <div data-w-id="26efd2c1-c2af-b320-3da8-3f93ba1dde36" className="section-subtitle">
-                                We provide comprehensive financial solutions to help you achieve your goals.
-                            </div>
-                        </div>
-                        <div data-w-id="26efd2c1-c2af-b320-3da8-3f93ba1dde38"
-                            className="about-image-wrapper">
-                            <img src="/img/Blog-Image-2.webp" loading="lazy" alt="" className="about-image"
-                                sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.984375px, 939.984375px" />
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Section 4 — Team Members (exact from real about.html) */}
-            <section className="section">
-                <div className="w-layout-blockcontainer container w-container">
-                    <div className="section-top-wrapper">
-                        <div data-w-id="af0ba9ee-4d51-3ff7-0ca3-c7bd6f11271a"
-                            className="section-top-subtitle-wrap">
-                            <img src="/img/Feather.svg" loading="lazy" alt="" className="section-top-image" />
-                            <div className="section-top-subtitle">Teams</div>
-                        </div>
-                        <h2 data-w-id="af0ba9ee-4d51-3ff7-0ca3-c7bd6f11271e" className="section-top-title">
-                            Guidance <span className="design-text">toward</span> your financial freedom
-                        </h2>
-                        <div data-w-id="af0ba9ee-4d51-3ff7-0ca3-c7bd6f112723" className="section-subtitle">
-                            Track expenses manage your finances effortlessly
-                        </div>
-                    </div>
-
-                    <div className="team-content-wrapper">
-                        {/* Team member 1 — James Carter */}
-                        <div data-w-id="2809f39d-69f7-bbf1-8830-713d8674405d" className="team-content-wrap">
-                            <div className="team-image-wrapper">
-                                <img src="/img/Team-image-1.jpg" loading="lazy"
-                                    alt="Smiling man with curly hair, glasses, and a brown leather jacket over a dark shirt against a plain background."
-                                    className="team-image" />
-                            </div>
-                            <div style={{ color: 'rgb(19,39,77)' }} className="team-title">James Carter</div>
-                            <div className="team-designation">Founder &amp; CEO</div>
-                        </div>
-
-                        {/* Team member 2 */}
-                        <div data-w-id="c8961049-7b6f-8c4f-4d27-770ee6c52cdf" className="team-content-wrap">
-                            <div className="team-image-wrapper">
-                                <img src="/img/Team-image-2.jpg" loading="lazy"
-                                    alt="Man with curly salt-and-pepper hair, glasses, and beard wearing a black shirt against a light background."
-                                    className="team-image" />
-                            </div>
-                            <div style={{ color: 'rgb(19,39,77)' }} className="team-title">Robert Williams</div>
-                            <div className="team-designation">Co-Founder &amp; CTO</div>
-                        </div>
-
-                        {/* Team member 3 — use available image as fallback */}
-                        <div data-w-id="c8961049-7b6f-8c4f-4d27-770ee6c52ce5" className="team-content-wrap">
-                            <div className="team-image-wrapper">
-                                <img src="/img/Team-image-1.jpg" loading="lazy"
-                                    alt="Team member"
-                                    className="team-image" />
-                            </div>
-                            <div style={{ color: 'rgb(19,39,77)' }} className="team-title">Sarah Johnson</div>
-                            <div className="team-designation">Head of Design</div>
-                        </div>
-
-                        {/* Team member 4 */}
-                        <div data-w-id="c8961049-7b6f-8c4f-4d27-770ee6c52ceb" className="team-content-wrap">
-                            <div className="team-image-wrapper">
-                                <img src="/img/Team-image-2.jpg" loading="lazy"
-                                    alt="Team member"
-                                    className="team-image" />
-                            </div>
-                            <div style={{ color: 'rgb(19,39,77)' }} className="team-title">Michael Chen</div>
-                            <div className="team-designation">Lead Engineer</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Section 5 — FAQ */}
-            <FAQSection />
-
-            {/* Section 6 — Footer CTA (footer-content-wrapper from real about.html at 44829) */}
-            <section className="section">
-                <div className="w-layout-blockcontainer container w-container">
-                    <div className="footer-content-wrapper">
-                        <div data-w-id="19cac388-8877-fdb5-ab95-2fa6ded75ac7"
-                            className="footer-left-col-wrapper">
-                            <h2>Get started today</h2>
-                            <p className="footer-description">
-                                We provide comprehensive financial solutions to help you achieve your goals. From gets Personalized.
-                            </p>
-                            <a href="/contact" data-w-id="022059ed-85d5-c9d6-db4d-384787a8a2c7"
-                                className="primary-button-wrapper white w-inline-block">
+                        <h1 data-w-id="6444e04b-f4d6-64b5-af74-17171db5d4bd"
+                            className="section-top-hero-title features">
+                            About <span className="design-text">Dashapatmaja</span> Solutions Pvt. Ltd
+                        </h1>
+                        <p data-w-id="6444e04b-f4d6-64b5-af74-17171db5d4c4"
+                            className="section-top-description" style={{ maxWidth: '720px', margin: '0 auto' }}>
+                            Founded on a mission to blend technology with care, driving innovation across industries to create meaningful, transformative solutions.
+                        </p>
+                        <div data-w-id="6444e04b-f4d6-64b5-af74-17171db5d4c6"
+                            className="hero-button-wrapper">
+                            <a href="/contact" data-w-id="d6e99a6b-32b8-7752-4992-8db9e68f321f"
+                                className="primary-button-wrapper secondary w-inline-block">
                                 <div className="primary-button-wrap">
-                                    <div className="primary-button-text">Get Started</div>
-                                    <div className="primary-button-text">Get Started</div>
-                                </div>
-                                <img loading="lazy" src="/img/ArrowUp-white.svg" alt="" className="primary-button-icon" />
-                            </a>
-                        </div>
-                        <div data-w-id="19cac388-8877-fdb5-ab95-2fa6ded75ad3"
-                            className="footer-left-col-wrapper _02">
-                            <h2>Get started today</h2>
-                            <p className="footer-description">
-                                We provide comprehensive financial solutions to help you achieve your goals. From gets Personalized.
-                            </p>
-                            <a href="/contact" data-w-id="19cac388-8877-fdb5-ab95-2fa6ded75ad8"
-                                className="primary-button-wrapper w-inline-block">
-                                <div className="primary-button-wrap">
-                                    <div className="primary-button-text">Book a Demo</div>
-                                    <div className="primary-button-text">Book a Demo</div>
+                                    <div className="primary-button-text">Get in Touch</div>
+                                    <div className="primary-button-text">Get in Touch</div>
                                 </div>
                                 <img loading="lazy" src="/img/ArrowUp.svg" alt="" className="primary-button-icon" />
                             </a>
+                            <Link data-w-id="717a1373-40c1-701e-7ec9-e70365b0649a" to="/our-values"
+                                className="download-button-wrapper w-inline-block">
+                                <div className="download-button-text">Our Values</div>
+                                <div className="download-button-icon-wrapper">
+                                    <img src="/img/DownloadSimple.svg" loading="lazy" alt="" className="download-button-icon" />
+                                    <img src="/img/DownloadSimple-White.svg" loading="lazy" alt="" className="download-button-white-icon" />
+                                </div>
+                            </Link>
                         </div>
                     </div>
                 </div>
             </section>
+
+            {/* ── Section 2: Company Introduction ── */}
+            <section className="section">
+                <div className="w-layout-blockcontainer container w-container">
+                    <div className="section-top-wrapper">
+                        <div className="section-top-subtitle-wrap">
+                            <img src="/img/Feather.svg" loading="lazy" alt="" className="section-top-image" />
+                            <div className="section-top-subtitle">WHO WE ARE</div>
+                        </div>
+                        <h2 className="section-top-title">
+                            Technology <span className="design-text">meets</span> care
+                        </h2>
+                    </div>
+                    <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
+                        <p className="section-subtitle" style={{ fontSize: '17px', lineHeight: '1.8', color: '#475569', marginBottom: '20px' }}>
+                            Dashapatmaja Solutions Pvt. Ltd. was founded on a mission to blend technology with care, driving innovation across industries to create meaningful, transformative solutions.
+                        </p>
+                        <p className="section-subtitle" style={{ fontSize: '17px', lineHeight: '1.8', color: '#475569' }}>
+                            Established in 2023 and incubated at the Manipal Universal Technology Business Incubator in Manipal, we bring together a multidisciplinary team of professionals from engineering, healthcare, management, and technology to solve real-world challenges.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            {/* ── Section 3: Our Journey Timeline ── */}
+            <section className="section" style={{ background: '#f8fafc' }}>
+                <div className="w-layout-blockcontainer container w-container">
+                    <div className="section-top-wrapper">
+                        <div className="section-top-subtitle-wrap">
+                            <img src="/img/Feather.svg" loading="lazy" alt="" className="section-top-image" />
+                            <div className="section-top-subtitle">OUR JOURNEY</div>
+                        </div>
+                        <h2 className="section-top-title">
+                            Building <span className="design-text">milestones</span> since 2023
+                        </h2>
+                    </div>
+
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '28px', marginTop: '20px' }}>
+
+                        {/* 2023 */}
+                        <div className="timeline-card">
+                            <div className="timeline-year">2023</div>
+                            <div className="timeline-item">
+                                <div className="timeline-dot"></div>
+                                <span>Formed with a vision to innovate at the intersection of technology, education, and research.</span>
+                            </div>
+                            <div className="timeline-item">
+                                <div className="timeline-dot" style={{ background: '#ffb400' }}></div>
+                                <span>Incubated at GOK Bioincubator, Manipal.</span>
+                            </div>
+                        </div>
+
+                        {/* 2024 */}
+                        <div className="timeline-card">
+                            <div className="timeline-year" style={{ background: '#ffb400' }}>2024</div>
+                            <div className="timeline-item">
+                                <div className="timeline-dot"></div>
+                                <span>Launch of flagship projects, including the GenAlpha Portable.</span>
+                            </div>
+                            <div className="timeline-item">
+                                <div className="timeline-dot" style={{ background: '#ffb400' }}></div>
+                                <span>Launch of premium Ayurvedic brand — Raw Radicles.</span>
+                            </div>
+                        </div>
+
+                        {/* 2025 */}
+                        <div className="timeline-card">
+                            <div className="timeline-year" style={{ background: '#22c55e' }}>2025</div>
+                            <div className="timeline-item">
+                                <div className="timeline-dot"></div>
+                                <span>Incubated at MUTBI, MAHE, Manipal.</span>
+                            </div>
+                            <div className="timeline-item">
+                                <div className="timeline-dot" style={{ background: '#ffb400' }}></div>
+                                <span>Received Grant from MUTBI, MAHE, Manipal under the NIDHI-PRAYAS Scheme.</span>
+                            </div>
+                            <div className="timeline-item">
+                                <div className="timeline-dot" style={{ background: '#22c55e' }}></div>
+                                <span>Signed a MOU with Amruthanjali Ayurveda for manufacturing and supply of premium Ayurvedic products.</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
         </>
     )
 }

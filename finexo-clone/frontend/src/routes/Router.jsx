@@ -8,6 +8,9 @@ import Blogs from '../pages/Blogs'
 import Pricing from '../pages/Pricing'
 import Contact from '../pages/Contact'
 import About from '../pages/About'
+import OurValues from '../pages/OurValues'
+import OurVision from '../pages/OurVision'
+import OurMission from '../pages/OurMission'
 import NotFound from '../pages/NotFound'
 
 export default function AppRouter() {
@@ -25,9 +28,13 @@ export default function AppRouter() {
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/our-values" element={<OurValues />} />
+                <Route path="/our-vision" element={<OurVision />} />
+                <Route path="/our-mission" element={<OurMission />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />
         </div>
     )
 }
+
