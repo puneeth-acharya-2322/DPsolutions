@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 
 /* ─── FeaturesSection ─────────────────────────────────────
@@ -6,6 +6,18 @@ import { Link } from 'react-router-dom'
    All local /img/ assets, all data-w-id attributes preserved
   ──────────────────────────────────────────────────────── */
 export default function FeaturesSection() {
+    const whyCardsRef = useRef(null);
+    const [whyVisible, setWhyVisible] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => { if (entry.isIntersecting) { setWhyVisible(true); observer.disconnect(); } },
+            { threshold: 0.2 }
+        );
+        if (whyCardsRef.current) observer.observe(whyCardsRef.current);
+        return () => observer.disconnect();
+    }, []);
+
     return (
         <>
             <style>{`
@@ -49,13 +61,45 @@ export default function FeaturesSection() {
                             className="section-top-title">Innovate. Educate. Elevate</h2>
                     </div>
 
-                    <div className="control-content-wrapper" style={{ gridTemplateColumns: '1fr 1fr 1fr 1fr' }}>
+                    <style>{`
+                        @keyframes cardReveal { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+                        .why-card {
+                            opacity: 0;
+                            position: relative;
+                            overflow: hidden;
+                            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+                        }
+                        .why-cards-visible .why-card {
+                            animation: cardReveal 0.7s ease forwards;
+                        }
+                        .why-cards-visible .why-card:nth-child(1) { animation-delay: 0.1s; }
+                        .why-cards-visible .why-card:nth-child(2) { animation-delay: 0.25s; }
+                        .why-cards-visible .why-card:nth-child(3) { animation-delay: 0.4s; }
+                        .why-cards-visible .why-card:nth-child(4) { animation-delay: 0.55s; }
+                        .why-card::before {
+                            content: '';
+                            position: absolute;
+                            top: 0; left: 0; right: 0;
+                            height: 4px;
+                            border-radius: 12px 12px 0 0;
+                        }
+                        .why-card:hover {
+                            transform: translateY(-6px) !important;
+                            box-shadow: 0 12px 30px rgba(0,0,0,0.08) !important;
+                        }
+                        .why-card-1::before { background: linear-gradient(90deg, #2d68fe, #60a5fa); }
+                        .why-card-2::before { background: linear-gradient(90deg, #ffb400, #fcd34d); }
+                        .why-card-3::before { background: linear-gradient(90deg, #2d68fe, #818cf8); }
+                        .why-card-4::before { background: linear-gradient(90deg, #0b2a5c, #2d68fe); }
+                        .why-card:hover .control-image-wrapper { transform: scale(1.02); }
+                        .control-image-wrapper { transition: transform 0.5s ease; }
+                    `}</style>
+
+                    <div ref={whyCardsRef} className={`control-content-wrapper${whyVisible ? ' why-cards-visible' : ''}`} style={{ gridTemplateColumns: '1fr 1fr 1fr 1fr' }}>
                         {/* Card 1 */}
                         <div data-w-id="9508af15-2a36-4a03-9858-5fd31e914dba"
-                            className="control-content-wrap"
-                            style={{ transition: 'transform 0.3s ease', cursor: 'pointer' }}
-                            onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-10px)'}
-                            onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}>
+                            className="control-content-wrap why-card why-card-1"
+                            style={{ cursor: 'pointer' }}>
                             <div className="control-top-content-wrapper">
                                 <h3 className="feature-title">Expertise Across Domains</h3>
                                 <div className="control-description">Cross-domain expertise across marketing, commerce, and sales</div>
@@ -67,10 +111,8 @@ export default function FeaturesSection() {
 
                         {/* Card 2 */}
                         <div data-w-id="ae606966-5161-1ea8-3122-81bf1a27d097"
-                            className="control-content-wrap"
-                            style={{ transition: 'transform 0.3s ease', cursor: 'pointer' }}
-                            onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-10px)'}
-                            onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}>
+                            className="control-content-wrap why-card why-card-2"
+                            style={{ cursor: 'pointer' }}>
                             <div className="control-top-content-wrapper">
                                 <h3 className="feature-title">Innovation-Driven Solutions</h3>
                                 <div className="control-description">Cutting-edge technology and research to create impactful and future-ready solutions.</div>
@@ -82,10 +124,8 @@ export default function FeaturesSection() {
 
                         {/* Card 3 */}
                         <div data-w-id="98631d1b-72cc-bd84-a455-e14048f1565f"
-                            className="control-content-wrap"
-                            style={{ transition: 'transform 0.3s ease', cursor: 'pointer' }}
-                            onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-10px)'}
-                            onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}>
+                            className="control-content-wrap why-card why-card-3"
+                            style={{ cursor: 'pointer' }}>
                             <div className="control-top-content-wrapper">
                                 <h3 className="feature-title">Customized Approach</h3>
                                 <div className="control-description">Tailored strategies that align with your business goals for maximum success.</div>
@@ -97,10 +137,8 @@ export default function FeaturesSection() {
 
                         {/* Card 4 */}
                         <div data-w-id="98631d1b-72cc-bd84-a455-e14048f1566f"
-                            className="control-content-wrap"
-                            style={{ transition: 'transform 0.3s ease', cursor: 'pointer' }}
-                            onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-10px)'}
-                            onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}>
+                            className="control-content-wrap why-card why-card-4"
+                            style={{ cursor: 'pointer' }}>
                             <div className="control-top-content-wrapper">
                                 <h3 className="feature-title">Global Impact</h3>
                                 <div className="control-description">Helping businesses scale and make a meaningful difference worldwide.</div>
