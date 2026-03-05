@@ -416,12 +416,95 @@ function FeatureTabs() {
                             </div>
                         </div>
                         <div id="w-node-_09456d7b-e4c0-d119-1868-962cadec8c2b-25b1e467" className="tab-image-wrapper">
-                            <img className="tab-image"
-                                src="/img/marketing_analytics_styled.png"
-                                alt="Marketing & Branding Analytics Dashboard"
-                                sizes="100vw"
-                                data-w-id="09456d7b-e4c0-d119-1868-962cadec8c2c"
-                                loading="lazy" />
+                            <style>{`
+                                @keyframes floatDash { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+                                @keyframes metricPop { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+                                .mkt-dash { animation: floatDash 4s ease-in-out infinite; background: linear-gradient(135deg, #fff 0%, #f1f5f9 100%); border-radius: 32px; padding: 40px; width: 100%; max-width: 520px; margin: 0 auto; box-shadow: 0 20px 50px rgba(0,0,0,0.08), inset 0 0 0 1px rgba(255,255,255,0.6); }
+                                .mkt-metric { opacity: 0; animation: metricPop 0.5s ease forwards; }
+                                .mkt-metric:nth-child(1) { animation-delay: 0.2s; }
+                                .mkt-metric:nth-child(2) { animation-delay: 0.4s; }
+                                .mkt-metric:nth-child(3) { animation-delay: 0.6s; }
+                                .mkt-metric:nth-child(4) { animation-delay: 0.8s; }
+                            `}</style>
+                            <div className="mkt-dash">
+                                {/* Header */}
+                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                                        <div style={{ width: '36px', height: '36px', borderRadius: '10px', background: '#0b2a5c', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffb400" strokeWidth="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2" /></svg>
+                                        </div>
+                                        <div style={{ fontSize: '15px', fontWeight: '800', color: '#0b2a5c' }}>Brand Performance</div>
+                                    </div>
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                                        <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#22c55e', animation: 'pulse-node 2s infinite' }}></div>
+                                        <span style={{ fontSize: '11px', color: '#64748b', fontWeight: '600' }}>Live</span>
+                                    </div>
+                                </div>
+                                {/* Metric cards row */}
+                                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '14px', marginBottom: '24px' }}>
+                                    <div className="mkt-metric" style={{ background: '#fff', borderRadius: '14px', padding: '14px', boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}>
+                                        <div style={{ fontSize: '10px', color: '#64748b', fontWeight: '600', marginBottom: '6px' }}>Brand Awareness</div>
+                                        <div style={{ display: 'flex', alignItems: 'baseline', gap: '6px' }}>
+                                            <span style={{ fontSize: '22px', fontWeight: '800', color: '#0b2a5c' }}>87%</span>
+                                            <span style={{ fontSize: '11px', fontWeight: '700', color: '#22c55e' }}>↑ 12%</span>
+                                        </div>
+                                    </div>
+                                    <div className="mkt-metric" style={{ background: '#fff', borderRadius: '14px', padding: '18px', boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}>
+                                        <div style={{ fontSize: '10px', color: '#64748b', fontWeight: '600', marginBottom: '6px' }}>Social Reach</div>
+                                        <div style={{ display: 'flex', alignItems: 'baseline', gap: '6px' }}>
+                                            <span style={{ fontSize: '22px', fontWeight: '800', color: '#0b2a5c' }}>12.4K</span>
+                                            <span style={{ fontSize: '11px', fontWeight: '700', color: '#22c55e' }}>↑ 8%</span>
+                                        </div>
+                                    </div>
+                                    <div className="mkt-metric" style={{ background: '#fff', borderRadius: '14px', padding: '18px', boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}>
+                                        <div style={{ fontSize: '10px', color: '#64748b', fontWeight: '600', marginBottom: '6px' }}>Campaign ROI</div>
+                                        <div style={{ display: 'flex', alignItems: 'baseline', gap: '6px' }}>
+                                            <span style={{ fontSize: '22px', fontWeight: '800', color: '#2d68fe' }}>3.8x</span>
+                                        </div>
+                                    </div>
+                                    <div className="mkt-metric" style={{ background: '#0b2a5c', borderRadius: '14px', padding: '18px' }}>
+                                        <div style={{ fontSize: '10px', color: '#94a3b8', fontWeight: '600', marginBottom: '6px' }}>Conversion</div>
+                                        <div style={{ display: 'flex', alignItems: 'baseline', gap: '6px' }}>
+                                            <span style={{ fontSize: '22px', fontWeight: '800', color: '#fff' }}>24%</span>
+                                            <span style={{ fontSize: '11px', fontWeight: '700', color: '#ffb400' }}>↑ 5%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                {/* Animated chart */}
+                                <div style={{ background: '#fff', borderRadius: '14px', padding: '16px', boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}>
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
+                                        <span style={{ fontSize: '11px', fontWeight: '700', color: '#0b2a5c' }}>Brand Reach Trend</span>
+                                        <span style={{ fontSize: '10px', color: '#64748b' }}>Last 6 months</span>
+                                    </div>
+                                    <svg viewBox="0 0 340 100" fill="none" style={{ width: '100%' }}>
+                                        <polyline points="10,80 60,65 120,70 180,50 240,45 300,25"
+                                            stroke="#2d68fe" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round"
+                                            strokeDasharray="400" strokeDashoffset="400">
+                                            <animate attributeName="stroke-dashoffset" from="400" to="0" dur="2s" begin="1s" fill="freeze" />
+                                        </polyline>
+                                        <polygon points="10,80 60,65 120,70 180,50 240,45 300,25 300,95 10,95"
+                                            fill="url(#mktGrad)" opacity="0">
+                                            <animate attributeName="opacity" from="0" to="0.2" dur="0.6s" begin="2.5s" fill="freeze" />
+                                        </polygon>
+                                        {/* Data points pop in */}
+                                        <circle cx="60" cy="65" r="0" fill="#2d68fe"><animate attributeName="r" from="0" to="4" dur="0.3s" begin="1.3s" fill="freeze" /></circle>
+                                        <circle cx="120" cy="70" r="0" fill="#2d68fe"><animate attributeName="r" from="0" to="4" dur="0.3s" begin="1.6s" fill="freeze" /></circle>
+                                        <circle cx="180" cy="50" r="0" fill="#2d68fe"><animate attributeName="r" from="0" to="4" dur="0.3s" begin="1.9s" fill="freeze" /></circle>
+                                        <circle cx="240" cy="45" r="0" fill="#2d68fe"><animate attributeName="r" from="0" to="4" dur="0.3s" begin="2.1s" fill="freeze" /></circle>
+                                        <circle cx="300" cy="25" r="0" fill="#ffb400"><animate attributeName="r" from="0" to="6" dur="0.3s" begin="2.3s" fill="freeze" /></circle>
+                                        {/* Latest value label */}
+                                        <text x="278" y="18" fontSize="10" fill="#0b2a5c" fontWeight="700" fontFamily="Inter,sans-serif" opacity="0">
+                                            12.4K<animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="2.5s" fill="freeze" />
+                                        </text>
+                                        <defs>
+                                            <linearGradient id="mktGrad" x1="0" y1="0" x2="0" y2="1">
+                                                <stop offset="0%" stopColor="#2d68fe" />
+                                                <stop offset="100%" stopColor="#2d68fe" stopOpacity="0" />
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </div>
                         </div>
                         <div className="tab-colomn-wrapper">
                             <div data-w-id="09456d7b-e4c0-d119-1868-962cadec8c2e" className="tab-colomn-wrap">
@@ -487,7 +570,29 @@ function FeatureTabs() {
                             </div>
                         </div>
                         <div id="w-node-_09456d7b-e4c0-d119-1868-962cadec8c7b-25b1e467" className="tab-image-wrapper">
-                            <div data-w-id="09456d7b-e4c0-d119-1868-962cadec8c7c" className="third-tab-content-wrapper">
+                            <style>{`
+                                @keyframes floatCard { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+                                .third-tab-content-wrapper {
+                                    animation: floatCard 4s ease-in-out infinite !important;
+                                }
+                                .third-tab-icon { transition: transform 0.15s ease-out; }
+                            `}</style>
+                            <div data-w-id="09456d7b-e4c0-d119-1868-962cadec8c7c" className="third-tab-content-wrapper"
+                                onMouseMove={e => {
+                                    const rect = e.currentTarget.getBoundingClientRect();
+                                    const x = (e.clientX - rect.left - rect.width / 2) / rect.width;
+                                    const y = (e.clientY - rect.top - rect.height / 2) / rect.height;
+                                    const icons = e.currentTarget.querySelectorAll('.third-tab-icon');
+                                    const speeds = [25, 35, 20, 30];
+                                    icons.forEach((icon, i) => {
+                                        icon.style.transform = `translate(${x * speeds[i]}px, ${y * speeds[i]}px)`;
+                                    });
+                                }}
+                                onMouseLeave={e => {
+                                    e.currentTarget.querySelectorAll('.third-tab-icon').forEach(icon => {
+                                        icon.style.transform = 'translate(0, 0)';
+                                    });
+                                }}>
                                 <div className="third-tan-subtitle">SALES</div>
                                 <h2 className="third-tab-image-title">Drive <span className="design-text">predictable</span> revenue</h2>
                                 <Link to="/contact" data-w-id="09456d7b-e4c0-d119-1868-962cadec8c83"
@@ -624,8 +729,23 @@ export const EcommerceVisualRounded = () => (
         margin: '0 auto',
         display: 'flex',
         flexDirection: 'column',
-        boxShadow: '0 20px 50px rgba(0,0,0,0.08), inset 0 0 0 1px rgba(255,255,255,0.6)'
+        boxShadow: '0 20px 50px rgba(0,0,0,0.08), inset 0 0 0 1px rgba(255,255,255,0.6)',
+        animation: 'floatTab 4s ease-in-out infinite'
     }}>
+        <style>{`
+            @keyframes progressPulse { 0%,100% { width: 65%; } 50% { width: 72%; } }
+            @keyframes cartBounce { 0%,100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+            .ecom-progress-bar { animation: progressPulse 3s ease-in-out infinite !important; }
+            .ecom-cart-badge { animation: cartBounce 2s ease-in-out infinite; }
+            .ecom-product-card { opacity: 0; animation: fadeSlideUp 0.5s ease forwards; }
+            .ecom-product-card:nth-child(1) { animation-delay: 0.1s; }
+            .ecom-product-card:nth-child(2) { animation-delay: 0.3s; }
+            .ecom-product-card:nth-child(3) { animation-delay: 0.5s; }
+            .ecom-product-card:nth-child(4) { animation-delay: 0.7s; }
+            @keyframes fadeSlideUp { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+            @keyframes deliveryDot { 0%,100% { left: 65%; } 50% { left: 72%; } }
+            .ecom-delivery-dot { animation: deliveryDot 3s ease-in-out infinite !important; }
+        `}</style>
         {/* Header */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '28px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
@@ -641,7 +761,7 @@ export const EcommerceVisualRounded = () => (
                 <div style={{ width: '44px', height: '44px', borderRadius: '50%', background: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }}>
                     <svg width="20" height="20" fill="none" stroke="#64748b" strokeWidth="2" viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
                 </div>
-                <div style={{ padding: '12px 20px', borderRadius: '24px', background: '#fff', display: 'flex', alignItems: 'center', gap: '10px', boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }}>
+                <div className="ecom-cart-badge" style={{ padding: '12px 20px', borderRadius: '24px', background: '#fff', display: 'flex', alignItems: 'center', gap: '10px', boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }}>
                     <svg width="18" height="18" fill="none" stroke="#64748b" strokeWidth="2" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
                     <div style={{ fontSize: '14px', fontWeight: '700', color: '#334155' }}>Cart <span style={{ color: '#94a3b8', fontWeight: '500' }}>(5)</span></div>
                 </div>
@@ -655,8 +775,8 @@ export const EcommerceVisualRounded = () => (
                 <div style={{ fontSize: '12px', color: '#64748b', fontWeight: '600' }}>Order #8457 - On the Way</div>
             </div>
             <div style={{ position: 'relative', height: '8px', background: '#f1f5f9', borderRadius: '4px', marginBottom: '16px' }}>
-                <div style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: '65%', background: '#00a3ff', borderRadius: '4px' }}></div>
-                <div style={{ position: 'absolute', top: '50%', left: '65%', transform: 'translate(-50%, -50%)', width: '18px', height: '18px', borderRadius: '50%', background: '#00a3ff', border: '4px solid #fff', boxShadow: '0 3px 6px rgba(0,163,255,0.4)' }}></div>
+                <div className="ecom-progress-bar" style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: '65%', background: '#00a3ff', borderRadius: '4px' }}></div>
+                <div className="ecom-delivery-dot" style={{ position: 'absolute', top: '50%', left: '65%', transform: 'translate(-50%, -50%)', width: '18px', height: '18px', borderRadius: '50%', background: '#00a3ff', border: '4px solid #fff', boxShadow: '0 3px 6px rgba(0,163,255,0.4)' }}></div>
             </div>
             <div style={{ textAlign: 'center', fontSize: '13px', fontWeight: '700', color: '#00a3ff' }}>10-Min Delivery: 6 Mins Left</div>
         </div>
@@ -670,16 +790,16 @@ export const EcommerceVisualRounded = () => (
             </div>
         </div>
         <div style={{ display: 'flex', gap: '12px', overflowX: 'hidden', paddingBottom: '4px' }}>
-            <ProductCard bgColor="#f0f9ff" title="Organic Milk 1L" price="$3.49" icon="🥛" />
-            <ProductCard bgColor="#fff7ed" title="Bread" price="$3.49" icon="🍞" />
-            <ProductCard bgColor="#fefce8" title="Bananas" price="$3.49" icon="🍌" />
-            <ProductCard bgColor="#fef2f2" title="Eggs" price="$3.49" icon="🥚" />
+            <ProductCard bgColor="#f0f9ff" title="Organic Milk 1L" price="$3.49" icon="🥛" className="ecom-product-card" />
+            <ProductCard bgColor="#fff7ed" title="Bread" price="$3.49" icon="🍞" className="ecom-product-card" />
+            <ProductCard bgColor="#fefce8" title="Bananas" price="$3.49" icon="🍌" className="ecom-product-card" />
+            <ProductCard bgColor="#fef2f2" title="Eggs" price="$3.49" icon="🥚" className="ecom-product-card" />
         </div>
     </div>
 )
 
-const ProductCard = ({ bgColor, title, price, icon }) => (
-    <div style={{ flex: 1, minWidth: '85px', background: '#fff', borderRadius: '20px', padding: '16px 12px', display: 'flex', flexDirection: 'column', alignItems: 'center', boxShadow: '0 4px 12px rgba(0,0,0,0.04)' }}>
+const ProductCard = ({ bgColor, title, price, icon, className }) => (
+    <div className={className} style={{ flex: 1, minWidth: '85px', background: '#fff', borderRadius: '20px', padding: '16px 12px', display: 'flex', flexDirection: 'column', alignItems: 'center', boxShadow: '0 4px 12px rgba(0,0,0,0.04)' }}>
         <div style={{ width: '56px', height: '56px', borderRadius: '50%', background: bgColor, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '28px', marginBottom: '12px' }}>
             {icon}
         </div>
