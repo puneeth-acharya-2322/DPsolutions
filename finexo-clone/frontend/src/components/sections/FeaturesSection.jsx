@@ -433,7 +433,7 @@ function FeatureTabs() {
                                         <div style={{ width: '36px', height: '36px', borderRadius: '10px', background: '#0b2a5c', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffb400" strokeWidth="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2" /></svg>
                                         </div>
-                                        <div style={{ fontSize: '15px', fontWeight: '800', color: '#0b2a5c' }}>Brand Performance</div>
+                                        <div style={{ fontSize: '17px', fontWeight: '800', color: '#0b2a5c' }}>Brand Performance</div>
                                     </div>
                                     <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                                         <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#22c55e', animation: 'pulse-node 2s infinite' }}></div>
@@ -441,31 +441,31 @@ function FeatureTabs() {
                                     </div>
                                 </div>
                                 {/* Metric cards row */}
-                                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '14px', marginBottom: '24px' }}>
-                                    <div className="mkt-metric" style={{ background: '#fff', borderRadius: '14px', padding: '14px', boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}>
+                                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '24px' }}>
+                                    <div className="mkt-metric" style={{ background: '#fff', borderRadius: '14px', padding: '18px', boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}>
                                         <div style={{ fontSize: '10px', color: '#64748b', fontWeight: '600', marginBottom: '6px' }}>Brand Awareness</div>
                                         <div style={{ display: 'flex', alignItems: 'baseline', gap: '6px' }}>
-                                            <span style={{ fontSize: '22px', fontWeight: '800', color: '#0b2a5c' }}>87%</span>
+                                            <span style={{ fontSize: '28px', fontWeight: '800', color: '#0b2a5c' }}>87%</span>
                                             <span style={{ fontSize: '11px', fontWeight: '700', color: '#22c55e' }}>↑ 12%</span>
                                         </div>
                                     </div>
                                     <div className="mkt-metric" style={{ background: '#fff', borderRadius: '14px', padding: '18px', boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}>
                                         <div style={{ fontSize: '10px', color: '#64748b', fontWeight: '600', marginBottom: '6px' }}>Social Reach</div>
                                         <div style={{ display: 'flex', alignItems: 'baseline', gap: '6px' }}>
-                                            <span style={{ fontSize: '22px', fontWeight: '800', color: '#0b2a5c' }}>12.4K</span>
+                                            <span style={{ fontSize: '28px', fontWeight: '800', color: '#0b2a5c' }}>12.4K</span>
                                             <span style={{ fontSize: '11px', fontWeight: '700', color: '#22c55e' }}>↑ 8%</span>
                                         </div>
                                     </div>
                                     <div className="mkt-metric" style={{ background: '#fff', borderRadius: '14px', padding: '18px', boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}>
                                         <div style={{ fontSize: '10px', color: '#64748b', fontWeight: '600', marginBottom: '6px' }}>Campaign ROI</div>
                                         <div style={{ display: 'flex', alignItems: 'baseline', gap: '6px' }}>
-                                            <span style={{ fontSize: '22px', fontWeight: '800', color: '#2d68fe' }}>3.8x</span>
+                                            <span style={{ fontSize: '28px', fontWeight: '800', color: '#2d68fe' }}>3.8x</span>
                                         </div>
                                     </div>
                                     <div className="mkt-metric" style={{ background: '#0b2a5c', borderRadius: '14px', padding: '18px' }}>
                                         <div style={{ fontSize: '10px', color: '#94a3b8', fontWeight: '600', marginBottom: '6px' }}>Conversion</div>
                                         <div style={{ display: 'flex', alignItems: 'baseline', gap: '6px' }}>
-                                            <span style={{ fontSize: '22px', fontWeight: '800', color: '#fff' }}>24%</span>
+                                            <span style={{ fontSize: '28px', fontWeight: '800', color: '#fff' }}>24%</span>
                                             <span style={{ fontSize: '11px', fontWeight: '700', color: '#ffb400' }}>↑ 5%</span>
                                         </div>
                                     </div>
@@ -476,7 +476,7 @@ function FeatureTabs() {
                                         <span style={{ fontSize: '11px', fontWeight: '700', color: '#0b2a5c' }}>Brand Reach Trend</span>
                                         <span style={{ fontSize: '10px', color: '#64748b' }}>Last 6 months</span>
                                     </div>
-                                    <svg viewBox="0 0 340 100" fill="none" style={{ width: '100%' }}>
+                                    <svg viewBox="0 0 340 120" fill="none" style={{ width: '100%' }}>
                                         <polyline points="10,80 60,65 120,70 180,50 240,45 300,25"
                                             stroke="#2d68fe" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round"
                                             strokeDasharray="400" strokeDashoffset="400">
