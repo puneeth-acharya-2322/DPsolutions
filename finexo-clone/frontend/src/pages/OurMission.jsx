@@ -173,41 +173,7 @@ export default function OurMission() {
                 </div>
             </section>
 
-            {/* ── Section 2: footer CTA ── */}
-            <section className="section">
-                <div className="w-layout-blockcontainer container w-container">
-                    <div className="footer-content-wrapper">
-                        <div data-w-id="19cac388-8877-fdb5-ab95-2fa6ded75ac7"
-                            className="footer-left-col-wrapper">
-                            <h2>Ready to grow?</h2>
-                            <p className="footer-description">
-                                Let's discuss how Dashapatmaja Solutions can help you strengthen your brand, expand commerce, and drive predictable revenue.
-                            </p>
-                            <a href="/contact" className="primary-button-wrapper white w-inline-block">
-                                <div className="primary-button-wrap">
-                                    <div className="primary-button-text">Get Started</div>
-                                    <div className="primary-button-text">Get Started</div>
-                                </div>
-                                <img loading="lazy" src="/img/ArrowUp-white.svg" alt="" className="primary-button-icon" />
-                            </a>
-                        </div>
-                        <div data-w-id="19cac388-8877-fdb5-ab95-2fa6ded75ad3"
-                            className="footer-left-col-wrapper _02">
-                            <h2>Let's connect</h2>
-                            <p className="footer-description">
-                                Whether you're an emerging brand or an established business, we're ready to help you scale with confidence.
-                            </p>
-                            <a href="/contact" className="primary-button-wrapper w-inline-block">
-                                <div className="primary-button-wrap">
-                                    <div className="primary-button-text">Book a Demo</div>
-                                    <div className="primary-button-text">Book a Demo</div>
-                                </div>
-                                <img loading="lazy" src="/img/ArrowUp.svg" alt="" className="primary-button-icon" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
+
         </>
     )
 }

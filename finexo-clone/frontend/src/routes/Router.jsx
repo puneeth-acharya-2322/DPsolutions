@@ -11,6 +11,7 @@ import About from '../pages/About'
 import OurValues from '../pages/OurValues'
 import OurVision from '../pages/OurVision'
 import OurMission from '../pages/OurMission'
+import OurLeadership from '../pages/OurLeadership'
 import NotFound from '../pages/NotFound'
 
 export default function AppRouter() {
@@ -31,6 +32,7 @@ export default function AppRouter() {
                 <Route path="/our-values" element={<OurValues />} />
                 <Route path="/our-vision" element={<OurVision />} />
                 <Route path="/our-mission" element={<OurMission />} />
+                <Route path="/our-leadership" element={<OurLeadership />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />

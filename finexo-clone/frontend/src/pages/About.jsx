@@ -63,37 +63,39 @@ export default function About() {
                     flex-shrink: 0;
                     margin-top: 8px;
                 }
+                @keyframes fadeInUp {
+                    from { opacity: 0; transform: translateY(30px); }
+                    to { opacity: 1; transform: translateY(0); }
+                }
+                .fade-in-up {
+                    opacity: 0;
+                    animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+                }
             `}</style>
 
             {/* ── Section 1: Hero ── */}
             <section className="section">
                 <div className="w-layout-blockcontainer container w-container">
                     <div className="hero-top-wrapper">
-                        <div data-w-id="6444e04b-f4d6-64b5-af74-17171db5d4b7"
-                            className="hero-top-text-wrapper">
+                        <div className="hero-top-text-wrapper fade-in-up" style={{ animationDelay: '0.1s' }}>
                             <img src="/img/Coins.svg" loading="lazy" alt="" className="hero-top-icon" />
                             <div className="hero-top-subtitle">#1 <span className="hero-top-subtitle-span">Dashapatmaja Solutions</span></div>
                         </div>
-                        <h1 data-w-id="6444e04b-f4d6-64b5-af74-17171db5d4bd"
-                            className="section-top-hero-title features">
+                        <h1 className="section-top-hero-title features fade-in-up" style={{ animationDelay: '0.2s' }}>
                             About <span className="design-text">Dashapatmaja</span> Solutions Pvt. Ltd
                         </h1>
-                        <p data-w-id="6444e04b-f4d6-64b5-af74-17171db5d4c4"
-                            className="section-top-description" style={{ maxWidth: '720px', margin: '0 auto' }}>
+                        <p className="section-top-description fade-in-up" style={{ maxWidth: '720px', margin: '0 auto', animationDelay: '0.3s' }}>
                             Founded on a mission to blend technology with care, driving innovation across industries to create meaningful, transformative solutions.
                         </p>
-                        <div data-w-id="6444e04b-f4d6-64b5-af74-17171db5d4c6"
-                            className="hero-button-wrapper">
-                            <a href="/contact" data-w-id="d6e99a6b-32b8-7752-4992-8db9e68f321f"
-                                className="primary-button-wrapper secondary w-inline-block">
+                        <div className="hero-button-wrapper fade-in-up" style={{ animationDelay: '0.4s' }}>
+                            <a href="/contact" className="primary-button-wrapper secondary w-inline-block">
                                 <div className="primary-button-wrap">
                                     <div className="primary-button-text">Get in Touch</div>
                                     <div className="primary-button-text">Get in Touch</div>
                                 </div>
                                 <img loading="lazy" src="/img/ArrowUp.svg" alt="" className="primary-button-icon" />
                             </a>
-                            <Link data-w-id="717a1373-40c1-701e-7ec9-e70365b0649a" to="/our-values"
-                                className="download-button-wrapper w-inline-block">
+                            <Link to="/our-values" className="download-button-wrapper w-inline-block">
                                 <div className="download-button-text">Our Values</div>
                                 <div className="download-button-icon-wrapper">
                                     <img src="/img/DownloadSimple.svg" loading="lazy" alt="" className="download-button-icon" />
@@ -108,7 +110,7 @@ export default function About() {
             {/* ── Section 2: Company Introduction ── */}
             <section className="section">
                 <div className="w-layout-blockcontainer container w-container">
-                    <div className="section-top-wrapper">
+                    <div className="section-top-wrapper fade-in-up" style={{ animationDelay: '0.2s' }}>
                         <div className="section-top-subtitle-wrap">
                             <img src="/img/Feather.svg" loading="lazy" alt="" className="section-top-image" />
                             <div className="section-top-subtitle">WHO WE ARE</div>
@@ -118,10 +120,10 @@ export default function About() {
                         </h2>
                     </div>
                     <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
-                        <p className="section-subtitle" style={{ fontSize: '17px', lineHeight: '1.8', color: '#475569', marginBottom: '20px' }}>
+                        <p className="section-subtitle fade-in-up" style={{ fontSize: '17px', lineHeight: '1.8', color: '#475569', marginBottom: '20px', animationDelay: '0.3s' }}>
                             Dashapatmaja Solutions Pvt. Ltd. was founded on a mission to blend technology with care, driving innovation across industries to create meaningful, transformative solutions.
                         </p>
-                        <p className="section-subtitle" style={{ fontSize: '17px', lineHeight: '1.8', color: '#475569' }}>
+                        <p className="section-subtitle fade-in-up" style={{ fontSize: '17px', lineHeight: '1.8', color: '#475569', animationDelay: '0.4s' }}>
                             Established in 2023 and incubated at the Manipal Universal Technology Business Incubator in Manipal, we bring together a multidisciplinary team of professionals from engineering, healthcare, management, and technology to solve real-world challenges.
                         </p>
                     </div>
@@ -131,7 +133,7 @@ export default function About() {
             {/* ── Section 3: Our Journey Timeline ── */}
             <section className="section" style={{ background: '#f8fafc' }}>
                 <div className="w-layout-blockcontainer container w-container">
-                    <div className="section-top-wrapper">
+                    <div className="section-top-wrapper fade-in-up" style={{ animationDelay: '0.2s' }}>
                         <div className="section-top-subtitle-wrap">
                             <img src="/img/Feather.svg" loading="lazy" alt="" className="section-top-image" />
                             <div className="section-top-subtitle">OUR JOURNEY</div>

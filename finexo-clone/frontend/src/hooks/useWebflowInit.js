@@ -19,6 +19,7 @@ const PAGE_WF_IDS = {
   '/contact': '67a46b8ae115f8b6dae8d466',  // contact.html
   '/about': '67a46b6c06f931cc32b4c1a6',  // about.html
   '/blogs': '67a46b7ae0ff8cb7e340b76e',  // blogs.html
+  '/our-leadership': '67a46b7ae0ff8cb7e340b76e',  // uses blogs.html animations
 }
 
 const SITE_ID = '67a1a4168a205f6b25b1e460' // same for every page

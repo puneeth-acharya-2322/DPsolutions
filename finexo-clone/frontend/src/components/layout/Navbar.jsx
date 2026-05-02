@@ -96,7 +96,7 @@ export default function Navbar() {
                                                         <div className="dropdown-item-title">Our Mission</div>
                                                     </div>
                                                 </Link>
-                                                <Link to="/about#leadership" className="dropdown-link-wrapper w-inline-block">
+                                                <Link to="/our-leadership" className="dropdown-link-wrapper w-inline-block">
                                                     <div className="dropdown-link-wrap">
                                                         <div className="dropdown-item-title">Our Leadership Team</div>
                                                     </div>

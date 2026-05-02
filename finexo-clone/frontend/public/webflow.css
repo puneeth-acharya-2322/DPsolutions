@@ -3971,7 +3971,7 @@ strong {
 }
 
 .hero-top-subtitle-span {
-  color: var(--bright-royal-blue);
+  color: #ffb400;
   font-size: var(--font--paragraph-s);
   line-height: var(--line-height--line-height-regular);
   font-weight: var(--font-weight--bold);
